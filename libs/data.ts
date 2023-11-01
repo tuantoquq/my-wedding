@@ -6,7 +6,8 @@ import crm from '@/public/crm.jpg';
 import eWallet from '@/public/e-wallet.jpg';
 import dkBanking from '@/public/dk-banking.png';
 
-export const email = 'tuantoquq@gmail.com';
+export const groomEmail = 'tuantoquq@gmail.com';
+export const brideEmail = 'truongbich21092000@gmail.com';
 export const links = [
   {
     name: 'Home',
@@ -29,7 +30,7 @@ export const links = [
     hash: '#experience',
   },
   {
-    name: 'Contact',
+    name: 'Wishes',
     hash: '#contact',
   },
 ] as const;

@@ -6,10 +6,16 @@ import { links } from '@/libs/data';
 import Link from 'next/link';
 import clsx from 'clsx';
 import { useActiveSectionContext } from '@/context/active-section-context';
-
+import { BsVolumeUpFill, BsVolumeMuteFill } from 'react-icons/bs';
 export default function Header() {
   const { activeSection, setActiveSection, setTimeOfLastClick } =
     useActiveSectionContext();
+
+  const [isMute, setIsMute] = React.useState(false);
+
+  const handleMouseClick = (state: boolean) => {
+    setIsMute(state);
+  };
   return (
     <header className="z-[999] relative">
       <motion.div
@@ -61,6 +67,22 @@ export default function Header() {
           ))}
         </ul>
       </nav>
+      <motion.div
+        className={`fixed bottom-10 right-10 flex opacity-40 p-4 gap-2 hover:cursor-pointer text-[1.35rem]
+        bg-gray-300 text-gray-900 items-center rounded-full hover:opacity-90`}
+        onClick={() => handleMouseClick(!isMute)}
+      >
+        <audio
+          controls
+          src="./music.mp3"
+          autoPlay={true}
+          hidden={true}
+          className="scale-90"
+          muted={isMute}
+          loop={true}
+        ></audio>
+        {isMute ? <BsVolumeMuteFill /> : <BsVolumeUpFill />}
+      </motion.div>
     </header>
   );
 }
