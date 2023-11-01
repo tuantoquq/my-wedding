@@ -1,21 +1,13 @@
-import About from '@/components/about';
-import Contact from '@/components/contact';
-import Experience from '@/components/experience';
+import Album from '@/components/album';
 import Intro from '@/components/intro';
-import Projects from '@/components/projects';
 import SectionDivider from '@/components/section-divider';
-import Skills from '@/components/skill';
 
 export default function Home() {
   return (
     <main className="flex flex-col items-center">
       <Intro />
       <SectionDivider />
-      <About />
-      <Projects />
-      <Skills />
-      <Experience />
-      <Contact />
+      <Album />
     </main>
   );
 }
