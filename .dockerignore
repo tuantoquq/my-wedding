@@ -1,0 +1,14 @@
+# IDE
+.vscode/
+.idea/
+
+# packages
+node_modules/
+
+# lock files
+yarn.lock
+
+# others
+.gitignore
+Dockerfile
+docker-compose.yml

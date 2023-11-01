@@ -1,0 +1,26 @@
+version: '3.9'
+services:
+  next-app:
+    build: 
+      context: .
+      target: dev # for dev environment use =>  target: dev
+    ports:
+      - "3000:3000"
+    restart: always
+    networks:
+      - next-app-net
+  
+  nginx: 
+    image: nginx:latest
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf
+    depends_on:
+      next-app:
+        condition: service_started
+    networks:
+      - next-app-net
+networks:
+  next-app-net:
