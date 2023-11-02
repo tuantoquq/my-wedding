@@ -1,5 +1,5 @@
-import { AddCommentDto } from '@/app/dtos/comment.dto';
 import { prisma } from '@/libs/db-client';
+import { WishData } from '@/libs/types';
 import { NextResponse } from 'next/server';
 export async function GET() {
   try {
@@ -25,7 +25,8 @@ export async function GET() {
 
 export async function POST(req: Request) {
   try {
-    const addCommentDto: AddCommentDto = await req.json();
+    const addCommentDto: WishData = await req.json();
+    console.log(addCommentDto);
     const comment = await prisma.comment.create({
       data: addCommentDto,
     });

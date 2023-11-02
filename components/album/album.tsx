@@ -4,7 +4,7 @@ import React from 'react';
 import { useSectionInView } from '@/libs/hooks';
 import { albums } from '@/libs/data';
 import AlbumImage from './album-img';
-import SectionHeading from './section-heading';
+import SectionHeading from '../section-heading';
 export default function Album() {
   const { ref } = useSectionInView({ sectionName: 'Album cưới' });
 

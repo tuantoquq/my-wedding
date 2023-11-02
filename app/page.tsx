@@ -1,6 +1,7 @@
-import Album from '@/components/album';
+import Album from '@/components/album/album';
 import Intro from '@/components/intro';
 import SectionDivider from '@/components/section-divider';
+import Wishes from '@/components/wish/wishes';
 
 export default function Home() {
   return (
@@ -8,6 +9,7 @@ export default function Home() {
       <Intro />
       <SectionDivider />
       <Album />
+      <Wishes />
     </main>
   );
 }
