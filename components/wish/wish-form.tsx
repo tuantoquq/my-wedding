@@ -1,4 +1,4 @@
-import { WishData } from '@/libs/types';
+import { WishData } from '@/services/types';
 import React, { FormEvent } from 'react';
 import { FaPaperPlane, FaSpinner } from 'react-icons/fa';
 import { toast } from 'react-toastify';

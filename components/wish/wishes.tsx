@@ -1,8 +1,8 @@
 'use client';
 
 import React from 'react';
-import { useSectionInView } from '@/libs/hooks';
-import SectionHeading from '../section-heading';
+import { useSectionInView } from '@/hooks/hooks';
+import SectionHeading from '../../layout/section-heading';
 import WishForm from './wish-form';
 import WishList from './wish-list';
 export default function Wishes() {

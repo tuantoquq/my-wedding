@@ -1,6 +1,6 @@
 import React from 'react';
 import WishCard from './wish-card';
-import { WishData } from '@/libs/types';
+import { WishData } from '@/services/types';
 
 export default function WishList() {
   const [listWishes, setListWishes] = React.useState<WishData[]>([]);

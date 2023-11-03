@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import { useSectionInView } from '@/libs/hooks';
+import { useSectionInView } from '@/hooks/hooks';
 export default function Intro() {
   const { ref } = useSectionInView({ sectionName: 'Giới thiệu' });
   return (
