@@ -4,24 +4,29 @@ import React from 'react';
 import { useSectionInView } from '@/hooks/hooks';
 import { storyLine } from '@/utils/data';
 import SectionHeading from '../../layout/section-heading';
+import StoryLine from './StoryLine';
+import { useWindowSize } from '@/hooks/useWindowSize';
 
 
 export default function Story() {
-  const { ref } = useSectionInView({ sectionName: 'Album cưới' });
+    const { ref } = useSectionInView({ sectionName: 'Chuyện tình yêu' });
+    const { isBelowMd } = useWindowSize();
 
-  return (
-    <section
-      ref={ref}
-      className="mb-28 max-w-[50rem] text-center sm:mb-20 scroll-mt-[100rem]"
-      id="story"
-    >
-      <SectionHeading>Chuyện Tình Yêu Chúng Mình</SectionHeading>
-      <div className="flex gap-4 flex-wrap justify-center">
-        {storyLine.map((chapter, index) => (
-          <React.Fragment key={index}>
-          </React.Fragment>
-        ))}
-      </div>
-    </section>
-  );
+    return (
+        <section
+            ref={ref}
+            className="sm:mb-32 xs:mb-10 w-full bg-white text-center pb-20 pt-10"
+            id="story"
+        >
+            <SectionHeading>Chuyện Tình Yêu Chúng Mình</SectionHeading>
+            <div className="w-full px-5 sm:px-10 lg:px-48 flex flex-col justify-between gap-10 relative">
+                {storyLine.map((chapter, index) => (
+                    <React.Fragment key={index}>
+                        <StoryLine {...chapter} index={index} />
+                    </React.Fragment>
+                ))}
+                {!isBelowMd && <div className='bg-cs-green-700 rounded-full absolute w-[3px] h-full top-0 left-1/2 -translate-x-1/2 z-5' />}
+            </div>
+        </section>
+    );
 }

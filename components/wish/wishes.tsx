@@ -5,12 +5,13 @@ import { useSectionInView } from '@/hooks/hooks';
 import SectionHeading from '../../layout/section-heading';
 import WishForm from './wish-form';
 import WishList from './wish-list';
+
 export default function Wishes() {
   const { ref } = useSectionInView({ sectionName: 'Lời chúc' });
   return (
     <section
       ref={ref}
-      className="mb-28 max-w-[100rem] sm:mb-20 scroll-mt-[100rem]"
+      className="mb-28 max-w-[100rem] sm:mb-20 pt-[10rem]"
       id="wishes"
     >
       <SectionHeading>Sổ lưu bút</SectionHeading>
