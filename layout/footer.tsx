@@ -34,7 +34,7 @@ export default function Footer() {
         <audio
           controls
           src="https://res.cloudinary.com/devoro1vn/video/upload/v1698862626/music_smeyse.mp3"
-          autoPlay
+          autoPlay={!isPause}
           hidden
           className="scale-90"
           loop

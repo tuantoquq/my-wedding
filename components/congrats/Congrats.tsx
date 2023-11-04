@@ -6,13 +6,13 @@ import SectionHeading from '../../layout/section-heading';
 
 
 export default function Congrats() {
-  const { ref } = useSectionInView({ sectionName: 'Album cưới' });
+  const { ref } = useSectionInView({ sectionName: 'Lời cảm ơn' });
 
   return (
     <section
       ref={ref}
-      className="mb-28 max-w-[50rem] text-center sm:mb-20 scroll-mt-[100rem]"
-      id="story"
+      className="mb-28 max-w-[50rem] text-center sm:mb-20"
+      id="congrats"
     >
       <SectionHeading>Lời Cảm Ơn</SectionHeading>
       <div className="flex gap-4 flex-wrap justify-center">

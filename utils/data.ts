@@ -61,10 +61,50 @@ export const albums = [
 export const storyLine = [
   {
     title: "Anh chị siêu cute luôn ạ 🥰",
-    description: "Chúc mừng anh chị hạnh phúc ạ 💕"
+    description: "Chúc mừng anh chị hạnh phúc ạ 💕",
+    year: 2023,
+    image: image0149
   },
   {
-    title: "...",
-    description: "..."
+    title: "BẠN CÓ TIN VÀO DUYÊN PHẬN KHÔNG?",
+    description: `Chúng mình quen nhau chẳng ở nơi nhà hàng sang trọng hay bãi biển lãng mạn nào cả.Tình cờ mình gặp nhau 1 lần năm 2014 trong một buổi tham gia lớp học thử tiếng anh của trung tâm Langmaster
+    Mình ngồi cạnh nhau và được bắt cặp làm bài tập theo nhóm 2 người
+    Mình quen nhau từ đó
+    Anh học giao thông vận tải ngành cầu đường
+    Em học chuyên ngành du lịch
+    Chúng mình cũng chẳng có chuyện gì để nói,bởi biết nói gì bây giờ`,
+    year: 2023,
+    image: image0161
+  },
+  {
+    title: "BẠN CÓ TIN VÀO DUYÊN PHẬN KHÔNG?",
+    description: `Chúng mình quen nhau chẳng ở nơi nhà hàng sang trọng hay bãi biển lãng mạn nào cả.Tình cờ mình gặp nhau 1 lần năm 2014 trong một buổi tham gia lớp học thử tiếng anh của trung tâm Langmaster
+    Mình ngồi cạnh nhau và được bắt cặp làm bài tập theo nhóm 2 người
+    Mình quen nhau từ đó
+    Anh học giao thông vận tải ngành cầu đường
+    Em học chuyên ngành du lịch
+    Chúng mình cũng chẳng có chuyện gì để nói,bởi biết nói gì bây giờ`,
+    year: 2023,
+    image: image9370
   },
 ] as const;
+
+
+export const couple = {
+  groom: {
+    name: "Anh Tuấn",
+    image: image0149,
+    description: "Anh chàng trai kĩ sư trẻ mới ra trường đang trên con đường tìm kiếm thành công và xây dựng sự nghiệp của chính mình .Anh yêu cây, yêu hoa đặc biệt hoa hồng.Trước giờ cũng chưa tán tỉnh hay yêu cô gái nào cả.Sáng đi làm tối về lại chăm chút vào vườn hoa cây cối.Anh thích động vật đam mê với cây cỏ.Cứ tới mùa hoa hồng nở tràn ngập hoa thơm ngát",
+    facebook: '',
+    instagram: '',
+
+  },
+  bride: {
+    name: 'Chị Bích',
+    image: image9370,
+    description: "Em cô gái tự lập từ bé,đôi lúc em quên mình là một đoá hoa,cá tính mạnh mẽ và em nghĩ cũng sẽ không cần một bờ vai để tựa vào.Anh ngồi bàn giấy làm hành chính với những con số hình vẽ khô khan Em làm lúc nào cũng tất bật sáng tối đôi khi còn không có cả thời gian cho bản thân chứ chưa nói tới chuyện yêu thương ai",
+    facebook: '',
+    instagram: '',
+
+  }
+}

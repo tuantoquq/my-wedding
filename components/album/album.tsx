@@ -11,7 +11,7 @@ export default function Album() {
   return (
     <section
       ref={ref}
-      className="mb-28 max-w-[50rem] text-center sm:mb-20 scroll-mt-[100rem]"
+      className="mb-28 max-w-[50rem] text-center sm:mb-20 "
       id="album"
     >
       <SectionHeading>Album Cưới</SectionHeading>

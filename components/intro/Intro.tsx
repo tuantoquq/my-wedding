@@ -2,17 +2,28 @@
 
 import React from 'react';
 import { useSectionInView } from '@/hooks/hooks';
+import Item from './Item';
+import { couple } from '@/utils/data';
+import Image from 'next/image';
 export default function Intro() {
   const { ref } = useSectionInView({ sectionName: 'Giới thiệu' });
+  const { groom, bride } = couple;
+
   return (
     <section
       ref={ref}
-      className="mb-28 max-w-[50rem] text-center sm:mb-0 scroll-mt-[100rem]"
+      className="sm:mb-32 w-full bg-cs-green-300 text-center xs:mb-10 pb-20 pt-10"
       id="intro"
     >
-      <h3 className="font-semibold text-lg text-blue-500">
-        Our Wedding website is coming soon ...
-      </h3>
+      <div className="w-full xs:px-5 sm:px-10 lg:px-40 flex xs:flex-col md:flex-row justify-between gap-10 relative">
+        <Item image={groom.image} descrition={groom.description} name={groom.name} />
+
+        <div className='w-full h-auto md:absolute lg:top-0 left-0 right-0 flex justify-center sm:top-[40%] z-50'>
+          <Image src={'/icon/heart-1@2x.png'} alt='' className='lg:w-40 md:w-34 w-32 h-auto' width={2275} height={1365} />
+        </div>
+
+        <Item image={bride.image} descrition={bride.description} name={bride.name} />
+      </div>
     </section>
   );
 }
