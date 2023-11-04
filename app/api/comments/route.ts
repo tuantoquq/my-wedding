@@ -1,5 +1,5 @@
-import { prisma } from '@/libs/db-client';
-import { WishData } from '@/libs/types';
+import { prisma } from '@/services/db-client';
+import { WishData } from '@/services/types';
 import { NextResponse } from 'next/server';
 export async function GET() {
   try {

@@ -5,7 +5,7 @@ type useSectionInViewProps = {
   thresholdInView?: number;
 };
 import { useInView } from 'react-intersection-observer';
-import { SectionName } from './types';
+import { SectionName } from '../services/types';
 export function useSectionInView({
   sectionName,
   thresholdInView,

@@ -57,3 +57,14 @@ export const albums = [
   image9334,
   image9370,
 ] as const;
+
+export const storyLine = [
+  {
+    title: "Anh chị siêu cute luôn ạ 🥰",
+    description: "Chúc mừng anh chị hạnh phúc ạ 💕"
+  },
+  {
+    title: "...",
+    description: "..."
+  },
+] as const;

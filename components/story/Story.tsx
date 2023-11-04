@@ -2,24 +2,23 @@
 
 import React from 'react';
 import { useSectionInView } from '@/hooks/hooks';
-import { albums } from '@/utils/data';
-import AlbumImage from './album-img';
+import { storyLine } from '@/utils/data';
 import SectionHeading from '../../layout/section-heading';
-export default function Album() {
+
+
+export default function Story() {
   const { ref } = useSectionInView({ sectionName: 'Album cưới' });
 
   return (
     <section
       ref={ref}
       className="mb-28 max-w-[50rem] text-center sm:mb-20 scroll-mt-[100rem]"
-      id="album"
+      id="story"
     >
-      <SectionHeading>Album Cưới</SectionHeading>
-      <div className="mb-20">Dưới đây là demo album cưới của chúng tôi...</div>
+      <SectionHeading>Chuyện Tình Yêu Chúng Mình</SectionHeading>
       <div className="flex gap-4 flex-wrap justify-center">
-        {albums.map((album, index) => (
+        {storyLine.map((chapter, index) => (
           <React.Fragment key={index}>
-            <AlbumImage imageUrl={album} />
           </React.Fragment>
         ))}
       </div>

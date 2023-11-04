@@ -1,4 +1,4 @@
-import { WishData } from '@/libs/types';
+import { WishData } from '@/services/types';
 import React from 'react';
 
 export default function WishCard({ guestName, content }: WishData) {
