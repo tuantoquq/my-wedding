@@ -6,6 +6,7 @@ import { storyLine } from '@/utils/data';
 import SectionHeading from '../../layout/section-heading';
 import StoryLine from './StoryLine';
 import { useWindowSize } from '@/hooks/useWindowSize';
+import Welcome from './Welcome';
 
 
 export default function Story() {
@@ -27,6 +28,7 @@ export default function Story() {
                 ))}
                 {!isBelowMd && <div className='bg-cs-green-700 rounded-full absolute w-[3px] h-full top-0 left-1/2 -translate-x-1/2 z-5' />}
             </div>
+            <Welcome />
         </section>
     );
 }

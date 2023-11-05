@@ -1,3 +1,4 @@
+import Typography from '@/libs/Typography';
 import React from 'react';
 
 type SectionHeadingProps = {
@@ -6,8 +7,8 @@ type SectionHeadingProps = {
 
 export default function SectionHeading({ children }: SectionHeadingProps) {
   return (
-    <h1 className="font-medium capitalize mb-8 text-center">
+    <Typography className="capitalize mb-8" variant='h1'>
       {children}
-    </h1>
+    </Typography>
   );
 }
