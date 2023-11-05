@@ -108,3 +108,47 @@ export const couple = {
 
   }
 }
+
+export const events = [
+  {
+    image: image9370,
+    title: 'LỄ ĂN HỎI NHÀ NỮ',
+    date: '06/11/2023',
+    time: '01:00 PM',
+    location: 'Liễu Giai, Ba Đình, Hà Nội',
+    mapUrl: "https://maps.app.goo.gl/RyRDvZwb4s4DoPWX8",
+  },
+  {
+    image: image9370,
+    title: 'LỄ ĂN HỎI NHÀ NỮ',
+    date: '06/11/2023',
+    time: '01:00 PM',
+    location: 'Liễu Giai, Ba Đình, Hà Nội',
+    mapUrl: "https://maps.app.goo.gl/RyRDvZwb4s4DoPWX8",
+  },
+  {
+    image: image9370,
+    title: 'LỄ ĂN HỎI NHÀ NỮ',
+    date: '06/11/2023',
+    time: '01:00 PM',
+    location: 'Liễu Giai, Ba Đình, Hà Nội',
+    mapUrl: "https://maps.app.goo.gl/RyRDvZwb4s4DoPWX8",
+  },
+  {
+    image: image9370,
+    title: 'LỄ ĂN HỎI NHÀ NỮ',
+    date: '06/11/2023',
+    time: '01:00 PM',
+    location: 'Liễu Giai, Ba Đình, Hà Nội',
+    mapUrl: "https://maps.app.goo.gl/RyRDvZwb4s4DoPWX8",
+  },
+  {
+    image: image9370,
+    title: 'LỄ ĂN HỎI NHÀ NỮ',
+    date: '06/11/2023',
+    time: '01:00 PM',
+    location: 'Liễu Giai, Ba Đình, Hà Nội',
+    mapUrl: "https://maps.app.goo.gl/RyRDvZwb4s4DoPWX8",
+  },
+
+] as const;

@@ -1,5 +1,5 @@
 import Album from '@/components/album/album';
-import Intro from '@/components/intro/intro';
+import Intro from '@/components/intro/Intro';
 import SectionDivider from '@/layout/section-divider';
 import Wishes from '@/components/wish/wishes';
 import Story from '@/components/story/Story';
