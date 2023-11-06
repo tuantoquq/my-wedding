@@ -35,6 +35,15 @@ const config: Config = {
         'cs-green-300': '#e3ede4',
         'cs-green-100': '#f1f8f1'
       },
+      keyframes: {
+        heartBeat: {
+          '0%': { transform: 'scale(.8)' },
+          '25%': { transform: 'scale(1.0)' },
+          '50%': { transform: 'scale(1.2)' },
+          '75%': { transform: 'scale(1.0)' },
+          '100%': { transform: 'scale(.8)' },
+        }
+      }
     },
   },
   plugins: [

@@ -1,7 +1,7 @@
 import Header from '@/layout/header';
 import './globals.css';
 import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
+import { Inter, Dosis } from 'next/font/google';
 import ActiveSectionContextProvider from '@/context/active-section-context';
 import Footer from '@/layout/footer';
 
@@ -20,7 +20,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="!scroll-smooth">
       <body
-        className={`${inter.className} bg-white text-gray-950 pt-28 sm:pt-36 overflow-x-hidden`}
+        className={`${inter.className} bg-white text-gray-950 overflow-x-hidden`}
       >
         <ActiveSectionContextProvider>
           <Header />
