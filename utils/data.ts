@@ -152,3 +152,9 @@ export const events = [
   },
 
 ] as const;
+
+export const slides = [
+  image0149,
+  image9216,
+  image9779,
+]

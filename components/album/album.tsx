@@ -5,13 +5,14 @@ import { useSectionInView } from '@/hooks/hooks';
 import { albums } from '@/utils/data';
 import AlbumImage from './album-img';
 import SectionHeading from '../../layout/section-heading';
+
 export default function Album() {
   const { ref } = useSectionInView({ sectionName: 'Album cưới' });
 
   return (
     <section
       ref={ref}
-      className="mb-28 max-w-[50rem] text-center sm:mb-20 "
+      className="mb-28 text-center sm:mb-20 "
       id="album"
     >
       <SectionHeading>Album Cưới</SectionHeading>
