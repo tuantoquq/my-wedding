@@ -35,7 +35,7 @@ export function useWindowSize() {
     }, []); // Empty array ensures that effect is only run on mount
     return {
         windowSize,
-        isBelowSm: windowSize.width !== undefined ? windowSize.width < 600 : false,
+        isBelowSm: windowSize.width !== undefined ? windowSize.width <= 600 : false,
         isBelowMd: windowSize.width !== undefined ? windowSize.width < 900 : false,
         isBelowLg: windowSize.width !== undefined ? windowSize.width < 1200 : false,
     };

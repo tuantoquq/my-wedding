@@ -20,7 +20,7 @@ export default function Header() {
           onClick={
             () => console.log(1234)
           }
-          className='fixed flex top-[1.5rem] text-white right-[1rem] p-2 rounded-full w-[2.5rem] h-[2.5rem] bg-cs-green-900 justify-center items-center'
+          className='fixed flex top-[1.5rem] text-white hover:bg-cs-green-700 right-[1rem] p-2 rounded-full w-[2.5rem] h-[2.5rem] bg-cs-green-900 justify-center items-center'
         >
           <RiMenuLine className="text-xl opacity-80 transition-all"/>
         </button> :
