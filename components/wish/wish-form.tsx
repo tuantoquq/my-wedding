@@ -1,3 +1,5 @@
+import { Button } from '@/libs/Button';
+import Typography from '@/libs/Typography';
 import { WishData } from '@/services/types';
 import React, { FormEvent } from 'react';
 import { FaPaperPlane, FaSpinner } from 'react-icons/fa';
@@ -31,53 +33,57 @@ export default function WishForm() {
       console.log(error);
     } finally {
       setIsLoading(false);
-      event.currentTarget?.reset();
+      const guestNameEle = document.getElementById('name') as HTMLInputElement;
+      const wishEle = document.getElementById('wish') as HTMLInputElement;
+      guestNameEle.value = '';
+      wishEle.value = '';
       toast.success('Thanks for give us wishes!', {
         hideProgressBar: true,
-        position: 'top-right',
+        position: 'top-center',
         autoClose: 2000,
       });
     }
   };
   return (
     <div
-      className="flex items-center bg-white text-center flex-col mt-10 w-1/2 
-    border-dashed border-[2px] border-secondary-cl p-4 rounded-md"
+      className="flex items-center bg-white text-center flex-col mt-10 w-full
+    border-dashed border-[2px] border-secondary-cl p-4 rounded-md md:h-[480px] xs:h-[400px]"
     >
-      <p className="font-normal">
+      <Typography className="font-semibold" variant="desc">
         Cảm ơn bạn rất nhiều vì đã gửi những lời chúc tốt đẹp nhất đến đám cưới
         của chúng tôi!
-      </p>
-      <p className="font-normal italic text-[14px]">
+      </Typography>
+      <Typography className="font-normal italic text-[14px]" variant="desc">
         (Điền đầy đủ tên hoặc ghi chú để chúng mình biết rằng bạn là ai nhéee)
-      </p>
-      <form className="flex flex-col mt-10 w-full p-6" onSubmit={submitForm}>
+      </Typography>
+      <form
+        className="flex flex-col md:mt-10 xs:mt-2 w-full p-6"
+        onSubmit={submitForm}
+      >
         <input
           type="text"
           name="guestName"
           id="name"
-          className="h-14 border-b-secondary px-3 bg-white focus:outline-none "
+          className="md:h-[3.5rem] xs:h-[3rem] border-b-secondary px-3 bg-white focus:outline-none "
           placeholder="Nhập họ tên *"
           required
         />
         <textarea
           name="content"
           id="wish"
-          className="h-36 my-3 border-b-secondary p-3 bg-white focus:outline-none"
+          className="md:h-[9rem] xs:h-[7rem] my-3 border-b-secondary p-3 bg-white focus:outline-none"
           placeholder="Nhập lời chúc của bạn *"
           maxLength={4000}
           required
         />
-        <button
-          type="submit"
-          className="group h-[3rem] w-[10rem] bg-secondary-cl
-          text-primary-cl rounded-full
-          flex flex-row justify-center items-center gap-2 transition-all
-          focus:scale-110 hover:scale-110 hover:bg-primary-cl active:scale-105 hover:text-secondary-cl
-          hover:border-secondary-cl border-2 border-primary-cl"
-        >
-          Gửi lời chúc {isLoading ? loadingIcon : originalIcon}
-        </button>
+        <div className="flex justify-center items-center">
+          <Button
+            type="submit"
+            endIcon={isLoading ? loadingIcon : originalIcon}
+          >
+            Gửi lời chúc
+          </Button>
+        </div>
       </form>
     </div>
   );

@@ -1,6 +1,8 @@
 import React from 'react';
 import WishCard from './wish-card';
 import { WishData } from '@/services/types';
+import Typography from '@/libs/Typography';
+import { FaSpinner } from 'react-icons/fa';
 
 export default function WishList() {
   const [listWishes, setListWishes] = React.useState<WishData[]>([]);
@@ -14,8 +16,10 @@ export default function WishList() {
   });
   return (
     <div
-      className="flex bg-white flex-col mt-10 w-1/2 border-[3px]
-     border-secondary-cl rounded-md gap-2 max-h-[30rem] overflow-auto"
+      className={`flex bg-white flex-col md:mt-10 xs:mt-1 border-[3px] w-full
+      border-secondary-cl rounded-md gap-2 md:h-[480px] xs:h-[400px] overflow-auto ${
+        listWishes?.length ? '' : ' justify-center items-center align-middle'
+      }'}`}
     >
       {listWishes?.length ? (
         listWishes.map((wish, index) => (
@@ -24,7 +28,9 @@ export default function WishList() {
           </React.Fragment>
         ))
       ) : (
-        <p>Chưa có lời chúc nào</p>
+        <div className="flex w-full md:w-[500px] justify-center items-center">
+          <FaSpinner className="text-xl opacity-80 transition-all animate-spin" />
+        </div>
       )}
     </div>
   );

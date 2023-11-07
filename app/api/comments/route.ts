@@ -26,7 +26,6 @@ export async function GET() {
 export async function POST(req: Request) {
   try {
     const addCommentDto: WishData = await req.json();
-    console.log(addCommentDto);
     const comment = await prisma.comment.create({
       data: addCommentDto,
     });
