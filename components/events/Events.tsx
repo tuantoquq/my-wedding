@@ -16,7 +16,7 @@ export default function Events() {
       id="events"
     >
       <SectionHeading>Sự Kiện</SectionHeading>
-      <div className="w-full sm:px-10 xs:px-5 md:px-32 lg:px-48 flex flex-wrap flex-row justify-center relative">
+      <div className="w-full sm:px-10 xs:px-5 md:px-32 lg:px-48 md:gap-3 flex flex-wrap flex-row justify-center relative">
         {events.map((item, index) => (
           <ItemEvent key={index} item={item} />
         ))}

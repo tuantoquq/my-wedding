@@ -1,12 +1,12 @@
-import React from 'react';
+'use client';
+import React, { useState, useEffect } from 'react';
 import WishCard from './wish-card';
 import { WishData } from '@/services/types';
-import Typography from '@/libs/Typography';
 import { FaSpinner } from 'react-icons/fa';
 
 export default function WishList() {
-  const [listWishes, setListWishes] = React.useState<WishData[]>([]);
-  React.useEffect(() => {
+  const [listWishes, setListWishes] = useState<WishData[]>([]);
+  useEffect(() => {
     const fetchWishes = async () => {
       const res = await fetch('/api/comments');
       const data = await res.json();
