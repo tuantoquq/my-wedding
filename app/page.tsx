@@ -9,12 +9,14 @@ import Carousel from '@/libs/Slide/Carousel';
 import { slides } from '@/utils/data';
 import SaveDateCircle from '@/components/main/save-date-circle';
 import 'react-toastify/dist/ReactToastify.css';
+import HeartFalling from '@/components/main/heart-fall';
 
 export default function Home() {
   return (
     <main className="flex flex-col items-center">
       <Carousel slides={slides} />
       <SaveDateCircle />
+      <HeartFalling />
       <Intro />
       {/* <SectionDivider /> */}
       <Story />

@@ -16,13 +16,27 @@ export default function Intro() {
       id="intro"
     >
       <div className="w-full xs:px-5 sm:px-10 lg:px-40 flex xs:flex-col md:flex-row justify-between gap-10 relative">
-        <Item image={groom.image} descrition={groom.description} name={groom.name} />
+        <Item
+          image={groom.image}
+          description={groom.description}
+          name={groom.name}
+        />
 
-        <div className='w-full h-auto md:absolute lg:top-0 left-0 right-0 flex justify-center sm:top-[40%] z-50'>
-          <Image src={'/icon/heart-1@2x.png'} alt='' className='lg:w-40 md:w-34 w-32 h-auto animate-[heartBeat_2s_linear_infinite]' width={2275} height={1365} />
+        <div className="w-full h-auto md:absolute lg:top-0 left-0 right-0 flex justify-center sm:top-[40%] z-50">
+          <Image
+            src={'/icon/heart-1@2x.png'}
+            alt=""
+            className="lg:w-40 md:w-34 w-32 h-auto animate-[heartBeat_2s_linear_infinite]"
+            width={2275}
+            height={1365}
+          />
         </div>
 
-        <Item image={bride.image} descrition={bride.description} name={bride.name} />
+        <Item
+          image={bride.image}
+          description={bride.description}
+          name={bride.name}
+        />
       </div>
     </section>
   );

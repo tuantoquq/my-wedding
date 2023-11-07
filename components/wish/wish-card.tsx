@@ -5,7 +5,7 @@ import React from 'react';
 export default function WishCard({ guestName, content }: WishData) {
   return (
     <div className="group">
-      <div className="flex flex-col items-start justify-start text-black w-full group-even:bg-secondary-cl-2 p-4 gap-1">
+      <div className="flex flex-col items-start justify-start text-black w-full group-even:bg-cs-green-500 p-4 gap-1">
         <Typography className="font-semibold" variant="h4">
           {guestName}
         </Typography>

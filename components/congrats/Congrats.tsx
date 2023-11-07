@@ -59,22 +59,26 @@ export default function Congrats() {
         position: 'top-center',
         autoClose: 2000,
       });
-    }
-    try {
-      setIsLoading(true);
-      await fetch('/api/confirmation', {
-        method: 'POST',
-        body: JSON.stringify({ guestName, type: selectedOption }),
-      });
-    } catch (error) {
-      console.log(error);
-    } finally {
-      setIsLoading(false);
-      setIsModalOpen(false);
-      toast.success('Cảm ơn bạn đã xác nhận tham dự đám cưới của chúng tôi!', {
-        position: 'top-center',
-        autoClose: 2000,
-      });
+    } else {
+      try {
+        setIsLoading(true);
+        await fetch('/api/confirmation', {
+          method: 'POST',
+          body: JSON.stringify({ guestName, type: selectedOption }),
+        });
+      } catch (error) {
+        console.log(error);
+      } finally {
+        setIsLoading(false);
+        setIsModalOpen(false);
+        toast.success(
+          'Cảm ơn bạn đã xác nhận tham dự đám cưới của chúng tôi!',
+          {
+            position: 'top-center',
+            autoClose: 2000,
+          },
+        );
+      }
     }
   };
   return (
