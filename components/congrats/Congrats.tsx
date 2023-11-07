@@ -11,6 +11,8 @@ import RadioButton from '@/libs/radio-button';
 import { BsCheckCircleFill } from 'react-icons/bs';
 import { ToastContainer, toast } from 'react-toastify';
 import { FaSpinner } from 'react-icons/fa';
+import GiftCard from '../gift/gift-card';
+import { banks } from '@/utils/data';
 enum GUEST {
   GROOM_GUEST = 'GROOM_GUEST',
   BRIDE_GUEST = 'BRIDE_GUEST',
@@ -32,6 +34,16 @@ export default function Congrats() {
   const [guestName, setGuestName] = React.useState('');
   const [isLoading, setIsLoading] = React.useState(false);
 
+  // modal wedding gift
+  const [isModalWeddingGiftOpen, setIsModalWeddingGiftOpen] =
+    React.useState(false);
+
+  const openModalWeddingGift = () => {
+    setIsModalWeddingGiftOpen(true);
+  };
+  const closeModalWeddingGift = () => {
+    setIsModalWeddingGiftOpen(false);
+  };
   const openModal = () => {
     setIsModalOpen(true);
   };
@@ -153,6 +165,38 @@ export default function Congrats() {
                 </Button>
               )}
             </div>
+          </div>
+        </Modal>
+      </div>
+
+      <div className="flex gap-2 justify-center items-center">
+        <Button
+          onClick={openModalWeddingGift}
+          type="button"
+          className="w-[14rem]"
+        >
+          Mừng cưới
+        </Button>
+        <Modal
+          open={isModalWeddingGiftOpen}
+          onClose={closeModalWeddingGift}
+          classNameChildren="!px-5"
+          title="Hộp mừng cưới"
+          classNameTitle="text-white py-2"
+          classNameHeader="bg-title rounded-t-md"
+        >
+          <div className="flex md:flex-row xs:flex-col justify-center items-center gap-2 w-full p-2">
+            {banks.map((bank, index) => (
+              <React.Fragment key={index}>
+                <GiftCard
+                  bankName={bank.bankName}
+                  cardHolder={bank.cardHolder}
+                  type={bank.type}
+                  cardNumber={bank.cardNumber}
+                  image={bank.image}
+                />
+              </React.Fragment>
+            ))}
           </div>
         </Modal>
       </div>
