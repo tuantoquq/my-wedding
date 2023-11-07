@@ -13,6 +13,8 @@ import image9779 from '@/public/HUY09779.jpg';
 import image9818 from '@/public/HUY09818.jpg';
 import image9837 from '@/public/HUY09837.jpg';
 import image9969 from '@/public/HUY09969.jpg';
+import groomQR from '@/public/groom_qr.jpeg';
+import brideQR from '@/public/bride_qr.jpeg';
 export const links = [
   {
     name: 'Giới thiệu',
@@ -144,3 +146,20 @@ export const events = [
 ] as const;
 
 export const slides = [image0149, image9216, image9779];
+
+export const banks = [
+  {
+    bankName: 'Teckcombank',
+    cardNumber: '1903 532 190 001',
+    cardHolder: 'NGUYEN HOANG ANH TUAN',
+    image: groomQR,
+    type: 'GROOM',
+  },
+  {
+    bankName: 'Teckcombank',
+    cardNumber: '1903 532 190 001',
+    cardHolder: 'TRUONG THI BICH',
+    image: brideQR,
+    type: 'BRIDE',
+  },
+];

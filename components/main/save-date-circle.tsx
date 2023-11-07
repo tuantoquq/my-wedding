@@ -21,7 +21,7 @@ export default function SaveDateCircle() {
           variant="desc"
           className="!text-[#ff7d7d] lg:text-lg drop-shadow-[1px_1px_1px_rgba(0,0,0,0.25)]"
         >
-          01/12/2023
+          02/12/2023
         </Typography>
       </div>
     </div>
