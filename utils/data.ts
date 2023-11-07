@@ -1,4 +1,4 @@
-import img0093 from '@/public/HUY00093.jpg';
+import image0093 from '@/public/HUY00093.jpg';
 import image0149 from '@/public/HUY00149.jpg';
 import image0161 from '@/public/HUY00161.jpg';
 import image0173 from '@/public/HUY00173.jpg';
@@ -45,7 +45,7 @@ export const albums = [
   image9216,
   image9779,
   image9818,
-  img0093,
+  image0093,
   image0161,
   image0173,
   image0225,
@@ -60,13 +60,13 @@ export const albums = [
 
 export const storyLine = [
   {
-    title: "Anh chị siêu cute luôn ạ 🥰",
-    description: "Chúc mừng anh chị hạnh phúc ạ 💕",
+    title: 'Anh chị siêu cute luôn ạ 🥰',
+    description: 'Chúc mừng anh chị hạnh phúc ạ 💕',
     year: 2023,
-    image: image0149
+    image: image0149,
   },
   {
-    title: "BẠN CÓ TIN VÀO DUYÊN PHẬN KHÔNG?",
+    title: 'BẠN CÓ TIN VÀO DUYÊN PHẬN KHÔNG?',
     description: `Chúng mình quen nhau chẳng ở nơi nhà hàng sang trọng hay bãi biển lãng mạn nào cả.Tình cờ mình gặp nhau 1 lần năm 2014 trong một buổi tham gia lớp học thử tiếng anh của trung tâm Langmaster
     Mình ngồi cạnh nhau và được bắt cặp làm bài tập theo nhóm 2 người
     Mình quen nhau từ đó
@@ -74,10 +74,10 @@ export const storyLine = [
     Em học chuyên ngành du lịch
     Chúng mình cũng chẳng có chuyện gì để nói,bởi biết nói gì bây giờ`,
     year: 2023,
-    image: image0161
+    image: image0161,
   },
   {
-    title: "BẠN CÓ TIN VÀO DUYÊN PHẬN KHÔNG?",
+    title: 'BẠN CÓ TIN VÀO DUYÊN PHẬN KHÔNG?',
     description: `Chúng mình quen nhau chẳng ở nơi nhà hàng sang trọng hay bãi biển lãng mạn nào cả.Tình cờ mình gặp nhau 1 lần năm 2014 trong một buổi tham gia lớp học thử tiếng anh của trung tâm Langmaster
     Mình ngồi cạnh nhau và được bắt cặp làm bài tập theo nhóm 2 người
     Mình quen nhau từ đó
@@ -85,76 +85,62 @@ export const storyLine = [
     Em học chuyên ngành du lịch
     Chúng mình cũng chẳng có chuyện gì để nói,bởi biết nói gì bây giờ`,
     year: 2023,
-    image: image9370
+    image: image9370,
   },
 ] as const;
-
 
 export const couple = {
   groom: {
-    name: "Anh Tuấn",
+    name: 'Nguyễn Tuấn',
     image: image0149,
-    description: "Anh chàng trai kĩ sư trẻ mới ra trường đang trên con đường tìm kiếm thành công và xây dựng sự nghiệp của chính mình .Anh yêu cây, yêu hoa đặc biệt hoa hồng.Trước giờ cũng chưa tán tỉnh hay yêu cô gái nào cả.Sáng đi làm tối về lại chăm chút vào vườn hoa cây cối.Anh thích động vật đam mê với cây cỏ.Cứ tới mùa hoa hồng nở tràn ngập hoa thơm ngát",
+    description:
+      'Anh chàng trai kĩ sư trẻ mới ra trường đang trên con đường tìm kiếm thành công và xây dựng sự nghiệp của chính mình .Anh yêu cây, yêu hoa đặc biệt hoa hồng.Trước giờ cũng chưa tán tỉnh hay yêu cô gái nào cả.Sáng đi làm tối về lại chăm chút vào vườn hoa cây cối.Anh thích động vật đam mê với cây cỏ.Cứ tới mùa hoa hồng nở tràn ngập hoa thơm ngát',
     facebook: '',
     instagram: '',
-
   },
   bride: {
-    name: 'Chị Bích',
+    name: 'Trương Bích',
     image: image9370,
-    description: "Em cô gái tự lập từ bé,đôi lúc em quên mình là một đoá hoa,cá tính mạnh mẽ và em nghĩ cũng sẽ không cần một bờ vai để tựa vào.Anh ngồi bàn giấy làm hành chính với những con số hình vẽ khô khan Em làm lúc nào cũng tất bật sáng tối đôi khi còn không có cả thời gian cho bản thân chứ chưa nói tới chuyện yêu thương ai",
+    description:
+      'Em cô gái tự lập từ bé,đôi lúc em quên mình là một đoá hoa,cá tính mạnh mẽ và em nghĩ cũng sẽ không cần một bờ vai để tựa vào.Anh ngồi bàn giấy làm hành chính với những con số hình vẽ khô khan Em làm lúc nào cũng tất bật sáng tối đôi khi còn không có cả thời gian cho bản thân chứ chưa nói tới chuyện yêu thương ai',
     facebook: '',
     instagram: '',
-
-  }
-}
+  },
+};
 
 export const events = [
   {
-    image: image9370,
-    title: 'LỄ ĂN HỎI NHÀ NỮ',
-    date: '06/11/2023',
-    time: '01:00 PM',
-    location: 'Liễu Giai, Ba Đình, Hà Nội',
-    mapUrl: "https://maps.app.goo.gl/RyRDvZwb4s4DoPWX8",
+    image: image9615,
+    title: 'LỄ DẠM NGÕ',
+    date: '29/10/2023',
+    time: '09:00 AM',
+    location: 'Lục Liễu, Đạo Trù, Tam Đảo, Vĩnh Phúc',
+    mapUrl: 'https://maps.app.goo.gl/q2KkyWbSNr9X4qCSA',
   },
   {
     image: image9370,
-    title: 'LỄ ĂN HỎI NHÀ NỮ',
-    date: '06/11/2023',
-    time: '01:00 PM',
-    location: 'Liễu Giai, Ba Đình, Hà Nội',
-    mapUrl: "https://maps.app.goo.gl/RyRDvZwb4s4DoPWX8",
+    title: 'LỄ ĂN HỎI',
+    date: '11/11/2023',
+    time: '08:30 AM',
+    location: 'Lục Liễu, Đạo Trù, Tam Đảo, Vĩnh Phúc',
+    mapUrl: 'https://maps.app.goo.gl/q2KkyWbSNr9X4qCSA',
   },
   {
-    image: image9370,
-    title: 'LỄ ĂN HỎI NHÀ NỮ',
-    date: '06/11/2023',
-    time: '01:00 PM',
-    location: 'Liễu Giai, Ba Đình, Hà Nội',
-    mapUrl: "https://maps.app.goo.gl/RyRDvZwb4s4DoPWX8",
+    image: image9216,
+    title: 'LỄ VU QUY',
+    date: '02/12/2023',
+    time: '08:00 AM',
+    location: 'Lục Liễu, Đạo Trù, Tam Đảo, Vĩnh Phúc',
+    mapUrl: 'https://maps.app.goo.gl/q2KkyWbSNr9X4qCSA',
   },
   {
-    image: image9370,
-    title: 'LỄ ĂN HỎI NHÀ NỮ',
-    date: '06/11/2023',
-    time: '01:00 PM',
-    location: 'Liễu Giai, Ba Đình, Hà Nội',
-    mapUrl: "https://maps.app.goo.gl/RyRDvZwb4s4DoPWX8",
+    image: image9779,
+    title: 'LỄ THÀNH HÔN',
+    date: '02/12/2023',
+    time: '10:00 AM',
+    location: 'ĐỒNG QUÁN, YÊN DƯƠNG, TAM ĐẢO, VĨNH PHÚC',
+    mapUrl: 'https://maps.app.goo.gl/rHwK7nZ7d2QQsoc4A',
   },
-  {
-    image: image9370,
-    title: 'LỄ ĂN HỎI NHÀ NỮ',
-    date: '06/11/2023',
-    time: '01:00 PM',
-    location: 'Liễu Giai, Ba Đình, Hà Nội',
-    mapUrl: "https://maps.app.goo.gl/RyRDvZwb4s4DoPWX8",
-  },
-
 ] as const;
 
-export const slides = [
-  image0149,
-  image9216,
-  image9779,
-]
+export const slides = [image0149, image9216, image9779];

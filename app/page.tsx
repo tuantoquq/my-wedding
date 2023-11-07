@@ -8,6 +8,7 @@ import Congrats from '@/components/congrats/Congrats';
 import Carousel from '@/libs/Slide/Carousel';
 import { slides } from '@/utils/data';
 import SaveDateCircle from '@/components/main/save-date-circle';
+import 'react-toastify/dist/ReactToastify.css';
 
 export default function Home() {
   return (

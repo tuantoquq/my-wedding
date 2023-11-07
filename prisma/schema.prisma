@@ -7,6 +7,11 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
+enum GUEST {
+  GROOM_GUEST
+  BRIDE_GUEST
+}
+
 model Comment {
   id        String   @id @default(cuid()) @map("_id")
   createdAt DateTime @default(now()) @map("created_at")
@@ -15,4 +20,15 @@ model Comment {
   content   String
 
   @@map("comments")
+}
+
+model Confirmation {
+  id        String   @id @default(cuid()) @map("_id")
+  createdAt DateTime @default(now()) @map("created_at")
+  updatedAt DateTime @default(now()) @updatedAt @map("updated_at")
+  guestName String   @map("guest_name")
+  type      GUEST    @default(GROOM_GUEST) @map("type")
+  joinTime  String   @default("01/12/2023") @map("join_time")
+
+  @@map("confirmations")
 }
