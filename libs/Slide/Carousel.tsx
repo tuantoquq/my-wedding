@@ -8,6 +8,7 @@ import {
     BsFillArrowRightCircleFill,
     BsFillArrowLeftCircleFill,
 } from "react-icons/bs";
+import { SwipeProvider } from "../Events/SwipeProvider";
 
 type Props = {
     slides: string[] | StaticImport[],
@@ -36,41 +37,42 @@ export default function Carousel({ slides }: Props) {
         return () => {
             clearTimeout(autoNext)
         }
-        
+
     }, [current, slides.length])
 
 
     return (
-        <div className="group overflow-hidden relative w-full aspect-[2/1]">
-            <div
-                className={`w-full flex transition-all duration-1000`}
-                style={{
-                    transform: `translateX(-${current * 100}%)`,
-                }}
-            >
-                {slides.map((s, index) => (
-                    <Image
-                        key={index}
-                        src={s}
-                        alt=''
-                        priority
-                        className={`w-full h-full object-center object-contain pointer-events-none transition-all duration-500 ${index === current ? 'opacity-100': 'opacity-30'}`}
-                    />
-                ))}
-            </div>
+        <SwipeProvider onSwipeLeft={previousSlide} onSwipeRight={nextSlide}>
+            <div className="group overflow-hidden relative w-full sm:aspect-[2/1] aspect-[3/2]">
+                <div
+                    className={`w-full flex transition-all duration-1000`}
+                    style={{
+                        transform: `translateX(-${current * 100}%)`,
+                    }}
+                >
+                    {slides.map((s, index) => (
+                        <Image
+                            key={index}
+                            src={s}
+                            alt=''
+                            priority
+                            className={`w-full h-full object-center object-contain pointer-events-none transition-all duration-500 ${index === current ? 'opacity-100' : 'opacity-30'}`}
+                        />
+                    ))}
+                </div>
 
-            {!isBelowSm &&
-                <>
-                    <div className="hidden absolute top-0 h-full w-full justify-between items-center group-hover:flex text-cs-green-900 px-10 sm:text-2xl md:text-3xl lg:text-4xl">
-                        <button onClick={previousSlide}>
-                            <BsFillArrowLeftCircleFill className="hover:text-cs-green-700" />
-                        </button>
-                        <button onClick={nextSlide}>
-                            <BsFillArrowRightCircleFill className="hover:text-cs-green-700"/>
-                        </button>
-                    </div>
+                {!isBelowSm &&
+                    <>
+                        <div className="hidden absolute top-0 h-full w-full justify-between items-center group-hover:flex text-cs-green-900 px-10 sm:text-2xl md:text-3xl lg:text-4xl">
+                            <button onClick={previousSlide}>
+                                <BsFillArrowLeftCircleFill className="hover:text-cs-green-700" />
+                            </button>
+                            <button onClick={nextSlide}>
+                                <BsFillArrowRightCircleFill className="hover:text-cs-green-700" />
+                            </button>
+                        </div>
 
-                    {/* <div className="absolute bottom-0 py-4 flex justify-center gap-3 w-full">
+                        {/* <div className="absolute bottom-0 py-4 flex justify-center gap-3 w-full">
                         {slides.map((_, i) => (
                             <div
                                 onClick={() => {
@@ -82,8 +84,9 @@ export default function Carousel({ slides }: Props) {
                         )
                         )}
                     </div> */}
-                </>
-            }
-        </div>
+                    </>
+                }
+            </div>
+        </SwipeProvider>
     );
 }

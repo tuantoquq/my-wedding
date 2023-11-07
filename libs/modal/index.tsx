@@ -25,7 +25,7 @@ export default function Modal({
   if (!open) return null;
   return (
     <div
-      className={`fixed inset-0 flex items-center justify-center z-50 ${className}`}
+      className={`fixed z-[999] inset-0 flex items-center justify-center z-50 ${className}`}
     >
       <div
         className="fixed inset-0 bg-black opacity-50"
