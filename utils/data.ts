@@ -42,6 +42,7 @@ export const links = [
   },
 ] as const;
 
+// Chọn số lượng ảnh là bội của 15 thôi nhé ạ
 export const albums = [
   image0149,
   image9216,
