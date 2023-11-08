@@ -14,8 +14,13 @@ group-hover:translate-x-1 group-hover:-translate-y-1"
 const loadingIcon = (
   <FaSpinner className="text-xs opacity-80 transition-all animate-spin" />
 );
-export default function WishForm() {
+
+type WishFormProps = {
+  callDone: (isDone: boolean) => void;
+};
+export default function WishForm({ callDone }: WishFormProps) {
   const [isLoading, setIsLoading] = React.useState(false);
+  const [isSubmitted, setIsSubmitted] = React.useState(false);
   const submitForm = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     setIsLoading(true);
@@ -33,6 +38,8 @@ export default function WishForm() {
       console.log(error);
     } finally {
       setIsLoading(false);
+      setIsSubmitted(!isSubmitted);
+      callDone(!isSubmitted);
       const guestNameEle = document.getElementById('name') as HTMLInputElement;
       const wishEle = document.getElementById('wish') as HTMLInputElement;
       guestNameEle.value = '';

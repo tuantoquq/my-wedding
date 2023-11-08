@@ -8,6 +8,7 @@ import WishList from './wish-list';
 
 export default function Wishes() {
   const { ref } = useSectionInView({ sectionName: 'Lời chúc' });
+  const [isNeedReload, setIsNeedReload] = React.useState(false);
   return (
     <section
       ref={ref}
@@ -22,10 +23,14 @@ export default function Wishes() {
       md:items-stretch  md:flex-row"
       >
         <div className="xs:px-5 md:w-1/2">
-          <WishForm />
+          <WishForm
+            callDone={(status: any) => {
+              setIsNeedReload(status);
+            }}
+          />
         </div>
         <div className="xs:w-full xs:px-5 md:w-1/2">
-          <WishList />
+          <WishList reload={isNeedReload} />
         </div>
       </div>
     </section>

@@ -3,8 +3,12 @@ import React, { useState, useEffect } from 'react';
 import WishCard from './wish-card';
 import { WishData } from '@/services/types';
 import { FaSpinner } from 'react-icons/fa';
+import { type } from 'os';
 
-export default function WishList() {
+type WishListProps = {
+  reload: boolean;
+};
+export default function WishList({ reload }: WishListProps) {
   const [listWishes, setListWishes] = useState<WishData[]>([]);
   useEffect(() => {
     const fetchWishes = async () => {
@@ -13,7 +17,7 @@ export default function WishList() {
       setListWishes(data?.data);
     };
     fetchWishes();
-  });
+  }, [reload]);
   return (
     <div
       className={`flex bg-white flex-col md:mt-10 xs:mt-1 border-[3px] w-full
