@@ -42,7 +42,7 @@ export default function Carousel({ slides }: Props) {
 
 
     return (
-        <SwipeProvider onSwipeLeft={previousSlide} onSwipeRight={nextSlide}>
+        <SwipeProvider onSwipeLeft={nextSlide} onSwipeRight={previousSlide}>
             <div className="group overflow-hidden relative w-full sm:aspect-[2/1] aspect-[3/2]">
                 <div
                     className={`w-full flex transition-all duration-1000`}

@@ -1,23 +1,23 @@
 'use client';
 
-import React from 'react';
+import React, { useState } from 'react';
 import { useSectionInView } from '@/hooks/hooks';
 import { albums } from '@/utils/data';
 import AlbumImage from './album-img';
 import SectionHeading from '@/layout/section-heading';
+import Gallery from '@/libs/Slide/Gallery';
+import { StaticImport } from 'next/dist/shared/lib/get-img-props';
 export default function Album() {
   const { ref } = useSectionInView({ sectionName: 'Album cưới' });
+  const [selected, setSelected] = useState<number>(0);
 
   return (
     <section ref={ref} className="mb-28 text-center sm:mb-20 " id="album">
       <SectionHeading>Album Cưới</SectionHeading>
       <div className="mb-20">Dưới đây là demo album cưới của chúng tôi...</div>
       <div className="flex gap-4 flex-wrap justify-center">
-        {albums.map((album, index) => (
-          <React.Fragment key={index}>
-            <AlbumImage imageUrl={album} />
-          </React.Fragment>
-        ))}
+        <AlbumImage imageUrl={albums[selected]} />
+        <Gallery items={[...albums]} selected={selected} onSelect={setSelected} />
       </div>
     </section>
   );
