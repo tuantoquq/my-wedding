@@ -88,6 +88,7 @@ export default function Congrats() {
       } finally {
         setIsLoading(false);
         setIsModalOpen(false);
+        setGuestName('');
         toast.success(
           'Cảm ơn bạn đã xác nhận tham dự đám cưới của chúng tôi!',
           {
