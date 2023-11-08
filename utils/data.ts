@@ -150,15 +150,15 @@ export const slides = [image0149, image9216, image9779];
 
 export const banks = [
   {
-    bankName: 'Teckcombank',
-    cardNumber: '1903 532 190 001',
+    bankName: 'Techcombank',
+    cardNumber: '1903 9075 5100 17',
     cardHolder: 'NGUYEN HOANG ANH TUAN',
     image: groomQR,
     type: 'GROOM',
   },
   {
-    bankName: 'Teckcombank',
-    cardNumber: '1903 532 190 001',
+    bankName: 'Techcombank',
+    cardNumber: '1903 6078 0040 16',
     cardHolder: 'TRUONG THI BICH',
     image: brideQR,
     type: 'BRIDE',

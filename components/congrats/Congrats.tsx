@@ -13,6 +13,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import { FaSpinner } from 'react-icons/fa';
 import GiftCard from '../gift/gift-card';
 import { banks } from '@/utils/data';
+import { appendRowData, getIDs } from '@/services/spreadsheet';
 enum GUEST {
   GROOM_GUEST = 'GROOM_GUEST',
   BRIDE_GUEST = 'BRIDE_GUEST',
@@ -74,15 +75,20 @@ export default function Congrats() {
     } else {
       try {
         setIsLoading(true);
-        await fetch('/api/confirmation', {
-          method: 'POST',
-          body: JSON.stringify({ guestName, type: selectedOption }),
-        });
+        const newestIds = await getIDs();
+        const rowSubmit = {
+          STT: newestIds,
+          'Guest name': guestName,
+          Type: selectedOption,
+          Number: 1,
+        };
+        await appendRowData(rowSubmit);
       } catch (error) {
         console.log(error);
       } finally {
         setIsLoading(false);
         setIsModalOpen(false);
+        setGuestName('');
         toast.success(
           'Cảm ơn bạn đã xác nhận tham dự đám cưới của chúng tôi!',
           {

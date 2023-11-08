@@ -3,7 +3,6 @@ import { motion } from 'framer-motion';
 import React from 'react';
 import { BsFillHeartFill } from 'react-icons/bs';
 export default function HeartFalling() {
-  const sizes = ['xl', '2xl', '3xl', '4xl', '5xl'];
   return (
     <div className="fixed z-[99999] top-0 left-0 w-full h-full pointer-events-none ">
       {[...Array(10)].map((_, index) => (
@@ -23,10 +22,11 @@ export default function HeartFalling() {
             ease: 'easeIn',
             repeat: Infinity,
           }}
+          style={{
+            fontSize: `${Math.random() * 1.5 + 1}rem`,
+          }}
         >
-          <BsFillHeartFill
-            className={`text-${sizes[Math.floor(Math.random() * 4)]}`}
-          />
+          <BsFillHeartFill />
         </motion.div>
       ))}
     </div>
