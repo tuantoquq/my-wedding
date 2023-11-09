@@ -46,7 +46,7 @@ export function CountdownTimer() {
   return (
     <section className="mb-28 text-center sm:mb-20">
       <SectionHeadingImage>Save the date</SectionHeadingImage>
-      <div className="flex justify-center items-center gap-4 min-h-[9rem]">
+      <div className="flex justify-center items-center gap-4 min-h-[3rem]">
         <Divider className="md:h-[3px] xs:h-[2px] md:w-15 xs:w-10 !bg-cs-green-900" />
         <Typography
           variant="h3"

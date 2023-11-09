@@ -26,6 +26,11 @@ export default class Gallery extends React.Component<Props> {
         this.props.onSelect(index);
     }
 
+    nextImage = setInterval(() => {
+        const nextIndex = (this.props.selected + 1) % this.props.items.length;
+        this.props.onSelect(nextIndex);
+    }, 5000);
+
     componentDidUpdate(): void {
         const elementStart = document.getElementById(`item-${this.props.selected}`)?.offsetLeft ?? 0;
         const wrapper = document.getElementById('album-wrapper');
@@ -33,15 +38,34 @@ export default class Gallery extends React.Component<Props> {
         wrapper?.scrollTo({ top: 0, left: elementStart - wrapperWidth / 2, behavior: 'smooth' });
     }
 
+    componentWillUnmount(): void {
+        clearInterval(this.nextImage);
+    }
+
+    shouldComponentUpdate(nextProps: Readonly<Props>): boolean {
+        if (this.props.selected !== nextProps.selected) {
+            clearInterval(this.nextImage);
+            // reset next image interval
+            this.nextImage = setInterval(() => {
+                const nextIndex = (this.props.selected + 1) % this.props.items.length;
+                this.props.onSelect(nextIndex);
+            }, 5000);
+
+            return true;
+        }
+
+        return false;
+    }
+
     render(): React.ReactNode {
         return (
             // <SwipeProvider onSwipe={swipe} sensitivity={50}>
             <div
-                className="group overflow-hidden relative px-10"
+                className="group overflow-hidden relative sm:px-10 md:px-20"
             >
                 <div
                     id="album-wrapper"
-                    className={`flex flex-row transition-all duration-200 overflow-x-auto overflow-y-hidden snap-x py-10 md:px-10`}
+                    className={`flex flex-row transition-all duration-200 overflow-x-auto overflow-y-hidden snap-x py-10 sm:px-5`}
                 >
                     {this.props.items.map((s, index) => (
                         <div
