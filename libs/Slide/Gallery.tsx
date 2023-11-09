@@ -3,12 +3,7 @@
 import { useWindowSize } from "@/hooks/useWindowSize";
 import { StaticImport } from "next/dist/shared/lib/get-img-props";
 import Image from "next/image";
-import React, { useState, useRef, useMemo, createRef, useEffect } from "react";
-import {
-    BsFillArrowRightCircleFill,
-    BsFillArrowLeftCircleFill,
-} from "react-icons/bs";
-import { SwipeProvider } from "../Events/SwipeProvider";
+import React from "react";
 
 type Props = {
     items: string[] | StaticImport[],
@@ -32,10 +27,12 @@ export default class Gallery extends React.Component<Props> {
     }, 5000);
 
     componentDidUpdate(): void {
-        const elementStart = document.getElementById(`item-${this.props.selected}`)?.offsetLeft ?? 0;
+        const element = document.getElementById(`item-${this.props.selected}`)
+        const elementStart = element?.offsetLeft ?? 0;
+        const elementWidth = element?.offsetWidth ?? 0;
         const wrapper = document.getElementById('album-wrapper');
-        const wrapperWidth = wrapper?.clientWidth ?? 0;
-        wrapper?.scrollTo({ top: 0, left: elementStart - wrapperWidth / 2, behavior: 'smooth' });
+        // const wrapperWidth = wrapper?.clientWidth ?? 0;
+        wrapper?.scrollTo({ top: 0, left: elementStart - elementWidth, behavior: 'smooth' });
     }
 
     componentWillUnmount(): void {
@@ -59,7 +56,6 @@ export default class Gallery extends React.Component<Props> {
 
     render(): React.ReactNode {
         return (
-            // <SwipeProvider onSwipe={swipe} sensitivity={50}>
             <div
                 className="group overflow-hidden relative sm:px-10 md:px-20"
             >
@@ -87,21 +83,7 @@ export default class Gallery extends React.Component<Props> {
                         </div>
                     ))}
                 </div>
-                {/* 
-            {!isBelowSm &&
-                <>
-                    <div className="hidden absolute top-0 left-0 h-full w-full justify-between items-center group-hover:flex text-cs-green-900 px-10 sm:text-2xl md:text-3xl lg:text-5xl pointer-events-none">
-                        <button onClick={previousPage}>
-                            <BsFillArrowLeftCircleFill className="hover:text-cs-green-700 pointer-events-auto" />
-                        </button>
-                        <button onClick={nextPage}>
-                            <BsFillArrowRightCircleFill className="hover:text-cs-green-700 pointer-events-auto" />
-                        </button>
-                    </div>
-                </>
-            } */}
             </div>
-            // </SwipeProvider>
         );
     }
 }
