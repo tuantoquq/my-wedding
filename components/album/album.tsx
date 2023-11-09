@@ -4,9 +4,8 @@ import React, { useState } from 'react';
 import { useSectionInView } from '@/hooks/hooks';
 import { albums } from '@/utils/data';
 import AlbumImage from './album-img';
-import SectionHeading from '@/layout/section-heading';
+import { SectionHeading } from '@/layout/section-heading';
 import Gallery from '@/libs/Slide/Gallery';
-import { StaticImport } from 'next/dist/shared/lib/get-img-props';
 export default function Album() {
   const { ref } = useSectionInView({ sectionName: 'Album cưới' });
   const [selected, setSelected] = useState<number>(0);
@@ -17,7 +16,11 @@ export default function Album() {
       <div className="mb-20">Dưới đây là demo album cưới của chúng tôi...</div>
       <div className="flex gap-4 flex-wrap justify-center">
         <AlbumImage imageUrl={albums[selected]} />
-        <Gallery items={[...albums]} selected={selected} onSelect={setSelected} />
+        <Gallery
+          items={[...albums]}
+          selected={selected}
+          onSelect={setSelected}
+        />
       </div>
     </section>
   );

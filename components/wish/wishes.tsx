@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { useSectionInView } from '@/hooks/hooks';
-import SectionHeading from '@/layout/section-heading';
+import { SectionHeading } from '@/layout/section-heading';
 import WishForm from './wish-form';
 import WishList from './wish-list';
 

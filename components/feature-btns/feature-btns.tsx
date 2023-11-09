@@ -1,6 +1,5 @@
 'use client';
 import { useSectionInView } from '@/hooks/hooks';
-import SectionHeading from '@/layout/section-heading';
 import React from 'react';
 import image0093 from '@/public/HUY00093.jpg';
 import Image from 'next/image';
@@ -11,8 +10,6 @@ import RadioButton from '@/libs/radio-button';
 import { BsCheckCircleFill } from 'react-icons/bs';
 import { ToastContainer, toast } from 'react-toastify';
 import { FaPaperPlane, FaSpinner } from 'react-icons/fa';
-import GiftCard from '../gift/gift-card';
-import { banks } from '@/utils/data';
 import { appendRowData, getIDs } from '@/services/spreadsheet';
 import Link from 'next/link';
 enum GUEST {
@@ -119,7 +116,7 @@ export default function FeatureButtons() {
         </Button>
 
         <Modal open={isModalOpen} onClose={closeModal}>
-          <div className="flex flex-col md:gap-4 xs:gap-1 ">
+          <div className="flex flex-col md:gap-4 xs:gap-1 xs:w-[20rem]">
             <div className="flex justify-center items-center">
               <Image
                 className="xs:w-48 xs:h-48 sm:w-60 sm:h-60 rounded-full border-4 border-cs-green-700 z-10 object-center object-cover"

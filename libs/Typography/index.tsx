@@ -1,47 +1,68 @@
 import React from 'react';
 import Image from 'next/image';
 
-type Variant = 'h1' | 'h2' | 'h3' | 'desc' | string
+type Variant = 'h1' | 'h2' | 'h3' | 'desc' | string;
 
 type Props = {
-    className?: string,
-    variant: Variant,
-    children?: React.ReactNode,
-}
+  className?: string;
+  variant: Variant;
+  children?: React.ReactNode;
+};
 
-export default function Typography({ className = '', variant, children }: Props) {
-
-    switch (variant) {
-        case 'h1':
-            return (
-                <h1 className={`text-3xl sm:text-3xl md:text-4xl lg:text-5xl font-medium ${className}`}>
-                    {children}
-                </h1>
-            );
-        case 'h2':
-            return (
-                <h2 className={`text-2xl sm:text-2xl md:text-2xl lg:text-3xl font-medium ${className}`}>
-                    {children}
-                </h2>
-            );
-        case 'h3':
-            return (
-                <h3 className={`text-lg sm:text-xl md:text-xl lg:text-2xl font-medium ${className}`}>
-                    {children}
-                </h3>
-            );
-        case 'desc':
-            return (
-                <p className={`text-xs sm:text-sm md:text-base lg:text-base !leading-6 md:!leading-7 font-light text-center text-description ${className}`}>
-                    {children}
-                </p>
-            );
-        default: {
-            return (
-                <p className={`text-xs sm:text-sm md:text-base lg:text-lg font-normal ${className}`}>
-                    {children}
-                </p>
-            )
-        }
+export default function Typography({
+  className = '',
+  variant,
+  children,
+}: Props) {
+  switch (variant) {
+    case 'h1':
+      return (
+        <h1
+          className={`text-3xl sm:text-3xl md:text-4xl lg:text-5xl font-medium ${className}`}
+        >
+          {children}
+        </h1>
+      );
+    case 'h2':
+      return (
+        <h2
+          className={`text-2xl sm:text-2xl md:text-2xl lg:text-3xl font-medium ${className}`}
+        >
+          {children}
+        </h2>
+      );
+    case 'h3':
+      return (
+        <h3
+          className={`text-lg sm:text-xl md:text-xl lg:text-2xl font-medium ${className}`}
+        >
+          {children}
+        </h3>
+      );
+    case 'h4':
+      return (
+        <p
+          className={`text-xs sm:text-sm md:text-base lg:text-lg font-semibold ${className}`}
+        >
+          {children}
+        </p>
+      );
+    case 'desc':
+      return (
+        <p
+          className={`text-xs sm:text-sm md:text-base lg:text-base !leading-6 md:!leading-7 font-light text-center text-description ${className}`}
+        >
+          {children}
+        </p>
+      );
+    default: {
+      return (
+        <p
+          className={`text-xs sm:text-sm md:text-base lg:text-lg font-normal ${className}`}
+        >
+          {children}
+        </p>
+      );
     }
+  }
 }
