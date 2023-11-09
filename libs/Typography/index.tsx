@@ -18,7 +18,7 @@ export default function Typography({
     case 'h1':
       return (
         <h1
-          className={`text-4xl sm:text-4xl md:text-4xl lg:text-5xl font-medium ${className}`}
+          className={`text-4xl sm:text-4xl md:text-[2.5rem] lg:text-5xl font-medium ${className}`}
         >
           {children}
         </h1>
