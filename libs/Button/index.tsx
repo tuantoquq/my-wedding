@@ -14,9 +14,9 @@ export function Button({ children, startIcon, endIcon, className = '', type, onC
         <button
             type={type}
             className={`
-                group h-[3rem] w-[10rem] bg-secondary-cl
+                group h-[3rem] lg:h[3.5-rem] w-[10rem] bg-secondary-cl
                 text-primary-cl rounded-full
-                text-xs sm:text-sm md:text-base lg:text-base !leading-6 md:!leading-7 font-normal text-center
+                text-sm sm:text-sm md:text-base lg:text-lg !leading-6 md:!leading-7 font-normal text-center
                 flex flex-row justify-center items-center gap-2 transition-all
                 focus:scale-110 hover:scale-110 hover:bg-primary-cl active:scale-105 hover:text-secondary-cl
                 hover:border-secondary-cl border-2 border-primary-cl

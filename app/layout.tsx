@@ -18,9 +18,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className="!scroll-smooth">
+    <html lang="en" className="!scroll-smooth overflow-x-hidden">
       <body
-        className={`${inter.className} bg-white text-gray-950 overflow-x-hidden`}
+        className={`${inter.className} bg-white text-gray-950`}
       >
         <ActiveSectionContextProvider>
           <Header />

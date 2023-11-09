@@ -9,9 +9,9 @@ type SectionHeadingProps = {
 
 export const SectionHeadingImage = ({ children }: SectionHeadingProps) => {
   return (
-    <div className="mt-0 flex flex-col justify-center items-center">
+    <div className="mt-0 mb-8 flex flex-col justify-center items-center">
       <Image alt="couple" src={couple} className="md:w-[10rem] xs:w-[8rem]" />
-      <Typography className="capitalize mb-8" variant="h1">
+      <Typography className="capitalize" variant="h1">
         {children}
       </Typography>
     </div>

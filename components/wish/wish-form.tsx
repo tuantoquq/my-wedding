@@ -58,7 +58,7 @@ export default function WishForm({ callDone }: WishFormProps) {
     >
       <Typography className="font-semibold" variant="desc">
         Cảm ơn bạn rất nhiều vì đã gửi những lời chúc tốt đẹp nhất đến đám cưới
-        của chúng tôi!
+        của chúng mình!
       </Typography>
       <Typography className="font-normal italic text-[14px]" variant="desc">
         (Điền đầy đủ tên hoặc ghi chú để chúng mình biết rằng bạn là ai nhéee)

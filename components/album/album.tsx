@@ -11,7 +11,7 @@ export default function Album() {
   const [selected, setSelected] = useState<number>(0);
 
   return (
-    <section ref={ref} className="mb-28 text-center sm:mb-20 " id="album">
+    <section ref={ref} className="mb-28 text-center sm:mb-20 pb-10" id="album">
       <SectionHeading>Album Cưới</SectionHeading>
       <div className="mb-20">Dưới đây là demo album cưới của chúng tôi...</div>
       <div className="flex gap-4 flex-wrap justify-center width-full">

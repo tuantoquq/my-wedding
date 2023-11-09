@@ -20,7 +20,7 @@ export default function ItemEvent({
   item: { image, title, time, date, location, mapUrl },
 }: Props) {
   return (
-    <div className={`basis-full sm:basis-1/2 lg:basis-1/3 mb-10 `}>
+    <div className={`basis-full sm:basis-5/12 lg:basis-1/3 mb-10 `}>
       <div className="z-10 flex flex-col gap-5 pb-5 md:pb-10 items-center bg-cs-green-300 h-full w-full shadow-[0_0px_25px_0px_rgba(0,0,0,0.2)]">
         <div className="w-full shrink-0 flex justify-center relative">
           <Image

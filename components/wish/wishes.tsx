@@ -12,7 +12,7 @@ export default function Wishes() {
   return (
     <section
       ref={ref}
-      className="mb-28 max-w-[100rem] sm:mb-20 pt-[10rem] text-center"
+      className="mb-28 max-w-[100rem] sm:mb-20 text-center"
       id="wishes"
     >
       <SectionHeading>Sổ lưu bút</SectionHeading>

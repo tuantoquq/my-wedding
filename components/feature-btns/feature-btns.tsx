@@ -97,12 +97,12 @@ export default function FeatureButtons() {
   return (
     <section
       ref={ref}
-      className="mb-28 text-center sm:mb-20 w-full bg-cs-green-300 md:py-10 xs:py-5"
+      className="text-center sm:mb-20 w-full bg-cs-green-300 md:py-10 xs:py-5"
       id="congrats"
     >
       <div className="flex md:flex-row xs:flex-col md:gap-10 xs:gap-3 justify-center items-center">
         <Link href={'#wishes'}>
-          <Button endIcon={wishSubmitIcon} type="button" className="w-[14rem]">
+          <Button endIcon={wishSubmitIcon} type="button" className="w-[14rem] !font-medium">
             Gửi lời chúc
           </Button>
         </Link>
@@ -110,7 +110,7 @@ export default function FeatureButtons() {
           onClick={openModal}
           endIcon={originalIcon}
           type="button"
-          className="w-[14rem]"
+          className="w-[14rem] !font-medium"
         >
           Xác nhận tham dự
         </Button>
