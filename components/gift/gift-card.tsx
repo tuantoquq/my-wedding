@@ -2,6 +2,7 @@ import Typography from '@/libs/Typography';
 import Image, { StaticImageData } from 'next/image';
 import React from 'react';
 import { GoCopy, GoCheck } from 'react-icons/go';
+
 type GiftCardProps = {
   bankName: string;
   cardNumber: string;
@@ -25,11 +26,11 @@ export default function GiftCard({
     }, 2000);
   };
   return (
-    <div className="flex flex-col border-2 border-cs-green-900 bg-cs-green-500 rounded-md gap-2 p-2 w-1/2 min-w-[18rem]">
+    <div className="flex flex-col border-2 border-cs-green-900 bg-cs-green-500 rounded-md gap-2 p-2 w-1/2 md:min-w-[18rem] xs:min-w-[16rem] justify-center items-center">
       <Typography variant="desc" className="!text-lg font-medium">
         Mừng cưới đến {type === 'BRIDE' ? 'cô dâu' : 'chú rể'}
       </Typography>
-      <div className="w-40 flex justify-center items-center self-center">
+      <div className="flex justify-center items-center self-center md:w-40 xs:w-32">
         <Image alt="qr" src={image} className="object-cover rounded-lg" />
       </div>
       <Typography variant="h4" className="!font-semibold">
@@ -42,9 +43,9 @@ export default function GiftCard({
         {cardNumber}{' '}
         <button onClick={copyToClipboard}>
           {!isCopied ? (
-            <GoCopy className="ml-1 inline-block font-semibold hover:cursor-pointer" />
+            <GoCopy className="ml-1 inline-block font-semibold hover:cursor-pointer md:text-xl xs:text-lg" />
           ) : (
-            <GoCheck className="ml-1 inline-block font-semibold hover:cursor-pointer" />
+            <GoCheck className="ml-1 inline-block font-semibold hover:cursor-pointer md:text-xl xs:text-lg" />
           )}
         </button>
       </Typography>
