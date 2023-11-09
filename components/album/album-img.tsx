@@ -1,12 +1,14 @@
 import Image, { StaticImageData } from 'next/image';
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 
 type AlbumImageProps = {
   imageUrl: StaticImageData;
 };
-export default function AlbumImage({ imageUrl }: AlbumImageProps) {
+
+function AlbumImage({ imageUrl }: AlbumImageProps) {
+
   return (
-    <div className='h-[24rem] lg:h-[32rem] flex justify-center items-center px-20 bg-transparent'>
+    <div className='h-[24rem] sm:h-[28rem] lg:h-[32rem] flex justify-center items-center px-10 bg-transparent'>
       <Image
         src={imageUrl}
         alt="My wedding images"
@@ -19,3 +21,5 @@ export default function AlbumImage({ imageUrl }: AlbumImageProps) {
     </div>
   );
 }
+
+export default AlbumImage;

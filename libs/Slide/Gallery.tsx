@@ -3,7 +3,7 @@
 import { useWindowSize } from "@/hooks/useWindowSize";
 import { StaticImport } from "next/dist/shared/lib/get-img-props";
 import Image from "next/image";
-import { useState, useRef, useMemo } from "react";
+import React, { useState, useRef, useMemo, createRef, useEffect } from "react";
 import {
     BsFillArrowRightCircleFill,
     BsFillArrowLeftCircleFill,
@@ -16,111 +16,68 @@ type Props = {
     onSelect: (item: number, ...arg: any[]) => any,
 }
 
-export default function Gallery({ items, selected, onSelect }: Props) {
-    const ref = useRef<HTMLDivElement>(null)
-    const [translateX, setTranslateX] = useState<number>(0);
-    const { isBelowLg, isBelowSm } = useWindowSize();
-    const imagesPerPage = useMemo(() => isBelowLg ? 3 : 5, [isBelowLg]);
 
-    const previousPage = () => {
-        if (selected === 0) {
-            setTranslateX(ref.current ? ref.current?.clientWidth * Math.floor((items.length - 1) / imagesPerPage) : 0);
-            onSelect(items.length - 1);
-        }
-        else {
-            if (selected < Math.ceil(imagesPerPage / 2) + 1) {
-                setTranslateX(0);
-            }
-            else if (Math.floor((selected - 3) / imagesPerPage) !== Math.floor((items.length - 1) / imagesPerPage) || selected < items.length - Math.floor(imagesPerPage / 2)) {
-                setTranslateX(ref.current ? ref.current?.clientWidth * (selected - 1 - Math.floor(imagesPerPage / 2)) / imagesPerPage : 0);
-            }
-
-            onSelect(selected - 1);
-        }
-    };
-
-    const nextPage = () => {
-        if (selected === items.length - 1) {
-            setTranslateX(0)
-            onSelect(0);
-        }
-        else {
-            if (selected < Math.ceil(imagesPerPage / 2) - 1) {
-                setTranslateX(0);
-            }
-            else if (Math.floor((selected + 1) / imagesPerPage) !== Math.floor((items.length - 1) / imagesPerPage) || selected < items.length - Math.floor(imagesPerPage / 2)) {
-                setTranslateX(ref.current ? ref.current?.clientWidth * (selected + 1 - Math.floor(imagesPerPage / 2)) / imagesPerPage : 0);
-            }
-
-            onSelect(selected + 1);
-        }
-    };
-
-    const selectImage = (index: number) => {
-        onSelect(index);
-        if (index < Math.ceil(imagesPerPage / 2)) {
-            setTranslateX(0);
-        }
-        else if (Math.floor(index / imagesPerPage) !== Math.floor((items.length - 1) / imagesPerPage) || index < items.length - Math.floor(imagesPerPage / 2)) {
-            setTranslateX(ref.current ? ref.current?.clientWidth * (index - Math.floor(imagesPerPage / 2)) / imagesPerPage : 0);
-        }
+export default class Gallery extends React.Component<Props> {
+    constructor(props: Props) {
+        super(props);
     }
 
-    const swipe = (distance: number) => {
-        setTranslateX(prev => {
-            if (prev + distance <= 0) {
-                return 0;
-            }
-
-            if (ref.current && prev + distance >= ref.current?.clientWidth * Math.floor((items.length - 1) / imagesPerPage)) {
-                return ref.current?.clientWidth * Math.floor((items.length - 1) / imagesPerPage);
-            }
-
-            return prev + distance;
-        })
+    selectImage = (index: number) => {
+        this.props.onSelect(index);
     }
 
-    return (
-        <SwipeProvider onSwipeLeft={swipe} onSwipeRight={swipe} sensitivity={50}>
-            <div className="group overflow-hidden relative w-full h-auto px-8 sm:px-16 md:px-24 lg:px-32 py-10">
+    componentDidUpdate(): void {
+        const elementStart = document.getElementById(`item-${this.props.selected}`)?.offsetLeft ?? 0;
+        const wrapper = document.getElementById('album-wrapper');
+        const wrapperWidth = wrapper?.clientWidth ?? 0;
+        wrapper?.scrollTo({ top: 0, left: elementStart - wrapperWidth / 2, behavior: 'smooth' });
+    }
+
+    render(): React.ReactNode {
+        return (
+            // <SwipeProvider onSwipe={swipe} sensitivity={50}>
+            <div
+                className="group overflow-hidden relative px-10"
+            >
                 <div
-                    ref={ref}
-                    className={`w-full flex flex-row transition-all duration-1000`}
-                    style={{
-                        transform: `translateX(-${translateX}px)`,
-                    }}
+                    id="album-wrapper"
+                    className={`flex flex-row transition-all duration-200 overflow-x-auto overflow-y-hidden snap-x py-10 md:px-10`}
                 >
-                    {items.map((s, index) => (
+                    {this.props.items.map((s, index) => (
                         <div
+                            id={`item-${index}`}
                             key={index}
-                            className={`aspect-[2/3] min-w-[33.333%]  lg:min-w-[20%] px-3`}
+                            className={`snap-center aspect-[8/9] min-w-[33.333%] lg:min-w-[20%] px-3 flex justify-center items-center`}
                         >
                             <Image
-                                onClick={() => selectImage(index)}
+                                onClick={() => {
+                                    this.selectImage(index);
+                                }}
                                 src={s}
                                 alt=''
                                 priority
                                 className={`h-full object-center object-cover rounded-md lg:rounded-2xl
-                                transition-all duration-500 ${index === selected ? 'opacity-100 scale-105' : 'opacity-50'} 
-                                shadow-[0_0px_25px_0px_rgba(0,0,0,0.2)] cursor-pointer`}
+                            transition-all duration-500 ${index === this.props.selected ? 'opacity-100 scale-105' : 'opacity-50'} 
+                            shadow-[0_0px_25px_0px_rgba(0,0,0,0.2)] cursor-pointer hover:scale-105`}
                             />
                         </div>
                     ))}
                 </div>
-
-                {!isBelowSm &&
-                    <>
-                        <div className="hidden absolute top-0 left-0 h-full w-full justify-between items-center group-hover:flex text-cs-green-900 px-10 sm:text-2xl md:text-3xl lg:text-5xl pointer-events-none">
-                            <button onClick={previousPage}>
-                                <BsFillArrowLeftCircleFill className="hover:text-cs-green-700 pointer-events-auto" />
-                            </button>
-                            <button onClick={nextPage}>
-                                <BsFillArrowRightCircleFill className="hover:text-cs-green-700 pointer-events-auto" />
-                            </button>
-                        </div>
-                    </>
-                }
+                {/* 
+            {!isBelowSm &&
+                <>
+                    <div className="hidden absolute top-0 left-0 h-full w-full justify-between items-center group-hover:flex text-cs-green-900 px-10 sm:text-2xl md:text-3xl lg:text-5xl pointer-events-none">
+                        <button onClick={previousPage}>
+                            <BsFillArrowLeftCircleFill className="hover:text-cs-green-700 pointer-events-auto" />
+                        </button>
+                        <button onClick={nextPage}>
+                            <BsFillArrowRightCircleFill className="hover:text-cs-green-700 pointer-events-auto" />
+                        </button>
+                    </div>
+                </>
+            } */}
             </div>
-        </SwipeProvider>
-    );
+            // </SwipeProvider>
+        );
+    }
 }

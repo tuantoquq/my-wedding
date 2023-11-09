@@ -4,11 +4,12 @@ type Props = {
     children: React.ReactNode,
     onSwipeLeft?: (...arg: any[]) => any,
     onSwipeRight?: (...arg: any[]) => any,
+    onSwipe?: (...arg: any[]) => any,
     sensitivity?: number,
 }
 
-export const SwipeProvider = ({ children, onSwipeLeft, onSwipeRight, sensitivity = 10 }: Props) => {
-    const duration = useRef<{start: number, end: number}>({
+export const SwipeProvider = ({ children, onSwipeLeft, onSwipeRight, onSwipe, sensitivity = 10 }: Props) => {
+    const duration = useRef<{ start: number, end: number }>({
         start: 0,
         end: 0
     })
@@ -21,16 +22,22 @@ export const SwipeProvider = ({ children, onSwipeLeft, onSwipeRight, sensitivity
     const onTouchStart = (e: React.TouchEvent) => {
         duration.current.start = Date.now();
         touchEnd.current = 0; // otherwise the swipe is fired even with usual touch events
-        touchStart.current = e.targetTouches[0].clientX;
+        touchStart.current = e.targetTouches[0].clientX; 
     }
 
     const onTouchMove = (e: React.TouchEvent) => {
-        duration.current.end = Date.now()
+        console.log(e);
+        
         touchEnd.current = e.targetTouches[0].clientX;
+        const distance = touchStart.current - touchEnd.current
+        const distance_ = distance * (sensitivity / 1000);
+        if (onSwipe) {
+            onSwipe(distance_);
+        }
     }
 
     const onTouchEnd = () => {
-        
+        duration.current.end = Date.now()
         if (!touchStart.current || !touchEnd.current) return
         const distance = touchStart.current - touchEnd.current
         const isLeftSwipe = distance > minSwipeDistance
