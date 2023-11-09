@@ -4,7 +4,8 @@ import React from 'react';
 import couple from '@/public/couple.png';
 
 type SectionHeadingProps = {
-  children: React.ReactNode;
+  children: React.ReactNode,
+  className?: string
 };
 
 export const SectionHeadingImage = ({ children }: SectionHeadingProps) => {
@@ -18,9 +19,9 @@ export const SectionHeadingImage = ({ children }: SectionHeadingProps) => {
   );
 };
 
-export const SectionHeading = ({ children }: SectionHeadingProps) => {
+export const SectionHeading = ({ children, className }: SectionHeadingProps) => {
   return (
-    <Typography className="capitalize mb-8" variant="h1">
+    <Typography className={`capitalize mb-8 ${className}`} variant="h1">
       {children}
     </Typography>
   );
