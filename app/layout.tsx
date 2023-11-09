@@ -1,11 +1,11 @@
 import Header from '@/layout/header';
 import './globals.css';
 import type { Metadata } from 'next';
-import { Inter, Dosis } from 'next/font/google';
+import { Dosis } from 'next/font/google';
 import ActiveSectionContextProvider from '@/context/active-section-context';
 import Footer from '@/layout/footer';
 
-const inter = Inter({ subsets: ['latin'] });
+const inter = Dosis({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
   title: 'Tuan Bich | Our Wedding',

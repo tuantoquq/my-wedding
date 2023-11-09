@@ -1,6 +1,6 @@
 import Album from '@/components/album/album';
 import Intro from '@/components/intro/Intro';
-import SectionDivider from '@/layout/section-divider';
+import Divider from '@/layout/divider';
 import Wishes from '@/components/wish/wishes';
 import Story from '@/components/story/Story';
 import Events from '@/components/events/Events';
@@ -10,6 +10,9 @@ import { slides } from '@/utils/data';
 import SaveDateCircle from '@/components/main/save-date-circle';
 import 'react-toastify/dist/ReactToastify.css';
 import HeartFalling from '@/components/main/heart-fall';
+import { CountdownTimer } from '@/components/counter/counter';
+import FeatureButtons from '@/components/feature-btns/feature-btns';
+import Gift from '@/components/gift/gift';
 
 export default function Home() {
   return (
@@ -18,16 +21,19 @@ export default function Home() {
       <SaveDateCircle />
       <HeartFalling />
       <Intro />
-      {/* <SectionDivider /> */}
+      {/* <Divider /> */}
+      <CountdownTimer />
+      <FeatureButtons />
       <Story />
-      {/* <SectionDivider/> */}
+      {/* <Divider/> */}
       <Events />
-      {/* <SectionDivider /> */}
+      {/* <Divider /> */}
       <Album />
-      {/* <SectionDivider /> */}
+      {/* <Divider /> */}
       <Wishes />
-      {/* <SectionDivider /> */}
+      {/* <Divider /> */}
       <Congrats />
+      <Gift />
     </main>
   );
 }
