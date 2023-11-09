@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from 'react';
 import moment from 'moment';
 import TimeBox from './time-box';
-import SectionHeading from '@/layout/section-heading';
+import { SectionHeadingImage } from '@/layout/section-heading';
 import Typography from '@/libs/Typography';
 import Divider from '@/layout/divider';
 
@@ -45,7 +45,7 @@ export function CountdownTimer() {
 
   return (
     <section className="mb-28 text-center sm:mb-20">
-      <SectionHeading>Save the date</SectionHeading>
+      <SectionHeadingImage>Save the date</SectionHeadingImage>
       <div className="flex justify-center items-center gap-4 min-h-[9rem]">
         <Divider className="md:h-[3px] xs:h-[2px] md:w-15 xs:w-10 !bg-cs-green-900" />
         <Typography

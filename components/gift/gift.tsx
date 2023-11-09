@@ -1,10 +1,12 @@
 'use client';
 import Image from 'next/image';
 import React from 'react';
-import giftImg from '@/public/gift.png';
+import giftImg from '@/public/gift.jpg';
 import Modal from '@/libs/modal';
 import { banks } from '@/utils/data';
 import GiftCard from './gift-card';
+import Typography from '@/libs/Typography';
+import { motion } from 'framer-motion';
 export default function Gift() {
   const [isModalWeddingGiftOpen, setIsModalWeddingGiftOpen] =
     React.useState(false);
@@ -16,15 +18,26 @@ export default function Gift() {
     setIsModalWeddingGiftOpen(false);
   };
   return (
-    <section className="mb-5">
+    <section className="mb-20">
       <div className="flex justify-center items-center">
-        <button
-          className="hover:cursor-pointer transition
-      hover:shadow-3xl hover:scale-110 duration-300 ease-in-out"
-          onClick={openModalWeddingGift}
-        >
-          <Image alt="gift" src={giftImg} className="w-10 h-10" />
-        </button>
+        <div className="flex justify-center items-center flex-col gap-3">
+          <Typography
+            variant="h4"
+            className="!text-cs-green-900 md:!text-2xl xs:!text-xl"
+          >
+            Gửi quà cho cô dâu & chú rể dưới đây nhé!
+          </Typography>
+          <motion.button
+            className="hover:cursor-pointer"
+            onClick={openModalWeddingGift}
+            initial={{ scale: 1 }}
+            whileHover={{ scale: 1.1 }}
+            animate={{ scale: 1 }}
+            transition={{ duration: 0.2, bounce: 0.5, damping: 10 }}
+          >
+            <Image alt="gift" src={giftImg} className="w-20 h-20" />
+          </motion.button>
+        </div>
         <Modal
           open={isModalWeddingGiftOpen}
           onClose={closeModalWeddingGift}

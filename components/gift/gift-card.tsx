@@ -33,13 +33,9 @@ export default function GiftCard({
       <div className="flex justify-center items-center self-center md:w-40 xs:w-32">
         <Image alt="qr" src={image} className="object-cover rounded-lg" />
       </div>
-      <Typography variant="h4" className="!font-semibold">
-        {bankName}
-      </Typography>
-      <Typography variant="h4" className="!font-semibold">
-        {cardHolder}
-      </Typography>
-      <Typography variant="h4" className="!font-semibold">
+      <Typography variant="h4">{bankName}</Typography>
+      <Typography variant="h4">{cardHolder}</Typography>
+      <Typography variant="h4">
         {cardNumber}{' '}
         <button onClick={copyToClipboard}>
           {!isCopied ? (

@@ -33,7 +33,7 @@ export default function Footer() {
       >
         <audio
           controls
-          src="https://res.cloudinary.com/devoro1vn/video/upload/v1698862626/music_smeyse.mp3"
+          src="https://res.cloudinary.com/devoro1vn/video/upload/v1698862626/wedding_music.mp3"
           autoPlay={!isPause}
           hidden
           className="scale-90"

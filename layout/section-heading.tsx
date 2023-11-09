@@ -7,7 +7,7 @@ type SectionHeadingProps = {
   children: React.ReactNode;
 };
 
-export default function SectionHeading({ children }: SectionHeadingProps) {
+export const SectionHeadingImage = ({ children }: SectionHeadingProps) => {
   return (
     <div className="mt-0 flex flex-col justify-center items-center">
       <Image alt="couple" src={couple} className="md:w-[10rem] xs:w-[8rem]" />
@@ -16,4 +16,12 @@ export default function SectionHeading({ children }: SectionHeadingProps) {
       </Typography>
     </div>
   );
-}
+};
+
+export const SectionHeading = ({ children }: SectionHeadingProps) => {
+  return (
+    <Typography className="capitalize mb-8" variant="h1">
+      {children}
+    </Typography>
+  );
+};
