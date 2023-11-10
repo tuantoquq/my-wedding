@@ -1,7 +1,8 @@
-'use client';
+'use client'
 import { motion } from 'framer-motion';
 import React from 'react';
 import { BsFillHeartFill } from 'react-icons/bs';
+
 export default function HeartFalling() {
   return (
     <div className="fixed z-[99999] top-0 left-0 w-full h-full pointer-events-none ">

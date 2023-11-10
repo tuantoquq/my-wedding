@@ -24,6 +24,7 @@ export default function TimeBox({ time, title }: TimeBoxProps) {
       <Typography
         variant="desc"
         className={`font-light md:!text-[3.25rem] xs:!text-[2.5rem] text-title/[.75] ${timeFont.className}`}
+        suppressHydrationWarning
       >
         {time}
       </Typography>

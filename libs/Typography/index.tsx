@@ -13,12 +13,14 @@ export default function Typography({
   className = '',
   variant,
   children,
-}: Props) {
+  ...rest
+}: Props & React.HTMLAttributes<HTMLParagraphElement>) {
   switch (variant) {
     case 'h1':
       return (
         <h1
-          className={`text-4xl sm:text-4xl md:text-[2.5rem] lg:text-5xl font-medium ${className}`}
+          className={`text-4xl sm:text-4xl md:text-[2.5rem] lg:text-5xl font-semibold ${className}`}
+          {...rest}
         >
           {children}
         </h1>
@@ -26,7 +28,8 @@ export default function Typography({
     case 'h2':
       return (
         <h2
-          className={`text-[1.75rem] sm:text-3xl md:text-3xl lg:text-4xl font-medium ${className}`}
+          className={`text-[1.75rem] sm:text-3xl md:text-3xl lg:text-4xl font-semibold ${className}`}
+          {...rest}
         >
           {children}
         </h2>
@@ -35,6 +38,7 @@ export default function Typography({
       return (
         <h3
           className={`text-lg sm:text-xl md:text-xl lg:text-2xl font-medium ${className}`}
+          {...rest}
         >
           {children}
         </h3>
@@ -43,6 +47,7 @@ export default function Typography({
       return (
         <p
           className={`text-sm sm:text-sm md:text-base lg:text-lg font-semibold ${className}`}
+          {...rest}
         >
           {children}
         </p>
@@ -50,7 +55,8 @@ export default function Typography({
     case 'desc':
       return (
         <p
-          className={`text-sm sm:text-base md:text-base lg:text-lg !leading-6 md:!leading-7 font-light text-center text-description ${className}`}
+          className={`text-sm sm:text-base md:text-base lg:text-lg !leading-6 md:!leading-7 font-normal text-center text-description ${className}`}
+          {...rest}
         >
           {children}
         </p>
@@ -59,6 +65,7 @@ export default function Typography({
       return (
         <p
           className={`text-xs sm:text-sm md:text-base lg:text-lg font-normal ${className}`}
+          {...rest}
         >
           {children}
         </p>

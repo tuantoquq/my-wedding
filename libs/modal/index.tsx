@@ -57,8 +57,8 @@ export default function Modal({
           </button>
         </div>
         <div
-          className={`md:px-16 xs:px-4 md:py-5 ${
-            title ? 'xs:py-2' : 'xs:py-5'
+          className={`md:px-16 xs:px-4 md:py-10 pb-5 ${
+            title ? 'xs:pt-2' : 'xs:pt-7'
           } ${classNameChildren}`}
         >
           {children}
