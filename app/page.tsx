@@ -9,10 +9,13 @@ import Carousel from '@/libs/Slide/Carousel';
 import { slides } from '@/utils/data';
 import SaveDateCircle from '@/components/main/save-date-circle';
 import 'react-toastify/dist/ReactToastify.css';
-import HeartFalling from '@/components/main/heart-fall';
+// import HeartFalling from '@/components/main/heart-fall';
 import { CountdownTimer } from '@/components/counter/counter';
 import FeatureButtons from '@/components/feature-btns/feature-btns';
 import Gift from '@/components/gift/gift';
+import dynamic from 'next/dynamic'
+ 
+const HeartFalling = dynamic(() => import('@/components/main/heart-fall'), { ssr: false })
 
 export default function Home() {
   return (

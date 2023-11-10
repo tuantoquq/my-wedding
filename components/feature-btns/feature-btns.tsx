@@ -116,10 +116,10 @@ export default function FeatureButtons() {
         </Button>
 
         <Modal open={isModalOpen} onClose={closeModal}>
-          <div className="flex flex-col md:gap-4 xs:gap-1 xs:w-[20rem]">
+          <div className="flex flex-col md:gap-4 xs:gap-1 xs:w-[20rem] md:w-[24rem]">
             <div className="flex justify-center items-center">
               <Image
-                className="xs:w-48 xs:h-48 sm:w-60 sm:h-60 rounded-full border-4 border-cs-green-700 z-10 object-center object-cover"
+                className="xs:w-48 xs:h-48 sm:w-60 sm:h-60 rounded-full border-4 border-cs-green-700 z-10 object-[center_top] object-cover"
                 src={image0093}
                 priority
                 alt=""
@@ -131,7 +131,7 @@ export default function FeatureButtons() {
             <Typography variant="desc" className="text-black font-normal">
               đám cưới của
             </Typography>
-            <Typography variant="h2" className="text-black font-bold">
+            <Typography variant="h2" className="xs:!text-2xl text-black font-bold">
               Nguyễn Tuấn & Trương Bích
             </Typography>
             <input
