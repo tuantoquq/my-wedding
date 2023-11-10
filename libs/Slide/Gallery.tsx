@@ -5,14 +5,19 @@ import { StaticImport } from "next/dist/shared/lib/get-img-props";
 import Image from "next/image";
 import React from "react";
 
-type Props = {
+interface InjectedProps {
+    isBelowSm?: boolean;
+    isBelowMd?: boolean;
+    isBelowLg?: boolean;
+}
+
+interface Props extends InjectedProps {
     items: string[] | StaticImport[],
     selected: number,
     onSelect: (item: number, ...arg: any[]) => any,
 }
 
-
-export default class Gallery extends React.Component<Props> {
+class Gallery extends React.Component<Props> {
     constructor(props: Props) {
         super(props);
     }
@@ -32,7 +37,7 @@ export default class Gallery extends React.Component<Props> {
         const elementWidth = element?.offsetWidth ?? 0;
         const wrapper = document.getElementById('album-wrapper');
         // const wrapperWidth = wrapper?.clientWidth ?? 0;
-        wrapper?.scrollTo({ top: 0, left: elementStart - elementWidth, behavior: 'smooth' });
+        wrapper?.scrollTo({ top: 0, left: elementStart - elementWidth * (this.props.isBelowLg ? 1 : 2), behavior: 'smooth' });
     }
 
     componentWillUnmount(): void {
@@ -87,3 +92,13 @@ export default class Gallery extends React.Component<Props> {
         );
     }
 }
+
+// HOC
+function withHook<T extends Props>(Component: React.ComponentType<T>) {    
+    return function WrappedComponent(props: Omit<T, keyof InjectedProps>) {
+        const { windowSize, ...value } = useWindowSize();
+        return <Component {...(props as T)} {...value} />;
+    }
+}
+
+export default withHook(Gallery);
