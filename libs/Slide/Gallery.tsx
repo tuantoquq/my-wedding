@@ -51,7 +51,7 @@ class Gallery extends React.Component<Props> {
             this.nextImage = setInterval(() => {
                 const nextIndex = (this.props.selected + 1) % this.props.items.length;
                 this.props.onSelect(nextIndex);
-            }, 5000);
+            }, 3000);
 
             return true;
         }
