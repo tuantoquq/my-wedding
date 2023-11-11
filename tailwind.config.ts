@@ -50,19 +50,19 @@ const config: Config = {
     plugin(function ({ addBase, theme }) {
       addBase({
         'h1': {
-          textAlign: 'text-center',
+          textAlign: 'center',
           fontSize: theme('fontSize.5xl'),
           lineHeight: theme('lineHeight.5xl'),
           color: theme('colors.title'),
         },
         'h2': {
-          textAlign: 'text-center',
+          textAlign: 'center',
           fontSize: theme('fontSize.3xl'),
           lineHeight: theme('lineHeight.3xl'),
           color: theme('colors.title'),
         },
         'h3': {
-          textAlign: 'text-center',
+          textAlign: 'center',
           fontSize: theme('fontSize.2xl'),
           lineHeight: theme('lineHeight.2xl'),
           color: theme('colors.title'),

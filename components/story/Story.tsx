@@ -15,10 +15,10 @@ export default function Story() {
   return (
     <section
       ref={ref}
-      className="sm:mb-32 xs:mb-10 w-full bg-white text-center pt-10"
+      className="w-full bg-white text-center sm:pt-10"
       id="story"
     >
-      <SectionHeadingImage>Chuyện Tình Yêu</SectionHeadingImage>
+      <SectionHeadingImage className='mt-10'>Chuyện Tình Yêu</SectionHeadingImage>
       <div className="w-full px-5 sm:px-10 lg:px-48 flex flex-col justify-between gap-10 relative">
         {storyLine.map((chapter, index) => (
           <React.Fragment key={index}>

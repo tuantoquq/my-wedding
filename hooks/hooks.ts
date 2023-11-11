@@ -11,7 +11,7 @@ export function useSectionInView({
   thresholdInView,
 }: useSectionInViewProps) {
   const { ref, inView } = useInView({
-    threshold: thresholdInView ?? 0.5,
+    threshold: thresholdInView ?? 0.2,
   });
   const { setActiveSection, timeOfLastClick } = useActiveSectionContext();
 

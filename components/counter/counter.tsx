@@ -44,9 +44,12 @@ export function CountdownTimer() {
   }
 
   return (
-    <section className="mb-28 text-center sm:mb-20">
-      <SectionHeadingImage>Save the date</SectionHeadingImage>
-      <div className="flex justify-center items-center gap-4 min-h-[3rem]">
+    <div
+      className="text-center sm:pt-10 w-full flex flex-col items-center 
+      before:absolute before:w-full before:h-full before:bg-auto before:bg-[url('/white-flower.png')] before:bg-center before:bg-no-repeat before:opacity-70"
+    >
+      <SectionHeadingImage className='mt-10 !mb-0 z-50'>Save the date</SectionHeadingImage>
+      <div className="flex justify-center items-center gap-4 min-h-[3rem] z-50">
         <Divider className="md:h-[3px] xs:h-[2px] md:w-15 xs:w-10 !bg-cs-green-900" />
         <Typography
           variant="h3"
@@ -56,12 +59,12 @@ export function CountdownTimer() {
         </Typography>
         <Divider className="md:h-[3px] xs:h-[2px] md:w-15 xs:w-10 !bg-cs-green-900" />
       </div>
-      <div className="grid md:grid-cols-4 sm:grid-cols-2 xs:grid-cols-2 gap-6">
+      <div className="grid md:grid-cols-4 sm:grid-cols-2 xs:grid-cols-2 gap-6 w-fit z-50">
         <TimeBox time={getStringTime(timeRemaining.days)} title="Ngày" />
         <TimeBox time={getStringTime(timeRemaining.hours)} title="Giờ" />
         <TimeBox time={getStringTime(timeRemaining.minutes)} title="Phút" />
         <TimeBox time={getStringTime(timeRemaining.seconds)} title="Giây" />
       </div>
-    </section>
+    </div>
   );
 }

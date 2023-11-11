@@ -12,7 +12,7 @@ export default function Intro() {
   return (
     <section
       ref={ref}
-      className="sm:mb-32 w-full bg-cs-green-300 text-center xs:mb-10 pb-20 pt-32 md:pt-40 "
+      className="w-full bg-cs-green-300 text-center pb-20 pt-32 md:pt-40 "
       id="intro"
     >
       <div className="w-full xs:px-5 sm:px-10 lg:px-40 flex xs:flex-col md:flex-row justify-between gap-10 relative">

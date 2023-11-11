@@ -12,10 +12,10 @@ export default function Wishes() {
   return (
     <section
       ref={ref}
-      className="mb-28 max-w-[100rem] sm:mb-20 text-center"
+      className="max-w-[100rem] text-center"
       id="wishes"
     >
-      <SectionHeading>Sổ lưu bút</SectionHeading>
+      <SectionHeading className='mt-10 md:mt-20'>Sổ lưu bút</SectionHeading>
       <div
         className="flex gap-2 justify-center
       sm:items-stretch sm:flex-col 
