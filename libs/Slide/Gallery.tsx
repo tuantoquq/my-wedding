@@ -72,7 +72,7 @@ class Gallery extends React.Component<Props> {
                         <div
                             id={`item-${index}`}
                             key={index}
-                            className={`snap-center aspect-[8/9] min-w-[33.333%] lg:min-w-[20%] px-3 flex justify-center items-center`}
+                            className={`snap-center min-w-[33.333%] lg:min-w-[20%] px-3 flex justify-center items-center`}
                         >
                             <Image
                                 onClick={() => {
@@ -81,8 +81,8 @@ class Gallery extends React.Component<Props> {
                                 src={s}
                                 alt=''
                                 priority
-                                className={`h-full object-center object-cover rounded-md lg:rounded-2xl
-                            transition-all duration-500 ${index === this.props.selected ? 'opacity-100 scale-105' : 'opacity-50'} 
+                                className={`aspect-[8/9] object-center object-cover rounded-md lg:rounded-2xl
+                            transition-all duration-500 ${index === this.props.selected ? 'opacity-100 scale-110' : 'opacity-50'} 
                             shadow-[0_0px_25px_0px_rgba(0,0,0,0.2)] cursor-pointer hover:scale-105`}
                             />
                         </div>
