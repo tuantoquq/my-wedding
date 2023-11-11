@@ -53,7 +53,7 @@ export default function WishForm({ callDone }: WishFormProps) {
   };
   return (
     <div
-      className="flex items-center bg-white text-center flex-col mt-10 w-full
+      className="flex items-center bg-white text-center flex-col mt-2 md:mt-10  w-full
     border-dashed border-[2px] border-secondary-cl p-4 rounded-md md:h-[480px] xs:h-[400px]"
     >
       <Typography className="font-semibold" variant="desc">

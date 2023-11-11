@@ -13,11 +13,11 @@ export default function Album() {
   const [selected, setSelected] = useState<number>(0);
 
   return (
-    <section ref={ref} className="mb-28 text-center sm:mb-20 pb-10" id="album">
-      <SectionHeading className='sm:!mb-2 md:!mb-4'>Album Cưới</SectionHeading>
+    <section ref={ref} className="text-center pb-10" id="album">
+      <SectionHeading className='sm:!mb-2 md:!mb-4 mt-10 md:mt-20'>Album Cưới</SectionHeading>
       <Typography variant="desc" className="mb-12">Dưới đây là demo album cưới của chúng mình...</Typography>
       <div className="flex gap-4 flex-wrap justify-center width-full">
-        <AlbumImage imageUrl={albums[selected]} />
+        <AlbumImage selected={selected} />
         <Gallery
           items={[...albums]}
           selected={selected}

@@ -24,17 +24,12 @@ export default function Home() {
       <SaveDateCircle />
       <HeartFalling />
       <Intro />
-      {/* <Divider /> */}
       <CountdownTimer />
       <FeatureButtons />
       <Story />
-      {/* <Divider/> */}
       <Events />
-      {/* <Divider /> */}
       <Album />
-      {/* <Divider /> */}
       <Wishes />
-      {/* <Divider /> */}
       <Congrats />
       <Gift />
     </main>

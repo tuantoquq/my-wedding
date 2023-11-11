@@ -33,7 +33,6 @@ const loadingIcon = (
   <FaSpinner className="text-xs opacity-80 transition-all animate-spin" />
 );
 export default function FeatureButtons() {
-  const { ref } = useSectionInView({ sectionName: 'Lời cảm ơn' });
   const [isModalOpen, setIsModalOpen] = React.useState(false);
   const [selectedOption, setSelectedOption] = React.useState(GUEST.GROOM_GUEST);
   const [guestName, setGuestName] = React.useState('');
@@ -95,12 +94,10 @@ export default function FeatureButtons() {
     }
   };
   return (
-    <section
-      ref={ref}
-      className="text-center sm:mb-20 w-full bg-cs-green-300 md:py-10 xs:py-5"
-      id="congrats"
+    <div
+      className="text-center md:mt-20 xs:mt-10 w-full bg-cs-green-300 md:py-10 xs:py-5 z-10"
     >
-      <div className="flex md:flex-row xs:flex-col md:gap-10 xs:gap-3 justify-center items-center">
+      <div className="z-60 flex md:flex-row xs:flex-col md:gap-10 xs:gap-3 justify-center items-center">
         <Link href={'#wishes'}>
           <Button endIcon={wishSubmitIcon} type="button" className="w-[14rem] !font-medium">
             Gửi lời chúc
@@ -174,6 +171,6 @@ export default function FeatureButtons() {
         </Modal>
       </div>
       <ToastContainer />
-    </section>
+    </div>
   );
 }

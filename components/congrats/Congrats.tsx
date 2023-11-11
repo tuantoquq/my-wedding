@@ -8,10 +8,11 @@ export default function Congrats() {
   return (
     <section
       ref={ref}
-      className="mb-28 max-w-[50rem] text-center sm:mb-20"
+      className="max-w-[50rem] text-center sm:pt-10"
       id="congrats"
     >
-      <SectionHeadingImage>Lời Cảm Ơn</SectionHeadingImage>
+      <SectionHeadingImage className='mt-10'>Lời Cảm Ơn</SectionHeadingImage>
+      
     </section>
   );
 }
