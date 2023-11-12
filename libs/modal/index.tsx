@@ -26,7 +26,7 @@ export default function Modal({
   if (!open) return null;
   return (
     <motion.div
-      className={`fixed z-[999] inset-0 flex items-center justify-center ${className}`}
+      className={`fixed z-[100] inset-0 flex items-center justify-center ${className}`}
       initial={{ opacity: 0, y: 100 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.25, delay: 0.125, type: 'spring' }}

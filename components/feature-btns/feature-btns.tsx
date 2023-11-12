@@ -95,7 +95,7 @@ export default function FeatureButtons() {
   };
   return (
     <div
-      className="text-center md:mt-20 xs:mt-10 w-full bg-cs-green-300 md:py-10 xs:py-5 z-10"
+      className="text-center md:mt-20 xs:mt-10 w-full bg-cs-green-300 md:py-10 xs:py-5 z-[9999]"
     >
       <div className="z-60 flex md:flex-row xs:flex-col md:gap-10 xs:gap-3 justify-center items-center">
         <Link href={'#wishes'}>
@@ -116,7 +116,7 @@ export default function FeatureButtons() {
           <div className="flex flex-col md:gap-4 xs:gap-1 xs:w-[20rem] md:w-[24rem]">
             <div className="flex justify-center items-center">
               <Image
-                className="xs:w-48 xs:h-48 sm:w-60 sm:h-60 rounded-full border-4 border-cs-green-700 z-10 object-[center_top] object-cover"
+                className="xs:w-48 xs:h-48 sm:w-60 sm:h-60 rounded-full border-4 border-cs-green-700 object-[center_top] object-cover"
                 src={image0093}
                 priority
                 alt=""

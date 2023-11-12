@@ -55,7 +55,7 @@ export function CountdownTimer() {
           variant="h3"
           className="font-normal text-cs-green-900 xs:!text-2xl md:!text-3xl italic"
         >
-          01/12/2023
+          02/12/2023
         </Typography>
         <Divider className="md:h-[3px] xs:h-[2px] md:w-15 xs:w-10 !bg-cs-green-900" />
       </div>
