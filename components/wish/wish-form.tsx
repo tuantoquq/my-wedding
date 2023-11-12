@@ -71,7 +71,7 @@ export default function WishForm({ callDone }: WishFormProps) {
           type="text"
           name="guestName"
           id="name"
-          className="md:h-[3.5rem] xs:h-[3rem] border-b-secondary px-3 bg-white focus:outline-none "
+          className="md:h-[3.5rem] xs:h-[3rem] border-b-secondary px-3 bg-white focus:outline-none rounded-none"
           placeholder="Nhập họ tên *"
           required
         />
