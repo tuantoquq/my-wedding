@@ -8,7 +8,7 @@ import { Button } from '@/libs/Button';
 import Modal from '@/libs/modal';
 import RadioButton from '@/libs/radio-button';
 import { BsCheckCircleFill } from 'react-icons/bs';
-import { ToastContainer, toast } from 'react-toastify';
+import { toast } from 'react-toastify';
 import { FaPaperPlane, FaSpinner } from 'react-icons/fa';
 import { appendRowData, getIDs } from '@/services/spreadsheet';
 import Link from 'next/link';
@@ -113,7 +113,6 @@ export default function FeatureButtons() {
             Xác nhận tham dự
           </Button>
         </div>
-        <ToastContainer />
       </div>
       <Modal open={isModalOpen} onClose={closeModal}>
         <div className="flex flex-col md:gap-4 xs:gap-1 xs:w-[20rem] md:w-[24rem]">

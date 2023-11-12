@@ -27,7 +27,7 @@ export default function Drawer({
         <AnimatePresence>
             {open &&
                 <motion.div
-                    className={`fixed z-[9999] inset-0 flex items-center justify-center ${className}`}
+                    className={`fixed z-[9999] inset-0 flex items-center justify-center pointer ${className}`}
                     initial={{ opacity: 0, backdropFilter: 'blur(4px)' }}
                     animate={{ opacity: 1, backdropFilter: 'blur(4px)' }}
                     transition={{ duration: 0.5, type: 'spring' }}
