@@ -25,7 +25,7 @@ export default function Footer() {
         </span>
       </p>
       <div
-        className={`fixed z-[9999] md:bottom-10 md:left-10 xs:bottom-5 xs:left-5 flex opacity-80 p-4 gap-2 hover:cursor-pointer text-[1.35rem]
+        className={`fixed z-[100] md:bottom-10 md:left-10 xs:bottom-5 xs:left-5 flex opacity-80 p-4 gap-2 hover:cursor-pointer text-[1.35rem]
         bg-green-500 text-white items-center rounded-full hover:opacity-100 ${
           isPause ? 'bg-red-500' : 'bg-green-500'
         }`}
