@@ -36,6 +36,7 @@ export default function FeatureButtons() {
   const [isModalOpen, setIsModalOpen] = React.useState(false);
   const [selectedOption, setSelectedOption] = React.useState(GUEST.GROOM_GUEST);
   const [guestName, setGuestName] = React.useState('');
+  const [confirmInfo, SetConfirmInfo] = React.useState('');
   const [isLoading, setIsLoading] = React.useState(false);
 
   // modal wedding gift
@@ -57,6 +58,12 @@ export default function FeatureButtons() {
     setGuestName(event.target.value);
   };
 
+  const handleConfirmInfoChange = (
+    event: React.ChangeEvent<HTMLInputElement>,
+  ) => {
+    SetConfirmInfo(event.target.value);
+  };
+
   const confirmationSubmit = async (
     event: React.MouseEvent<HTMLElement, MouseEvent>,
   ) => {
@@ -74,6 +81,7 @@ export default function FeatureButtons() {
           STT: newestIds,
           'Guest name': guestName,
           Type: selectedOption,
+          'Confirm Info': confirmInfo,
           Number: 1,
         };
         await appendRowData(rowSubmit);
@@ -95,12 +103,14 @@ export default function FeatureButtons() {
   };
   return (
     <>
-      <div
-        className="text-center md:mt-20 xs:mt-10 w-full bg-cs-green-300 md:py-10 xs:py-5 z-[100]"
-      >
+      <div className="text-center md:mt-20 xs:mt-10 w-full bg-cs-green-300 md:py-10 xs:py-5 z-[100]">
         <div className="z-60 flex md:flex-row xs:flex-col md:gap-10 xs:gap-3 justify-center items-center">
           <Link href={'#wishes'}>
-            <Button endIcon={wishSubmitIcon} type="button" className="w-[14rem] !font-medium">
+            <Button
+              endIcon={wishSubmitIcon}
+              type="button"
+              className="w-[14rem] !font-medium"
+            >
               Gửi lời chúc
             </Button>
           </Link>
@@ -130,13 +140,17 @@ export default function FeatureButtons() {
           <Typography variant="desc" className="text-black font-normal">
             đám cưới của
           </Typography>
-          <Typography variant="h2" className="xs:!text-2xl text-black font-bold">
+          <Typography
+            variant="h2"
+            className="xs:!text-2xl text-black font-bold"
+          >
             Nguyễn Tuấn & Trương Bích
           </Typography>
           <input
             placeholder="Nhập tên của bạn"
             className="text-center md:h-14 xs:h-10 border-b-secondary px-3 bg-white focus:outline-none"
             required
+            id="guestName"
             value={guestName}
             onChange={handleGuestNameChange}
           ></input>
@@ -152,7 +166,14 @@ export default function FeatureButtons() {
               onChange={() => handleOptionChange(GUEST.BRIDE_GUEST)}
             />
           </div>
-          <div className="flex justify-center items-center md:mt-4">
+          <input
+            placeholder="Bạn sẽ tham dự đám cưới của chúng mình chứ?"
+            className="text-center md:h-14 xs:h-10 border-b-secondary px-3 bg-white focus:outline-none"
+            required
+            value={confirmInfo}
+            onChange={handleConfirmInfoChange}
+          ></input>
+          <div className="flex justify-center items-center mt-4">
             {isLoading ? (
               <Button
                 className="items-center"

@@ -1,16 +1,25 @@
 import React from 'react';
 import Image from 'next/image';
 import Typography from '@/libs/Typography';
+import Link from 'next/link';
+import { FaFacebook } from 'react-icons/fa';
+import { FaInstagram } from 'react-icons/fa';
 
-type Props = {
+type ItemProps = {
   image: any;
   description?: string;
   name: string;
-  facebook?: string;
-  instagram?: string;
+  facebook: string;
+  instagram: string;
 };
 
-export default function Item({ image, description: description, name }: Props) {
+export default function Item({
+  image,
+  description,
+  name,
+  facebook,
+  instagram,
+}: ItemProps) {
   return (
     <div className="flex-auto flex flex-col relative justify-center items-center">
       <Image
@@ -25,6 +34,14 @@ export default function Item({ image, description: description, name }: Props) {
           {name}
         </Typography>
         <Typography variant="desc">{description}</Typography>
+        <div className="flex flex-row justify-center items-center gap-2">
+          <Link href={`${facebook}`}>
+            <FaFacebook className="text-3xl text-secondary-cl" />
+          </Link>
+          <Link href={`${instagram}`}>
+            <FaInstagram className="text-3xl text-secondary-cl " />
+          </Link>
+        </div>
       </div>
     </div>
   );

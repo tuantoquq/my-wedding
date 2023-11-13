@@ -5,7 +5,7 @@ import Typography from '@/libs/Typography';
 type Props = {
   title: string;
   description: string;
-  year: number;
+  year: string;
   index: number;
   image: any;
 };
@@ -30,7 +30,7 @@ export default function StoryLine({
         />
       </div>
 
-      <div className="w-14 h-7 flex justify-center items-center rounded-md bg-cs-green-700">
+      <div className="w-20 h-7 flex justify-center items-center rounded-md bg-cs-green-700">
         <Typography className="font-medium text-description" variant="desc">
           {year}
         </Typography>
@@ -58,7 +58,7 @@ export default function StoryLine({
         />
       </div>
 
-      <div className="w-14 h-7 flex justify-center items-center rounded-md bg-cs-green-700">
+      <div className="w-20 h-7 flex justify-center items-center rounded-md bg-cs-green-700">
         <Typography className="font-medium text-description" variant="desc">
           {year}
         </Typography>

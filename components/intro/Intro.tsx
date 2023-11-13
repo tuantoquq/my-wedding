@@ -20,6 +20,8 @@ export default function Intro() {
           image={groom.image}
           description={groom.description}
           name={groom.name}
+          facebook={groom.facebook}
+          instagram={groom.instagram}
         />
 
         <div className="w-full h-auto md:absolute lg:top-0 left-0 right-0 flex justify-center sm:top-[40%] z-50">
@@ -36,6 +38,8 @@ export default function Intro() {
           image={bride.image}
           description={bride.description}
           name={bride.name}
+          facebook={bride.facebook}
+          instagram={bride.instagram}
         />
       </div>
     </section>
