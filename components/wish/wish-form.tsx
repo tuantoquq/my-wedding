@@ -78,7 +78,7 @@ export default function WishForm({ callDone }: WishFormProps) {
         <textarea
           name="content"
           id="wish"
-          className="md:h-[9rem] xs:h-[7rem] my-3 border-b-secondary p-3 bg-white focus:outline-none"
+          className="md:h-[9rem] xs:h-[7rem] my-3 border-b-secondary p-3 bg-white focus:outline-none rounded-none"
           placeholder="Nhập lời chúc của bạn *"
           maxLength={4000}
           required

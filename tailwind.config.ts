@@ -1,6 +1,5 @@
 import type { Config } from 'tailwindcss';
-import plugin from 'tailwindcss/plugin'
-
+import plugin from 'tailwindcss/plugin';
 
 const config: Config = {
   content: [
@@ -9,11 +8,11 @@ const config: Config = {
   theme: {
     // responsive according breakpoints MUI
     screens: {
-      'xs': '0px',
-      'sm': '600px',
-      'md': '900px',
-      'lg': '1200px',
-      'xl': '1536px',
+      xs: '0px',
+      sm: '600px',
+      md: '900px',
+      lg: '1200px',
+      xl: '1536px',
     },
     extend: {
       backgroundImage: {
@@ -25,15 +24,15 @@ const config: Config = {
         'secondary-cl': '#3e7884',
         'primary-cl': '#f5fffe',
         'secondary-cl-2': '#dcf5f2',
-        'description': '#6e6f6f',
-        'title': '#427882',
-        'black': '#000000',
-        'white': '#ffffff',
+        description: '#6e6f6f',
+        title: '#427882',
+        black: '#000000',
+        white: '#ffffff',
         'cs-green-900': '#767c68',
         'cs-green-700': '#c4d5bc',
         'cs-green-500': '#c5e2c8',
         'cs-green-300': '#e3ede4',
-        'cs-green-100': '#f1f8f1'
+        'cs-green-100': '#f1f8f1',
       },
       keyframes: {
         heartBeat: {
@@ -42,33 +41,40 @@ const config: Config = {
           '50%': { transform: 'scale(1.2)' },
           '75%': { transform: 'scale(1.0)' },
           '100%': { transform: 'scale(.8)' },
-        }
-      }
+        },
+        gift: {
+          '0%': { transform: 'scale(.8) rotate(0)' },
+          '25%': { transform: 'scale(1.0) rotate(13deg)' },
+          '50%': { transform: 'scale(1.2) rotate(26deg)' },
+          '75%': { transform: 'scale(1.0) rotate(13deg)' },
+          '100%': { transform: 'scale(.8) rotate(0)' },
+        },
+      },
     },
   },
   plugins: [
     plugin(function ({ addBase, theme }) {
       addBase({
-        'h1': {
+        h1: {
           textAlign: 'center',
           fontSize: theme('fontSize.5xl'),
           lineHeight: theme('lineHeight.5xl'),
           color: theme('colors.title'),
         },
-        'h2': {
+        h2: {
           textAlign: 'center',
           fontSize: theme('fontSize.3xl'),
           lineHeight: theme('lineHeight.3xl'),
           color: theme('colors.title'),
         },
-        'h3': {
+        h3: {
           textAlign: 'center',
           fontSize: theme('fontSize.2xl'),
           lineHeight: theme('lineHeight.2xl'),
           color: theme('colors.title'),
         },
-      })
-    })
-  ]
+      });
+    }),
+  ],
 };
 export default config;
