@@ -13,10 +13,12 @@ import 'react-toastify/dist/ReactToastify.css';
 import { CountdownTimer } from '@/components/counter/counter';
 import FeatureButtons from '@/components/feature-btns/feature-btns';
 import Gift from '@/components/gift/gift';
-import dynamic from 'next/dynamic'
+import dynamic from 'next/dynamic';
 import { ToastContainer } from 'react-toastify';
- 
-const HeartFalling = dynamic(() => import('@/components/main/heart-fall'), { ssr: false })
+
+const HeartFalling = dynamic(() => import('@/components/main/heart-fall'), {
+  ssr: false,
+});
 
 export default function Home() {
   return (

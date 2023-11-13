@@ -6,7 +6,6 @@ import Modal from '@/libs/modal';
 import { banks } from '@/utils/data';
 import GiftCard from './gift-card';
 import Typography from '@/libs/Typography';
-import { motion } from 'framer-motion';
 export default function Gift() {
   const [isModalWeddingGiftOpen, setIsModalWeddingGiftOpen] =
     React.useState(false);
@@ -27,16 +26,12 @@ export default function Gift() {
           >
             Gửi quà cho cô dâu & chú rể dưới đây nhé!
           </Typography>
-          <motion.button
-            className="hover:cursor-pointer"
+          <button
+            className="hover:cursor-pointer transition-all animate-[gift_2s_linear_infinite]"
             onClick={openModalWeddingGift}
-            initial={{ scale: 1 }}
-            whileHover={{ scale: 1.1 }}
-            animate={{ scale: 1 }}
-            transition={{ duration: 0.2, bounce: 0.5, damping: 10 }}
           >
-            <Image alt="gift" src={giftImg} className="w-20 h-20" />
-          </motion.button>
+            <Image alt="gift" src={giftImg} className="w-20 h-20 rounded-xl" />
+          </button>
         </div>
         <Modal
           open={isModalWeddingGiftOpen}
