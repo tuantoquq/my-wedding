@@ -15,6 +15,11 @@ import image9837 from '@/public/HUY09837.jpg';
 import image9969 from '@/public/HUY09969.jpg';
 import groomQR from '@/public/groom_qr.jpeg';
 import brideQR from '@/public/bride_qr.jpeg';
+import story01 from '@/public/story_01.jpg';
+import story02 from '@/public/story_02.jpg';
+import story03 from '@/public/story_03.jpg';
+import story04 from '@/public/story_04.jpg';
+import story05 from '@/public/story_05.jpg';
 export const links = [
   {
     name: 'Giới thiệu',
@@ -63,32 +68,36 @@ export const albums = [
 
 export const storyLine = [
   {
-    title: 'Anh chị siêu cute luôn ạ 🥰',
-    description: 'Chúc mừng anh chị hạnh phúc ạ 💕',
-    year: 2023,
-    image: image0149,
+    title: 'Từ bạn thân thành người yêu',
+    description: `3 năm cấp 3 học cùng nhau, cùng làm cán bộ lớp, chúng mình là bạn thân của nhau, luôn giúp đỡ nhau học tập chỉ với mục tiêu đỗ Đại học. 
+      Đạt được mục tiêu đó, chúng mình xuống Thủ đô vẫn là bạn bè tốt như vậy. Thời gian trôi vừa đúng lúc Em cảm nhận tình cảm đối với Anh hơi khác thì Anh tỏ tình “làm người yêu tao nhé!” 
+      Những năm tháng Đại học rực rỡ đó, chúng mình lặng lẽ bình yên bên nhau, cùng nhau trải qua bao khó khăn, vất vả, cùng nhau rong ruổi khắp các con phố của Hà Nội`,
+    year: '09 - 2018',
+    image: story01,
   },
   {
-    title: 'BẠN CÓ TIN VÀO DUYÊN PHẬN KHÔNG?',
-    description: `Chúng mình quen nhau chẳng ở nơi nhà hàng sang trọng hay bãi biển lãng mạn nào cả.Tình cờ mình gặp nhau 1 lần năm 2014 trong một buổi tham gia lớp học thử tiếng anh của trung tâm Langmaster
-    Mình ngồi cạnh nhau và được bắt cặp làm bài tập theo nhóm 2 người
-    Mình quen nhau từ đó
-    Anh học giao thông vận tải ngành cầu đường
-    Em học chuyên ngành du lịch
-    Chúng mình cũng chẳng có chuyện gì để nói,bởi biết nói gì bây giờ`,
-    year: 2023,
-    image: image0161,
+    title: 'Chuyến đi chơi xa đầu tiên của 2 đứa',
+    description: `Đà Lạt đẹp tuyệt vời, nhất định chúng mình sẽ trở lại`,
+    year: '02 - 2022',
+    image: story02,
   },
   {
-    title: 'BẠN CÓ TIN VÀO DUYÊN PHẬN KHÔNG?',
-    description: `Chúng mình quen nhau chẳng ở nơi nhà hàng sang trọng hay bãi biển lãng mạn nào cả.Tình cờ mình gặp nhau 1 lần năm 2014 trong một buổi tham gia lớp học thử tiếng anh của trung tâm Langmaster
-    Mình ngồi cạnh nhau và được bắt cặp làm bài tập theo nhóm 2 người
-    Mình quen nhau từ đó
-    Anh học giao thông vận tải ngành cầu đường
-    Em học chuyên ngành du lịch
-    Chúng mình cũng chẳng có chuyện gì để nói,bởi biết nói gì bây giờ`,
-    year: 2023,
-    image: image9370,
+    title: 'Em tốt nghiệp cử nhân sớm',
+    description: `Chúng mình đã cùng nhau đi hết thời sinh viên của Em, đợi Anh nữa thui`,
+    year: '05 - 2022',
+    image: story03,
+  },
+  {
+    title: 'Anh tốt nghiệp kỹ sư sớm',
+    description: `Chúng mình đã hẹn cùng nhau tốt nghiệp sớm, vậy là tròn 1 năm sau Anh giữ đúng lời hẹn đó`,
+    year: '05 - 2023',
+    image: story04,
+  },
+  {
+    title: 'Anh bất ngờ cầu hôn em',
+    description: `Em tin ngày hôm đó Em là người hạnh phúc nhất thế giới. Nhiệm kỳ 5 năm làm người yêu chúng mình đã hoàn thành rất xuất sắc, từ đây Em đồng ý thăng chức cho Anh thành bạn đời của Em…`,
+    year: '10 - 2023',
+    image: story05,
   },
 ] as const;
 
@@ -97,17 +106,17 @@ export const couple = {
     name: 'Nguyễn Tuấn',
     image: image0149,
     description:
-      'Anh chàng trai kĩ sư trẻ mới ra trường đang trên con đường tìm kiếm thành công và xây dựng sự nghiệp của chính mình .Anh yêu cây, yêu hoa đặc biệt hoa hồng.Trước giờ cũng chưa tán tỉnh hay yêu cô gái nào cả.Sáng đi làm tối về lại chăm chút vào vườn hoa cây cối.Anh thích động vật đam mê với cây cỏ.Cứ tới mùa hoa hồng nở tràn ngập hoa thơm ngát',
-    facebook: '',
-    instagram: '',
+      'Anh, chàng trai luôn mải mê với các phép tính, câu lệnh, lập trình, thể thao. Giờ đây anh mê làm em cười hạnh phúc...',
+    facebook: 'https://www.facebook.com/tuantoquq2109',
+    instagram: 'https://www.instagram.com/tuanbnb',
   },
   bride: {
     name: 'Trương Bích',
     image: image9370,
     description:
-      'Em cô gái tự lập từ bé,đôi lúc em quên mình là một đoá hoa,cá tính mạnh mẽ và em nghĩ cũng sẽ không cần một bờ vai để tựa vào.Anh ngồi bàn giấy làm hành chính với những con số hình vẽ khô khan Em làm lúc nào cũng tất bật sáng tối đôi khi còn không có cả thời gian cho bản thân chứ chưa nói tới chuyện yêu thương ai',
-    facebook: '',
-    instagram: '',
+      'Em, cô gái tự lập từ bé, thích chăm sóc mọi người, thích cái đẹp, thích bay nhảy và thích luôn sự chân thành, chất phác của Anh',
+    facebook: 'https://www.facebook.com/TTB.bichnobi',
+    instagram: 'https://www.instagram.com/bichnobi',
   },
 };
 

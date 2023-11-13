@@ -11,24 +11,23 @@ import { RiMenuLine } from 'react-icons/ri';
 import Drawer from '@/components/main/drawer';
 
 export default function Header() {
-  const { activeSection, setActiveSection, setTimeOfLastClick } = useActiveSectionContext();
+  const { activeSection, setActiveSection, setTimeOfLastClick } =
+    useActiveSectionContext();
   const { isBelowMd } = useWindowSize();
   const [openDrawer, setOpenDrawer] = useState(false);
 
   return (
     <header className="z-[999] relative">
-      {isBelowMd ?
+      {isBelowMd ? (
         <>
           <button
-            onClick={
-              () => setOpenDrawer(true)
-            }
-            className='fixed flex top-[1.5rem] text-white hover:bg-cs-green-700 right-[1rem] p-2 rounded-full w-[2.5rem] h-[2.5rem] bg-cs-green-900 justify-center items-center'
+            onClick={() => setOpenDrawer(true)}
+            className="fixed flex top-[1.5rem] text-white hover:bg-cs-green-700 right-[1rem] p-2 rounded-full w-[2.5rem] h-[2.5rem] bg-cs-green-900 justify-center items-center"
           >
             <RiMenuLine className="text-xl opacity-80 transition-all" />
           </button>
           <Drawer open={openDrawer} onClose={() => setOpenDrawer(false)}>
-            <nav className="flex py-2 h-[initial] w-full py-0 items-stretch justify-center">
+            <nav className="flex py-2 h-[initial] w-full items-stretch justify-center">
               <ul
                 className={`
                   flex flex-grow flex-col items-stretch justify-center gap-y-1 
@@ -54,7 +53,7 @@ export default function Header() {
                       onClick={() => {
                         setActiveSection(link.name);
                         setTimeOfLastClick(Date.now());
-                        setOpenDrawer(false)
+                        setOpenDrawer(false);
                       }}
                     >
                       {link.name}
@@ -75,10 +74,11 @@ export default function Header() {
               </ul>
             </nav>
           </Drawer>
-        </> :
+        </>
+      ) : (
         <>
           <motion.div
-            className="fixed top-0 left-1/2 -translate-x-1/2 h-12 lg:w-7/12 md:w-3/4 rounded-none border border-white border-opacity-30 bg-white bg-opacity-80 shadow-lg shadow-black/[0.03] backdrop-blur-[0.5rem] sm:top-6 sm:rounded-full"
+            className="fixed top-0 left-1/2 -translate-x-1/2 h-12 xl:w-5/12 lg:w-7/12 md:w-3/4 rounded-none border border-white border-opacity-30 bg-white bg-opacity-80 shadow-lg shadow-black/[0.03] backdrop-blur-[0.5rem] sm:top-6 sm:rounded-full"
             initial={{ y: -100, x: '-50%', opacity: 0 }}
             animate={{ y: 0, x: '-50%', opacity: 1 }}
           >
@@ -126,7 +126,7 @@ export default function Header() {
             </nav>
           </motion.div>
         </>
-      }
+      )}
     </header>
   );
 }

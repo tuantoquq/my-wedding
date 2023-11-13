@@ -51,6 +51,10 @@ export default function WishForm({ callDone }: WishFormProps) {
       });
     }
   };
+  const hanldleChangeGuestNamePlaceholder = (placeholder: string) => {
+    const guestNameEle = document.getElementById('name') as HTMLInputElement;
+    guestNameEle.placeholder = placeholder;
+  };
   return (
     <div
       className="flex items-center bg-white text-center flex-col mt-2 md:mt-10  w-full
@@ -61,7 +65,8 @@ export default function WishForm({ callDone }: WishFormProps) {
         của chúng mình!
       </Typography>
       <Typography className="font-normal italic text-[14px]" variant="desc">
-        (Điền đầy đủ tên hoặc ghi chú để chúng mình biết rằng bạn là ai nhéee)
+        -- Điền đầy đủ tên hoặc ghi chú để chúng mình biết rằng bạn là ai nhé!
+        --
       </Typography>
       <form
         className="flex flex-col md:mt-10 xs:mt-2 w-full p-6"
@@ -73,6 +78,10 @@ export default function WishForm({ callDone }: WishFormProps) {
           id="name"
           className="md:h-[3.5rem] xs:h-[3rem] border-b-secondary px-3 bg-white focus:outline-none rounded-none"
           placeholder="Nhập họ tên *"
+          onFocus={() =>
+            hanldleChangeGuestNamePlaceholder('VD: Thảo - Bạn thân cô dâu')
+          }
+          onBlur={() => hanldleChangeGuestNamePlaceholder('Nhập họ tên *')}
           required
         />
         <textarea
