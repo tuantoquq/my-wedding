@@ -24,7 +24,7 @@ export default function Gift() {
             variant="h4"
             className="!text-cs-green-900 md:!text-2xl xs:!text-xl"
           >
-            Gửi quà cho cô dâu & chú rể ở đây nhe!
+            Gửi quà cho cô dâu & chú rể ở đây nhé!
           </Typography>
           <button
             className="hover:cursor-pointer transition-all animate-[gift_2s_linear_infinite]"
