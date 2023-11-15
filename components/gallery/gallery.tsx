@@ -1,16 +1,13 @@
 'use client';
-
-import React, { useState, useRef } from 'react';
+import React from 'react';
 import { useSectionInView } from '@/hooks/hooks';
 import { albumUrls } from '@/utils/data';
-import AlbumImage from './album-img';
-import { SectionHeading, SectionHeadingImage } from '@/layout/section-heading';
-import Gallery from '@/libs/Slide/Gallery';
+import { SectionHeadingImage } from '@/layout/section-heading';
 import Typography from '@/libs/Typography';
+import ImageGrid from './image-grid';
 
-export default function Album() {
+export default function Gallery() {
   const { ref } = useSectionInView({ sectionName: 'Album cưới' });
-  const [selected, setSelected] = useState<number>(0);
 
   return (
     <section ref={ref} className="text-center pb-10" id="album">
@@ -20,14 +17,7 @@ export default function Album() {
       <Typography variant="desc" className="mb-12">
         Dưới đây là demo album cưới của chúng mình...
       </Typography>
-      <div className="flex gap-4 flex-wrap justify-center width-full">
-        <AlbumImage selected={selected} />
-        <Gallery
-          items={[...albumUrls]}
-          selected={selected}
-          onSelect={setSelected}
-        />
-      </div>
+      <ImageGrid images={albumUrls} />
     </section>
   );
 }

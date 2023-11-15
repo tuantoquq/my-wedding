@@ -1,4 +1,3 @@
-import Album from '@/components/album/album';
 import Intro from '@/components/intro/Intro';
 import Wishes from '@/components/wish/wishes';
 import Story from '@/components/story/Story';
@@ -13,6 +12,7 @@ import Gift from '@/components/gift/gift';
 import dynamic from 'next/dynamic';
 import { ToastContainer } from 'react-toastify';
 import Parties from '@/components/party/parties';
+import Gallery from '@/components/gallery/gallery';
 
 const HeartFalling = dynamic(() => import('@/components/main/heart-fall'), {
   ssr: false,
@@ -29,7 +29,7 @@ export default function Home() {
       <Story />
       <Events />
       <Parties />
-      <Album />
+      <Gallery />
       <Wishes />
       <Congrats />
       <Gift />
