@@ -4,14 +4,14 @@ import React from 'react';
 export default function Welcome() {
   return (
     <div
-      className="p-5 sm:p-16 md:p-24 mt-24 h-[18rem] sm:h-[24rem] md:h-[30rem] lg:h-[32rem] bg-cover bg-no-repeat bg-[center_top_30%] 
-    md:bg-[center_top_25%] bg-[url('https://i.imgur.com/fH2PdLk.jpg')] 
+      className="p-5 sm:p-16 md:p-24 mt-24 h-[18rem] sm:h-[24rem] md:h-[30rem] lg:h-[32rem] bg-cover bg-no-repeat bg-[center_top_35%] 
+    md:bg-[center_top_35%] bg-[url('https://i.imgur.com/fH2PdLk.jpg')] 
     w-full flex flex-col gap-5 relative items-center justify-center"
     >
       <div className="w-full h-full bg-cs-green-900 absolute z-10 opacity-50"></div>
-      <h1 className="text-[2rem] xs:text-[1.8rem] sm:text-[3rem] lg:text-[4rem] text-white font-semibold z-20">
+      {/* <h1 className="text-[2rem] xs:text-[1.8rem] sm:text-[3rem] lg:text-[4rem] text-white font-semibold z-20">
         Ngày trọng đại của chúng mình
-      </h1>
+      </h1> */}
       <div className="flex justify-center items-center gap-1 w-full h-full flex-col xs:mb-15 xs:h-3/5">
         <Typography
           variant="h2"

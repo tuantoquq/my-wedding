@@ -1,9 +1,5 @@
 import groomQR from '@/public/groom_qr.jpeg';
 import brideQR from '@/public/bride_qr.jpeg';
-import story01 from '@/public/story_01.jpg';
-import story02 from '@/public/story_02.jpg';
-import story03 from '@/public/story_03.jpg';
-import story05 from '@/public/story_05.jpg';
 import { PartyItemProps } from '@/components/party/party-item';
 import { StaticImageData } from 'next/image';
 export const links = [
@@ -183,9 +179,9 @@ export const albumUrls = [
 export const storyLine = [
   {
     title: 'Từ bạn thân thành người yêu',
-    description: `3 năm cấp Ba cùng học, cùng làm cán bộ lớp, chúng mình trở thành bạn thân của nhau, luôn giúp đỡ nhau học tập với mục tiêu đỗ Đại học 
-    Đạt được mục tiêu đó, chúng mình xuống Thủ đô theo đuổi ước mơ và vẫn là bạn bè tốt vô tư, hồn nhiên như vậy. Thời gian trôi vừa đúng lúc Em cảm nhận thấy tình cảm với Anh hơi khác thì Anh chợt tỏ tình “làm người yêu tao nhé!”
-    Những năm tháng Đại học rực rỡ đó, chúng mình lặng lẽ bình yên bên nhau, cùng nhau trải qua bao khó khăn, vui buồn và cùng nhau rong ruổi khắp các con phố của Hà Nội`,
+    description: `3 năm cấp Ba, chúng cùng học, cùng làm cán bộ lớp, là bạn thân, luôn giúp đỡ nhau học tập với mục tiêu đỗ Đại học. \n
+    Đạt được mục tiêu đó, chúng mình xuống Thủ đô theo đuổi ước mơ và vẫn là bạn tốt của nhau như vậy. Thời gian trôi vừa đúng lúc Em cảm nhận thấy tình cảm với Anh hơi khác thì Anh chợt tỏ tình “làm người yêu tao nhé!\n”
+    Những năm tháng Đại học rực rỡ đó, Em và Anh lặng lẽ bình yên bên nhau, cùng nhau rong ruổi khắp phố phường Hà Nội, cùng trải qua bao thăng trầm, buồn vui`,
     year: '09 - 2018',
     image: {
       src: 'https://i.imgur.com/zcZMylA.jpg',
@@ -194,8 +190,8 @@ export const storyLine = [
     } as StaticImageData,
   },
   {
-    title: 'Chuyến đi chơi xa đầu tiên của 2 đứa',
-    description: `Chúng mình đã cùng nhau vi vu, cùng thưởng thức những món ăn mới, cùng lần đầu chơi trò mạo hiểm, cùng mệt, cùng cười, cùng vui. 
+    title: 'Chuyến đi chơi xa đầu tiên của chúng mình',
+    description: `Em và Anh cùng nhau vi vu, cùng thưởng thức những món ăn mới, cùng lần đầu chơi trò mạo hiểm, cùng mệt, cùng cười, cùng vui. 
     Đà Lạt đẹp tuyệt vời, nhất định chúng mình sẽ trở lại`,
     year: '02 - 2022',
     image: {
@@ -206,10 +202,10 @@ export const storyLine = [
   },
   {
     title:
-      'Em tốt nghiệp Cử nhân ngành Du lịch - Anh tốt nghiệp Kỹ sư ngành IT',
-    description: `Em tốt nghiệp Cử nhân ngành Du lịch - Anh tốt nghiệp Kỹ sư ngành IT
-    Chúng mình đã hẹn nhau cùng tốt nghiệp sớm và lời hẹn đó sau 4,5 năm đã được thực hiện trọn vẹn. 
-    Chúng mình đã cùng cố gắng, đồng hành, cổ vũ, giúp đỡ nhau trải qua thời sinh viên thật đáng nhớ và có những người bạn thật tuyệt vời`,
+      'Chúng mình luôn có nhau trong những dấu mốc quan trọng của cuộc đời',
+    description: `Năm 2022, Em tốt nghiệp Cử nhân ngành Du lịch. Năm 2023, Anh tốt nghiệp Kỹ sư ngành IT. \n
+    Chúng mình đã hẹn nhau cùng tốt nghiệp sớm và lời hẹn đó đều đã được thực hiện trọn vẹn. 
+    Em và Anh đã cùng cố gắng, đồng hành, cổ vũ, giúp đỡ nhau đi qua thời sinh viên thật đáng nhớ cùng những người bạn thật tuyệt vời`,
     year: ['05 - 2022', '05 - 2023'] as Array<string>,
     image: {
       src: 'https://i.imgur.com/xskZEmk.jpg',
@@ -218,9 +214,10 @@ export const storyLine = [
     } as StaticImageData,
   },
   {
-    title: 'Anh bất ngờ cầu hôn em',
-    description: `Ngày hôm đó, dưới khung cảnh lãng mạn với biết bao lời chúc phúc của những người em thương cùng cả những người xa lạ, Em tin mình là cô gái hạnh phúc nhất thế giới. 
-    Nhiệm kỳ 5 năm làm người yêu chúng mình đã hoàn thành rất xuất sắc, từ đây Em đồng ý thăng chức cho Anh thành bạn đời của Em…`,
+    title: 'Lời cầu hôn bất ngờ',
+    description: `Ngày hôm đó, Em tin mình là cô gái hạnh phúc nhất thế giới. Dưới khung cảnh lãng mạn với biết bao 
+    lời chúc phúc của những người em thương và cả những người xa lạ, Anh bất ngờ cầu hôn em. 
+    Nhiệm kỳ 5 năm làm người yêu, chúng mình đã hoàn thành rất xuất sắc. Từ đây, Em đồng ý "thăng chức" cho Anh thành bạn đời của Em…`,
     year: '10 - 2023',
     image: {
       src: 'https://i.imgur.com/0BBAD0Y.jpg',
@@ -251,7 +248,7 @@ export const couple = {
       height: 4319,
     } as StaticImageData,
     description:
-      'Em - cô gái tự lập từ bé, thích chăm sóc mọi người, thích cái đẹp, thích bay nhảy và thích luôn sự chân thành, thông minh của Anh',
+      'Em - cô gái tự lập từ nhỏ, thích chăm sóc những người xung quanh, thích cái đẹp, thích bay nhảy và thích cả sự chân thành, thông minh của Anh',
     facebook: 'https://www.facebook.com/TTB.bichnobi',
     instagram: 'https://www.instagram.com/bichnobi',
   },

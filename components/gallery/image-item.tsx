@@ -28,7 +28,11 @@ export default function ImageItem({ imgProps, alt }: ImageItemProps) {
   hover:cursor-pointer bg-transparent"
       />
 
-      <Modal onClose={closeModal} open={isModalOpen} classNameChildren="!px-0">
+      <Modal
+        onClose={closeModal}
+        open={isModalOpen}
+        classNameChildren="!px-0 xs:!pb-7 md:!pb-10"
+      >
         <div
           className={`flex relative justify-center items-center p-0 ${
             imgProps.width > imgProps.height

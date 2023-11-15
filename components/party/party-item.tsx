@@ -2,7 +2,7 @@ import { Button } from '@/libs/Button';
 import Typography from '@/libs/Typography';
 import React from 'react';
 import { FaClock } from 'react-icons/fa';
-import { FaC, FaLocationDot } from 'react-icons/fa6';
+import { FaLocationDot } from 'react-icons/fa6';
 
 export type PartyItemProps = {
   house: 'NHÀ TRAI' | 'NHÀ GÁI';
@@ -23,20 +23,31 @@ export default function PartyItem({
 }: PartyItemProps) {
   return (
     <div
-      className={`basis-full sm:basis-5/12 lg:basis-1/3 fhd:basis-[28%] mb-10`}
+      className={`basis-full sm:basis-5/12 lg:basis-[35%] fhd:basis-[30%] mb-10`}
     >
-      <div className="z-10 flex flex-col gap-5 pb-5 md:pb-10 lg:px-16 items-center bg-cs-green-300 h-full w-full shadow-[0_0px_25px_0px_rgba(0,0,0,0.2)]">
+      <div
+        className={`z-10 flex flex-col gap-5 pb-5 md:pb-10 lg:px-16 items-center
+       h-full w-full shadow-[0_0px_25px_0px_rgba(0,0,0,0.2)] relative
+       bg-cover bg-no-repeat bg-[center_top_1%] ${
+         house === 'NHÀ TRAI'
+           ? "bg-[url('https://i.imgur.com/bB0qUlt.jpg')]"
+           : "bg-[url('https://i.imgur.com/LrBeJJ4.jpg')]"
+       }
+       rounded-lg
+       `}
+      >
+        <div className="w-full h-full absolute z-10 bg-cs-green-300 opacity-[65%] rounded-lg"></div>
         <Typography
           variant="h3"
-          className="!font-bold md:!text-3xl xs:!text-2xl mt-10"
+          className="!font-bold md:!text-3xl xs:!text-2xl mt-10 z-20"
         >
           {house}
         </Typography>
-        <Typography variant="h4">
+        <Typography variant="h4" className="z-20">
           ĐƯỢC TỔ CHỨC VÀO LÚC {hour} GIỜ {minute}
           {"'"}
         </Typography>
-        <div className="flex justify-center items-center flex-row gap-2">
+        <div className="flex justify-center items-center flex-row gap-2 z-20">
           <FaClock className="text-description" />
           <Typography
             variant="h3"
@@ -45,17 +56,19 @@ export default function PartyItem({
             {date}
           </Typography>
         </div>
-        <Typography variant="desc" className="!italic">
+        <Typography variant="desc" className="!italic z-20 !font-semibold">
           -- Tức Ngày 19 Tháng 10 Năm Quý Mão --
         </Typography>
-        <div className="flex justify-center items-center flex-row gap-2">
+        <div className="flex justify-center items-center flex-row gap-2 z-20">
           <FaLocationDot className="text-description" />
-          <Typography variant="desc">{address}</Typography>
+          <Typography variant="desc" className="!font-semibold">
+            {address}
+          </Typography>
         </div>
-        <Button onClick={() => window.open(location)} className="mt-3">
+        <Button onClick={() => window.open(location)} className="mt-3 z-20">
           Xem bản đồ
         </Button>
-        <Typography variant="desc" className="!italic">
+        <Typography variant="desc" className="!italic z-20 !font-semibold">
           Rất hân hạnh được đón tiếp!
         </Typography>
       </div>

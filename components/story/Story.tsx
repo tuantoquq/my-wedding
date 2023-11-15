@@ -18,7 +18,9 @@ export default function Story() {
       className="w-full bg-white text-center sm:pt-10"
       id="story"
     >
-      <SectionHeadingImage className='mt-10'>Chuyện Tình Yêu</SectionHeadingImage>
+      <SectionHeadingImage className="mt-10">
+        Chuyện Tình Chúng Mình
+      </SectionHeadingImage>
       <div className="w-full px-5 sm:px-10 lg:px-48 flex flex-col justify-between gap-10 relative">
         {storyLine.map((chapter, index) => (
           <React.Fragment key={index}>
