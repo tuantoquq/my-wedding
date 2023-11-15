@@ -19,7 +19,7 @@ export function CountdownTimer() {
 
   function calculateTimeRemaining() {
     const targetDate = moment('2023-12-01T23:59:59'); // Replace with your target date
-    const now = moment();
+    const now = moment().utcOffset('+07:00', true);
     const duration = moment.duration(targetDate.diff(now));
 
     const totalSeconds = duration.asSeconds();
@@ -48,7 +48,9 @@ export function CountdownTimer() {
       className="text-center sm:pt-10 w-full flex flex-col items-center 
       before:absolute before:w-full before:h-full before:bg-auto before:bg-[url('/white-flower.png')] before:bg-center before:bg-no-repeat before:opacity-70"
     >
-      <SectionHeadingImage className='mt-10 !mb-0 z-50'>Save the date</SectionHeadingImage>
+      <SectionHeadingImage className="mt-10 !mb-0 z-50">
+        Save the date
+      </SectionHeadingImage>
       <div className="flex justify-center items-center gap-4 min-h-[3rem] z-50">
         <Divider className="md:h-[3px] xs:h-[2px] md:w-15 xs:w-10 !bg-cs-green-900" />
         <Typography

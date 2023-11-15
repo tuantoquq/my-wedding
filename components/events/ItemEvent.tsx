@@ -4,6 +4,7 @@ import Typography from '@/libs/Typography';
 import { Button } from '@/libs/Button';
 import { FaClock } from 'react-icons/fa';
 import { FaLocationDot } from 'react-icons/fa6';
+import moment from 'moment';
 
 type Props = {
   item: {
@@ -19,6 +20,9 @@ type Props = {
 export default function ItemEvent({
   item: { image, title, time, date, location, mapUrl },
 }: Props) {
+  const currentDate = moment();
+  const dateMoment = moment(date, 'DD/MM/YYYY');
+
   return (
     <div className={`basis-full sm:basis-5/12 lg:basis-1/3 mb-10 `}>
       <div className="z-10 flex flex-col gap-5 pb-5 md:pb-10 items-center bg-cs-green-300 h-full w-full shadow-[0_0px_25px_0px_rgba(0,0,0,0.2)]">
@@ -41,21 +45,27 @@ export default function ItemEvent({
           <Typography className="font-medium mb-3" variant="h3">
             {title}
           </Typography>
-          <div className="flex flex-row gap-2 items-center justify-center">
-            <FaClock className="text-description" />
-            <Typography variant="desc" className="md:!text-sm">
-              {time}
-            </Typography>
-          </div>
-          <div className="flex flex-row gap-2 items-center justify-center">
-            <FaLocationDot className="text-description" />
-            <Typography variant="desc" className="md:!text-sm">
-              {location}
-            </Typography>
-          </div>
-          <Button onClick={() => window.open(mapUrl)} className="mt-3">
-            Xem bản đồ
-          </Button>
+          {currentDate > dateMoment ? (
+            <></>
+          ) : (
+            <>
+              <div className="flex flex-row gap-2 items-center justify-center">
+                <FaClock className="text-description" />
+                <Typography variant="desc" className="md:!text-sm">
+                  {time}
+                </Typography>
+              </div>
+              <div className="flex flex-row gap-2 items-center justify-center">
+                <FaLocationDot className="text-description" />
+                <Typography variant="desc" className="md:!text-sm">
+                  {location}
+                </Typography>
+              </div>
+              <Button onClick={() => window.open(mapUrl)} className="mt-3">
+                Xem bản đồ
+              </Button>
+            </>
+          )}
         </div>
       </div>
     </div>

@@ -1,17 +1,21 @@
 'use client';
+
 import { useSectionInView } from '@/hooks/hooks';
-import React from 'react';
-import image0093 from '@/public/HUY00093.jpg';
-import Image from 'next/image';
 import Typography from '@/libs/Typography';
+import React from 'react';
+import PartyItem from './party-item';
+import { parties } from '@/utils/data';
+import { SectionHeadingImage } from '@/layout/section-heading';
 import { Button } from '@/libs/Button';
-import Modal from '@/libs/modal';
-import RadioButton from '@/libs/radio-button';
-import { BsCheckCircleFill } from 'react-icons/bs';
-import { toast } from 'react-toastify';
-import { FaPaperPlane, FaSpinner } from 'react-icons/fa';
 import { appendRowData, getIDs } from '@/services/spreadsheet';
-import Link from 'next/link';
+import { toast } from 'react-toastify';
+import { BsCheckCircleFill } from 'react-icons/bs';
+import { FaPaperPlane, FaSpinner } from 'react-icons/fa';
+import Modal from '@/libs/modal';
+import Image from 'next/image';
+import image0093 from '@/public/HUY00093.jpg';
+import RadioButton from '@/libs/radio-button';
+
 enum GUEST {
   GROOM_GUEST = 'GROOM_GUEST',
   BRIDE_GUEST = 'BRIDE_GUEST',
@@ -32,7 +36,8 @@ group-hover:translate-x-1 group-hover:-translate-y-1"
 const loadingIcon = (
   <FaSpinner className="text-xs opacity-80 transition-all animate-spin" />
 );
-export default function FeatureButtons() {
+export default function Parties() {
+  const { ref } = useSectionInView({ sectionName: 'Tiệc cưới' });
   const [isModalOpen, setIsModalOpen] = React.useState(false);
   const [selectedOption, setSelectedOption] = React.useState(GUEST.GROOM_GUEST);
   const [guestName, setGuestName] = React.useState('');
@@ -102,27 +107,34 @@ export default function FeatureButtons() {
     }
   };
   return (
-    <>
-      <div className="text-center md:mt-20 xs:mt-10 w-full bg-cs-green-300 md:py-10 xs:py-5 z-[100]">
-        <div className="z-60 flex md:flex-row xs:flex-col md:gap-10 xs:gap-3 justify-center items-center">
-          <Link href={'#wishes'}>
-            <Button
-              endIcon={wishSubmitIcon}
-              type="button"
-              className="w-[14rem] !font-medium"
-            >
-              Gửi lời chúc
-            </Button>
-          </Link>
-          <Button
-            onClick={openModal}
-            endIcon={originalIcon}
-            type="button"
-            className="w-[14rem] !font-medium"
-          >
-            Xác nhận tham dự
-          </Button>
-        </div>
+    <section
+      ref={ref}
+      className="w-full bg-white text-center sm:pt-10"
+      id="parties"
+    >
+      <SectionHeadingImage className="mt-10 md:mt-20">
+        Tiệc cưới
+      </SectionHeadingImage>
+      {/* <Typography variant="h3">
+        TRÂN TRONG KÍNH MỜI QUÝ KHÁCH TỚI DỰ BỮA CƠM THÂN MẬT CÙNG GIA ĐÌNH
+        CHÚNG TÔI
+      </Typography> */}
+      <div className="w-full mt-16 sm:px-10 xs:px-5 md:px-32 lg:px-16 fhd:px-16 sm:gap-5 md:gap-10 lg:gap-14 flex flex-wrap flex-row justify-center relative">
+        {parties.map((party, index) => (
+          <React.Fragment key={index}>
+            <PartyItem {...party} />
+          </React.Fragment>
+        ))}
+      </div>
+      <div className="md:mt-6 xs:mt-3 flex items-center justify-center">
+        <Button
+          onClick={openModal}
+          endIcon={originalIcon}
+          type="button"
+          className="w-[14rem] !font-medium"
+        >
+          Xác nhận tham dự
+        </Button>
       </div>
       <Modal open={isModalOpen} onClose={closeModal}>
         <div className="flex flex-col md:gap-4 xs:gap-1 xs:w-[20rem] md:w-[24rem]">
@@ -138,7 +150,7 @@ export default function FeatureButtons() {
             Xác nhận tham dự
           </Typography>
           <Typography variant="desc" className="text-black font-normal">
-            đám cưới của
+            tiệc cưới của
           </Typography>
           <Typography
             variant="h2"
@@ -192,6 +204,6 @@ export default function FeatureButtons() {
           </div>
         </div>
       </Modal>
-    </>
+    </section>
   );
 }

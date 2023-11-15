@@ -37,7 +37,7 @@ export default function Gift() {
           open={isModalWeddingGiftOpen}
           onClose={closeModalWeddingGift}
           classNameChildren="!px-5"
-          title="Hộp mừng cưới"
+          title="Hộp quà cưới"
           classNameTitle="text-white py-2"
           classNameHeader="bg-title rounded-t-md"
         >
