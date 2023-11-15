@@ -16,6 +16,14 @@ const nextConfig = {
   env: {
     GOOGLE_SERVICE_PRIVATE_KEY: process.env.GOOGLE_SERVICE_PRIVATE_KEY,
   },
+  images: {
+    remotePatterns: [
+      {
+        hostname: 'i.imgur.com',
+        protocol: 'https',
+      },
+    ],
+  },
 };
 
 module.exports = nextConfig;

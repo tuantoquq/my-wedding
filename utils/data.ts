@@ -1,26 +1,3 @@
-import image0093 from '@/public/HUY00093.jpg';
-import image0149 from '@/public/HUY00149.jpg';
-import image0161 from '@/public/HUY00161.jpg';
-import image0173 from '@/public/HUY00173.jpg';
-import image0225 from '@/public/HUY00255.jpg';
-import image0263 from '@/public/HUY00263.jpg';
-import image0659 from '@/public/HUY00659.jpg';
-import image9216 from '@/public/HUY09216.jpg';
-import image9334 from '@/public/HUY09334.jpg';
-import image9370 from '@/public/HUY09370.jpg';
-import image9615 from '@/public/HUY09615.jpg';
-import image9779 from '@/public/HUY09779.jpg';
-import image9818 from '@/public/HUY09818.jpg';
-import image9837 from '@/public/HUY09837.jpg';
-import image9969 from '@/public/HUY09969.jpg';
-import image0260 from '@/public/HUY00260.jpg';
-import image9570 from '@/public/HUY09570.jpg';
-import image9571 from '@/public/HUY09571.jpg';
-import image9585 from '@/public/HUY09585.jpg';
-import image9587 from '@/public/HUY09587.jpg';
-import image9589 from '@/public/HUY09589.jpg';
-import image9590 from '@/public/HUY09590.jpg';
-import image9591 from '@/public/HUY09591.jpg';
 import groomQR from '@/public/groom_qr.jpeg';
 import brideQR from '@/public/bride_qr.jpeg';
 import story01 from '@/public/story_01.jpg';
@@ -28,6 +5,7 @@ import story02 from '@/public/story_02.jpg';
 import story03 from '@/public/story_03.jpg';
 import story05 from '@/public/story_05.jpg';
 import { PartyItemProps } from '@/components/party/party-item';
+import { StaticImageData } from 'next/image';
 export const links = [
   {
     name: 'Giới thiệu',
@@ -59,32 +37,118 @@ export const links = [
   },
 ] as const;
 
-// Chọn số lượng ảnh là bội của 15 thôi nhé ạ
-export const albums = [
-  image0149,
-  image9216,
-  image9779,
-  image9818,
-  image0093,
-  image0161,
-  image0173,
-  image0225,
-  image0260,
-  image0263,
-  image9615,
-  image9837,
-  image9969,
-  image0659,
-  image9334,
-  image9370,
-  image9570,
-  image9571,
-  image9585,
-  image9587,
-  image9589,
-  image9590,
-  image9591,
-] as const;
+export const albumUrls = [
+  {
+    src: 'https://i.imgur.com/qZSXtdf.jpg', //0 - 9216
+    height: 4000,
+    width: 6000,
+  },
+  {
+    src: 'https://i.imgur.com/bB0qUlt.jpg', //1 - 9615
+    height: 6000,
+    width: 4000,
+  },
+  {
+    src: 'https://i.imgur.com/vyz7D5M.jpg', //2 - 9370
+    height: 6000,
+    width: 4000,
+  },
+  {
+    src: 'https://i.imgur.com/XBKpMDU.jpg', //3 - 0255
+    height: 6000,
+    width: 4000,
+  },
+  {
+    src: 'https://i.imgur.com/LrBeJJ4.jpg', //4 - 0161
+    height: 6000,
+    width: 4000,
+  },
+  {
+    src: 'https://i.imgur.com/eCTbl7l.jpg', //5 - 9334
+    height: 6000,
+    width: 4000,
+  },
+  {
+    src: 'https://i.imgur.com/bmHkqbh.jpg', //6 - 9779
+    height: 4000,
+    width: 6000,
+  },
+  {
+    src: 'https://i.imgur.com/H02JaEa.jpg', //7 - 9387
+    height: 6000,
+    width: 4000,
+  },
+  {
+    src: 'https://i.imgur.com/xz8I5iB.jpg', //8 - 9589
+    height: 3936,
+    width: 2624,
+  },
+  {
+    src: 'https://i.imgur.com/0hS58Fg.jpg', //9 - 9590
+    height: 3936,
+    width: 2624,
+  },
+  {
+    src: 'https://i.imgur.com/NknvcAF.jpg', //10 - 9818
+    height: 4000,
+    width: 6000,
+  },
+  {
+    src: 'https://i.imgur.com/CCUT5fL.jpg', //11 - 9591
+    height: 3936,
+    width: 2624,
+  },
+  {
+    src: 'https://i.imgur.com/eCTbl7l.jpg', //12 - 9571
+    height: 3707,
+    width: 2436,
+  },
+  {
+    src: 'https://i.imgur.com/fH2PdLk.jpg', //13 - 9969
+    height: 3936,
+    width: 2624,
+  },
+  {
+    src: 'https://i.imgur.com/IpPkixq.jpg', //14 - 9570
+    height: 3640,
+    width: 2399,
+  },
+  {
+    src: 'https://i.imgur.com/0FBnvPb.jpg', //15 - 0173
+    height: 6000,
+    width: 4000,
+  },
+  {
+    src: 'https://i.imgur.com/8yoW1hd.jpg', //16 - 0659
+    height: 6000,
+    width: 4000,
+  },
+  {
+    src: 'https://i.imgur.com/B1XdNP3.jpg', //17 - 0263
+    height: 6000,
+    width: 4000,
+  },
+  {
+    src: 'https://i.imgur.com/XkEJEKe.jpg', //18 - 0093
+    height: 6000,
+    width: 4000,
+  },
+  {
+    src: 'https://i.imgur.com/W6iDTa6.jpg', //19 - 9587
+    height: 6000,
+    width: 4000,
+  },
+  {
+    src: 'https://i.imgur.com/AcUxm5n.jpg', //20 - 9260
+    height: 6000,
+    width: 4000,
+  },
+  {
+    src: 'https://i.imgur.com/z6iIt2C.jpg', //21 - 0149
+    height: 4000,
+    width: 6000,
+  },
+] as Array<StaticImageData>;
 
 export const storyLine = [
   {
@@ -123,7 +187,7 @@ export const storyLine = [
 export const couple = {
   groom: {
     name: 'Nguyễn Tuấn',
-    image: image0149,
+    image: albumUrls[8],
     description:
       'Anh - chàng trai luôn đam mê với các phép tính, câu lệnh, lập trình, thể thao,… và giờ đây Anh mê cách làm Em cười hạnh phúc',
     facebook: 'https://www.facebook.com/tuantoquq2109',
@@ -131,7 +195,7 @@ export const couple = {
   },
   bride: {
     name: 'Trương Bích',
-    image: image9370,
+    image: albumUrls[19],
     description:
       'Em - cô gái tự lập từ bé, thích chăm sóc mọi người, thích cái đẹp, thích bay nhảy và thích luôn sự chân thành, thông minh của Anh',
     facebook: 'https://www.facebook.com/TTB.bichnobi',
@@ -141,7 +205,7 @@ export const couple = {
 
 export const events = [
   {
-    image: image9615,
+    image: albumUrls[5],
     title: 'LỄ DẠM NGÕ',
     date: '29/10/2023',
     time: '09:00 AM',
@@ -149,7 +213,7 @@ export const events = [
     mapUrl: 'https://maps.app.goo.gl/q2KkyWbSNr9X4qCSA',
   },
   {
-    image: image9370,
+    image: albumUrls[5],
     title: 'LỄ ĂN HỎI',
     date: '11/11/2023',
     time: '08:30 AM',
@@ -157,7 +221,7 @@ export const events = [
     mapUrl: 'https://maps.app.goo.gl/q2KkyWbSNr9X4qCSA',
   },
   {
-    image: image9216,
+    image: albumUrls[5],
     title: 'LỄ VU QUY',
     date: '02/12/2023',
     time: '08:00 AM',
@@ -165,7 +229,7 @@ export const events = [
     mapUrl: 'https://maps.app.goo.gl/q2KkyWbSNr9X4qCSA',
   },
   {
-    image: image9779,
+    image: albumUrls[5],
     title: 'LỄ THÀNH HÔN',
     date: '02/12/2023',
     time: '10:00 AM',
@@ -174,7 +238,7 @@ export const events = [
   },
 ] as const;
 
-export const slides = [image0149, image9216, image9779];
+export const slides = [albumUrls[21], albumUrls[0], albumUrls[6]];
 
 export const banks = [
   {

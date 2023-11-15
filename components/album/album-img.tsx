@@ -1,8 +1,8 @@
 'use client';
 
-import { albums } from '@/utils/data';
+import { albumUrls } from '@/utils/data';
 import { AnimatePresence, motion } from 'framer-motion';
-import Image from 'next/image';
+import Image, { StaticImageData } from 'next/image';
 import React from 'react';
 
 type AlbumImageProps = {
@@ -10,9 +10,8 @@ type AlbumImageProps = {
 };
 
 function AlbumImage({ selected }: AlbumImageProps) {
-
   return (
-    <AnimatePresence mode='wait' initial={false}>
+    <AnimatePresence mode="wait" initial={false}>
       <motion.div
         key={selected}
         layout
@@ -21,12 +20,12 @@ function AlbumImage({ selected }: AlbumImageProps) {
         exit={{ opacity: 0 }}
         transition={{
           type: 'linear',
-          duration: 0.4
+          duration: 0.4,
         }}
-        className='h-[24rem] sm:h-[28rem] lg:h-[32rem] flex justify-center items-center px-10 bg-transparent'
+        className="h-[24rem] sm:h-[28rem] lg:h-[32rem] flex justify-center items-center px-10 bg-transparent"
       >
         <Image
-          src={albums[selected]}
+          src={albumUrls[selected]}
           alt="My wedding images"
           quality={95}
           priority
