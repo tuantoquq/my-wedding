@@ -10,12 +10,10 @@ export default function Wishes() {
   const { ref } = useSectionInView({ sectionName: 'Lời chúc' });
   const [isNeedReload, setIsNeedReload] = React.useState(false);
   return (
-    <section
-      ref={ref}
-      className="max-w-[100rem] text-center"
-      id="wishes"
-    >
-      <SectionHeading className='mt-10 md:mt-20'>Sổ lưu bút</SectionHeading>
+    <section ref={ref} className="max-w-[100rem] text-center mt-10" id="wishes">
+      <SectionHeading className="mt-10 md:mt-20">
+        Gửi Lời Yêu Thương
+      </SectionHeading>
       <div
         className="flex gap-2 justify-center
       sm:items-stretch sm:flex-col 
