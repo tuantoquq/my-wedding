@@ -13,7 +13,6 @@ import { BsCheckCircleFill } from 'react-icons/bs';
 import { FaPaperPlane, FaSpinner } from 'react-icons/fa';
 import Modal from '@/libs/modal';
 import Image from 'next/image';
-import image0093 from '@/public/HUY00093.jpg';
 import RadioButton from '@/libs/radio-button';
 
 enum GUEST {
@@ -115,10 +114,6 @@ export default function Parties() {
       <SectionHeadingImage className="mt-10 md:mt-20">
         Tiệc cưới
       </SectionHeadingImage>
-      {/* <Typography variant="h3">
-        TRÂN TRONG KÍNH MỜI QUÝ KHÁCH TỚI DỰ BỮA CƠM THÂN MẬT CÙNG GIA ĐÌNH
-        CHÚNG TÔI
-      </Typography> */}
       <div className="w-full mt-16 sm:px-10 xs:px-5 md:px-32 lg:px-16 fhd:px-16 sm:gap-5 md:gap-10 lg:gap-14 flex flex-wrap flex-row justify-center relative">
         {parties.map((party, index) => (
           <React.Fragment key={index}>
@@ -141,7 +136,11 @@ export default function Parties() {
           <div className="flex justify-center items-center">
             <Image
               className="xs:w-48 xs:h-48 sm:w-60 sm:h-60 rounded-full border-4 border-cs-green-700 object-[center_top] object-cover"
-              src={image0093}
+              src={
+                'https://res.cloudinary.com/devoro1vn/image/upload/v1700036698/wedding/HUY09779_dkulk9.jpg'
+              }
+              width={240}
+              height={240}
               priority
               alt=""
             />

@@ -3,7 +3,6 @@ import React, { useState, useEffect } from 'react';
 import WishCard from './wish-card';
 import { WishData } from '@/services/types';
 import { FaSpinner } from 'react-icons/fa';
-import { type } from 'os';
 
 type WishListProps = {
   reload: boolean;

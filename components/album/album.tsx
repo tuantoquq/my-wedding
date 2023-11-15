@@ -2,7 +2,7 @@
 
 import React, { useState, useRef } from 'react';
 import { useSectionInView } from '@/hooks/hooks';
-import { albums } from '@/utils/data';
+import { albumUrls } from '@/utils/data';
 import AlbumImage from './album-img';
 import { SectionHeading, SectionHeadingImage } from '@/layout/section-heading';
 import Gallery from '@/libs/Slide/Gallery';
@@ -23,7 +23,7 @@ export default function Album() {
       <div className="flex gap-4 flex-wrap justify-center width-full">
         <AlbumImage selected={selected} />
         <Gallery
-          items={[...albums]}
+          items={[...albumUrls]}
           selected={selected}
           onSelect={setSelected}
         />
