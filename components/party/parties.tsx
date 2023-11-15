@@ -4,7 +4,7 @@ import { useSectionInView } from '@/hooks/hooks';
 import Typography from '@/libs/Typography';
 import React from 'react';
 import PartyItem from './party-item';
-import { parties } from '@/utils/data';
+import { albumUrls, parties } from '@/utils/data';
 import { SectionHeadingImage } from '@/layout/section-heading';
 import { Button } from '@/libs/Button';
 import { appendRowData, getIDs } from '@/services/spreadsheet';
@@ -136,11 +136,7 @@ export default function Parties() {
           <div className="flex justify-center items-center">
             <Image
               className="xs:w-48 xs:h-48 sm:w-60 sm:h-60 rounded-full border-4 border-cs-green-700 object-[center_top] object-cover"
-              src={
-                'https://res.cloudinary.com/devoro1vn/image/upload/v1700036698/wedding/HUY09779_dkulk9.jpg'
-              }
-              width={240}
-              height={240}
+              src={albumUrls[15]}
               priority
               alt=""
             />

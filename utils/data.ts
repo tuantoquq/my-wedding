@@ -49,9 +49,9 @@ export const albumUrls = [
     width: 4000,
   },
   {
-    src: 'https://i.imgur.com/vyz7D5M.jpg', //2 - 9370
-    height: 6000,
-    width: 4000,
+    src: 'https://i.imgur.com/j36kQCh.jpg', //2 - 9586
+    height: 3936,
+    width: 2624,
   },
   {
     src: 'https://i.imgur.com/XBKpMDU.jpg', //3 - 0255
@@ -69,9 +69,9 @@ export const albumUrls = [
     width: 4000,
   },
   {
-    src: 'https://i.imgur.com/bmHkqbh.jpg', //6 - 9779
-    height: 4000,
-    width: 6000,
+    src: 'https://i.imgur.com/0FBnvPb.jpg', //6 - 0173
+    height: 6000,
+    width: 4000,
   },
   {
     src: 'https://i.imgur.com/H02JaEa.jpg', //7 - 9387
@@ -99,9 +99,9 @@ export const albumUrls = [
     width: 2624,
   },
   {
-    src: 'https://i.imgur.com/eCTbl7l.jpg', //12 - 9571
-    height: 3707,
-    width: 2436,
+    src: 'https://i.imgur.com/MzFKCFA.jpg', //12 - 9593
+    height: 3451,
+    width: 2384,
   },
   {
     src: 'https://i.imgur.com/fH2PdLk.jpg', //13 - 9969
@@ -114,9 +114,9 @@ export const albumUrls = [
     width: 2399,
   },
   {
-    src: 'https://i.imgur.com/0FBnvPb.jpg', //15 - 0173
-    height: 6000,
-    width: 4000,
+    src: 'https://i.imgur.com/bmHkqbh.jpg', //15 - 9779
+    height: 4000,
+    width: 6000,
   },
   {
     src: 'https://i.imgur.com/8yoW1hd.jpg', //16 - 0659
@@ -134,9 +134,9 @@ export const albumUrls = [
     width: 4000,
   },
   {
-    src: 'https://i.imgur.com/W6iDTa6.jpg', //19 - 9587
-    height: 6000,
-    width: 4000,
+    src: 'https://i.imgur.com/Pv2lT9y.jpg', //19 - 0408
+    height: 3936,
+    width: 2624,
   },
   {
     src: 'https://i.imgur.com/AcUxm5n.jpg', //20 - 9260
@@ -148,6 +148,36 @@ export const albumUrls = [
     height: 4000,
     width: 6000,
   },
+  {
+    src: 'https://i.imgur.com/iiN9oZB.jpg', //22 - 8379
+    height: 3936,
+    width: 2624,
+  },
+  {
+    src: 'https://i.imgur.com/ImcADAN.jpg', //23 - 9592
+    height: 4608,
+    width: 3072,
+  },
+  // {
+  //   src: 'https://i.imgur.com/ImcADAN.jpg', //24 - 9592
+  //   height: 4608,
+  //   width: 3072,
+  // },
+  // {
+  //   src: 'https://i.imgur.com/ImcADAN.jpg', //25 - 9592
+  //   height: 4608,
+  //   width: 3072,
+  // },
+  // {
+  //   src: 'https://i.imgur.com/ImcADAN.jpg', //26 - 9592
+  //   height: 4608,
+  //   width: 3072,
+  // },
+  // {
+  //   src: 'https://i.imgur.com/ImcADAN.jpg', //27 - 9592
+  //   height: 4608,
+  //   width: 3072,
+  // },
 ] as Array<StaticImageData>;
 
 export const storyLine = [
@@ -157,14 +187,22 @@ export const storyLine = [
     Đạt được mục tiêu đó, chúng mình xuống Thủ đô theo đuổi ước mơ và vẫn là bạn bè tốt vô tư, hồn nhiên như vậy. Thời gian trôi vừa đúng lúc Em cảm nhận thấy tình cảm với Anh hơi khác thì Anh chợt tỏ tình “làm người yêu tao nhé!”
     Những năm tháng Đại học rực rỡ đó, chúng mình lặng lẽ bình yên bên nhau, cùng nhau trải qua bao khó khăn, vui buồn và cùng nhau rong ruổi khắp các con phố của Hà Nội`,
     year: '09 - 2018',
-    image: story01,
+    image: {
+      src: 'https://i.imgur.com/zcZMylA.jpg',
+      width: 5120,
+      height: 5120,
+    } as StaticImageData,
   },
   {
     title: 'Chuyến đi chơi xa đầu tiên của 2 đứa',
     description: `Chúng mình đã cùng nhau vi vu, cùng thưởng thức những món ăn mới, cùng lần đầu chơi trò mạo hiểm, cùng mệt, cùng cười, cùng vui. 
     Đà Lạt đẹp tuyệt vời, nhất định chúng mình sẽ trở lại`,
     year: '02 - 2022',
-    image: story02,
+    image: {
+      src: 'https://i.imgur.com/KB23k0f.jpg',
+      width: 1837,
+      height: 1837,
+    } as StaticImageData,
   },
   {
     title:
@@ -173,21 +211,33 @@ export const storyLine = [
     Chúng mình đã hẹn nhau cùng tốt nghiệp sớm và lời hẹn đó sau 4,5 năm đã được thực hiện trọn vẹn. 
     Chúng mình đã cùng cố gắng, đồng hành, cổ vũ, giúp đỡ nhau trải qua thời sinh viên thật đáng nhớ và có những người bạn thật tuyệt vời`,
     year: ['05 - 2022', '05 - 2023'] as Array<string>,
-    image: story03,
+    image: {
+      src: 'https://i.imgur.com/xskZEmk.jpg',
+      width: 1440,
+      height: 1440,
+    } as StaticImageData,
   },
   {
     title: 'Anh bất ngờ cầu hôn em',
     description: `Ngày hôm đó, dưới khung cảnh lãng mạn với biết bao lời chúc phúc của những người em thương cùng cả những người xa lạ, Em tin mình là cô gái hạnh phúc nhất thế giới. 
     Nhiệm kỳ 5 năm làm người yêu chúng mình đã hoàn thành rất xuất sắc, từ đây Em đồng ý thăng chức cho Anh thành bạn đời của Em…`,
     year: '10 - 2023',
-    image: story05,
+    image: {
+      src: 'https://i.imgur.com/0BBAD0Y.jpg',
+      width: 3119,
+      height: 3119,
+    } as StaticImageData,
   },
 ] as const;
 
 export const couple = {
   groom: {
     name: 'Nguyễn Tuấn',
-    image: albumUrls[8],
+    image: {
+      src: 'https://i.imgur.com/oFH3oA9.jpg',
+      width: 1264,
+      height: 1896,
+    } as StaticImageData,
     description:
       'Anh - chàng trai luôn đam mê với các phép tính, câu lệnh, lập trình, thể thao,… và giờ đây Anh mê cách làm Em cười hạnh phúc',
     facebook: 'https://www.facebook.com/tuantoquq2109',
@@ -195,7 +245,11 @@ export const couple = {
   },
   bride: {
     name: 'Trương Bích',
-    image: albumUrls[19],
+    image: {
+      src: 'https://i.imgur.com/t1YlXru.jpg',
+      width: 3072,
+      height: 4319,
+    } as StaticImageData,
     description:
       'Em - cô gái tự lập từ bé, thích chăm sóc mọi người, thích cái đẹp, thích bay nhảy và thích luôn sự chân thành, thông minh của Anh',
     facebook: 'https://www.facebook.com/TTB.bichnobi',
@@ -205,7 +259,11 @@ export const couple = {
 
 export const events = [
   {
-    image: albumUrls[5],
+    image: {
+      src: 'https://i.imgur.com/zBX2MCZ.jpg',
+      width: 968,
+      height: 968,
+    } as StaticImageData,
     title: 'LỄ DẠM NGÕ',
     date: '29/10/2023',
     time: '09:00 AM',
@@ -213,7 +271,11 @@ export const events = [
     mapUrl: 'https://maps.app.goo.gl/q2KkyWbSNr9X4qCSA',
   },
   {
-    image: albumUrls[5],
+    image: {
+      src: 'https://i.imgur.com/fBgsCq0.jpg',
+      width: 1304,
+      height: 1304,
+    } as StaticImageData,
     title: 'LỄ ĂN HỎI',
     date: '11/11/2023',
     time: '08:30 AM',
@@ -221,7 +283,11 @@ export const events = [
     mapUrl: 'https://maps.app.goo.gl/q2KkyWbSNr9X4qCSA',
   },
   {
-    image: albumUrls[5],
+    image: {
+      src: 'https://i.imgur.com/EgKcU1q.jpg',
+      width: 1956,
+      height: 2725,
+    } as StaticImageData,
     title: 'LỄ VU QUY',
     date: '02/12/2023',
     time: '08:00 AM',
@@ -229,7 +295,7 @@ export const events = [
     mapUrl: 'https://maps.app.goo.gl/q2KkyWbSNr9X4qCSA',
   },
   {
-    image: albumUrls[5],
+    image: albumUrls[12],
     title: 'LỄ THÀNH HÔN',
     date: '02/12/2023',
     time: '10:00 AM',
@@ -238,7 +304,7 @@ export const events = [
   },
 ] as const;
 
-export const slides = [albumUrls[21], albumUrls[0], albumUrls[6]];
+export const slides = [albumUrls[21], albumUrls[15], albumUrls[0]];
 
 export const banks = [
   {
