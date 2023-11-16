@@ -19,5 +19,32 @@ html {
   border: 2px solid rgba(0, 0, 0, 0);
   background-clip: padding-box;
   border-radius: 9999px;
-  background-color: #AAAAAA;
+  background-color: #aaaaaa;
+}
+
+@keyframes borderTransform {
+  0% {
+    width: 58px;
+    height: 58px;
+  }
+
+  25% {
+    width: 64px;
+    height: 64px;
+  }
+
+  50% {
+    width: 68px;
+    height: 68px;
+  }
+
+  75% {
+    width: 64px;
+    height: 64px;
+  }
+
+  100% {
+    width: 58px;
+    height: 58px;
+  }
 }

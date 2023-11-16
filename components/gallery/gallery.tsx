@@ -11,12 +11,9 @@ export default function Gallery() {
 
   return (
     <section ref={ref} className="text-center pb-10" id="album">
-      <SectionHeadingImage className="sm:!mb-2 md:!mb-4 mt-20">
-        Album Cưới
+      <SectionHeadingImage className="sm:!mb-2 md:!mb-6 mt-20">
+        Album Cưới của chúng mình
       </SectionHeadingImage>
-      <Typography variant="desc" className="mb-12">
-        Dưới đây là demo album cưới của chúng mình...
-      </Typography>
       <ImageGrid images={albumUrls} />
     </section>
   );

@@ -14,15 +14,16 @@ export default function Congrats() {
     >
       <SectionHeadingImage className="mt-10">Lời Cảm Ơn</SectionHeadingImage>
       <Typography variant="desc" className="p-6">
-        Tuấn và Bích xin gửi lời cảm ơn chân thành tới Bố Mẹ, Gia đình hai bên,
-        tới các Anh Chị Em, Bạn bè đã luôn dõi theo, ủng hộ và chúc phúc cho
-        hành trình yêu nhau của chúng con/chúng mình để hành trình đó đến được
-        bến bờ hạnh phúc. Tuấn và Bích hy vọng sẽ luôn được nhận tình yêu thương
-        của tất cả mọi người để hành trình này của chúng con/chúng mình tiếp tục
-        hạnh phúc đến mãi mãi… Chúc cho mọi người thật nhiều niềm vui và sức
-        khoẻ. Xin hẹn gặp mọi người tại đám cưới của Tuấn và Bích nhe!
+        Tuấn và Bích xin gửi lời cảm ơn chân thành tới Bố Mẹ, Gia đình, các Anh
+        Chị Em, Bạn bè hai bên đã luôn dõi theo, ủng hộ và chúc phúc cho hành
+        trình yêu nhau và đến bến bờ hạnh phúc của chúng con/chúng mình. Tuấn và
+        Bích hy vọng tình yêu thương của tất cả mọi người sẽ luôn đong đầy,
+        chúng con/chúng mình sẽ luôn vững vàng trên hành trình vun đắp hạnh phúc
+        đến đầu bạc răng long… Chúc cho tất cả những người thân yêu xung quanh
+        thật nhiều niềm vui và sức khoẻ. Hẹn gặp mọi người tại ngày cưới của
+        Tuấn và Bích nhé!
       </Typography>
-      <p>💚💚💚</p>
+      <p>💚💚💚💚</p>
     </section>
   );
 }
