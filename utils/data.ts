@@ -145,14 +145,14 @@ export const albumUrls = [
     width: 2624,
   },
   {
-    src: 'https://i.imgur.com/iiN9oZB.jpg', //22 - 8379
-    height: 3936,
-    width: 2624,
-  },
-  {
-    src: 'https://i.imgur.com/ImcADAN.jpg', //23 - 9592
+    src: 'https://i.imgur.com/ImcADAN.jpg', //22 - 9592
     height: 4608,
     width: 3072,
+  },
+  {
+    src: 'https://i.imgur.com/KsPTFHy.jpg', //23 - 0433
+    height: 3936,
+    width: 2624,
   },
   {
     src: 'https://i.imgur.com/cRTJ9pH.jpg', //24 - 0422
@@ -160,19 +160,39 @@ export const albumUrls = [
     width: 2624,
   },
   {
-    src: 'https://i.imgur.com/z6iIt2C.jpg', //25 - 0149
-    height: 4000,
-    width: 6000,
-  },
-  {
-    src: 'https://i.imgur.com/KsPTFHy.jpg', //26 - 0433
+    src: 'https://i.imgur.com/nuAixcA.jpg', //25 - 9584
     height: 3936,
     width: 2624,
   },
   {
-    src: 'https://i.imgur.com/vwAvHmn.jpg', //27 - 9584
+    src: 'https://i.imgur.com/hAVbYfh.jpg', //26 - 9665
+    height: 3936,
+    width: 2624,
+  },
+  {
+    src: 'https://i.imgur.com/iiN9oZB.jpg', //27 - 8379
+    height: 3936,
+    width: 2624,
+  },
+  {
+    src: 'https://i.imgur.com/vwAvHmn.jpg', //28 - 9584
     height: 3509,
     width: 2341,
+  },
+  {
+    src: 'https://i.imgur.com/z6iIt2C.jpg', //29 - 0149
+    height: 4000,
+    width: 6000,
+  },
+  {
+    src: 'https://i.imgur.com/i6IN3QH.jpg', //30 - 9584
+    height: 3936,
+    width: 2624,
+  },
+  {
+    src: 'https://i.imgur.com/Atfrdlb.jpg', //31 - 9584
+    height: 3936,
+    width: 2624,
   },
 ] as Array<StaticImageData>;
 
@@ -301,7 +321,7 @@ export const events = [
   },
 ] as const;
 
-export const slides = [albumUrls[21], albumUrls[15], albumUrls[0]];
+export const slides = [albumUrls[29], albumUrls[15], albumUrls[0]];
 
 export const banks = [
   {

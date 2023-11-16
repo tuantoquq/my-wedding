@@ -1,6 +1,8 @@
 'use client';
 import React from 'react';
 import { BsVolumeMuteFill, BsVolumeUpFill } from 'react-icons/bs';
+import { motion } from 'framer-motion';
+import Typography from '@/libs/Typography';
 
 export default function Footer() {
   const audioRef = React.useRef<HTMLAudioElement>(null);
@@ -26,21 +28,36 @@ export default function Footer() {
       </p>
       <div
         className={`fixed z-[100] md:bottom-10 md:left-10 xs:bottom-5 xs:left-5 flex opacity-80 p-4 gap-2 hover:cursor-pointer text-[1.35rem]
-        bg-green-500 text-white items-center rounded-full hover:opacity-100 ${
-          isPause ? 'bg-red-500' : 'bg-green-500'
-        }`}
-        onClick={() => handleMouseClick(!isPause)}
+        bg-green-500 text-white justify-center items-center rounded-full hover:opacity-100 ${
+          isPause ? 'bg-red-600' : 'bg-green-600'
+        }
+        `}
       >
+        <div
+          className={`absolute rounded-full ${
+            isPause ? 'bg-red-300' : 'bg-green-300'
+          } animate-[borderTransform_1.5s_linear_infinite] z-[80] opacity-40`}
+        ></div>
         <audio
           controls
           src="https://res.cloudinary.com/devoro1vn/video/upload/v1698862626/wedding_music.mp3"
           autoPlay={!isPause}
           hidden
-          className="scale-90"
+          className="scale-90 z-[90]"
           loop
           ref={audioRef}
         ></audio>
-        {isPause ? <BsVolumeMuteFill /> : <BsVolumeUpFill />}
+        {isPause ? (
+          <BsVolumeMuteFill
+            className="z-[90] overflow-hidden"
+            onClick={() => handleMouseClick(!isPause)}
+          />
+        ) : (
+          <BsVolumeUpFill
+            className="z-[90] overflow-hidden"
+            onClick={() => handleMouseClick(!isPause)}
+          />
+        )}
       </div>
     </footer>
   );

@@ -28,10 +28,10 @@ export default function PartyItem({
       <div
         className={`z-10 flex flex-col gap-5 pb-5 md:pb-10 lg:px-16 items-center
        h-full w-full shadow-[0_0px_25px_0px_rgba(0,0,0,0.2)] relative
-       bg-cover bg-no-repeat bg-[center_top_1%] ${
+       bg-cover bg-no-repeat  ${
          house === 'NHÀ TRAI'
-           ? "bg-[url('https://i.imgur.com/bB0qUlt.jpg')]"
-           : "bg-[url('https://i.imgur.com/LrBeJJ4.jpg')]"
+           ? "bg-[center_top_35%] bg-[url('https://i.imgur.com/Zzy4jTv.jpg')]"
+           : "bg-[center_top_25%] bg-[url('https://i.imgur.com/LrBeJJ4.jpg')]"
        }
        rounded-lg
        `}
