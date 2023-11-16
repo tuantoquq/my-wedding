@@ -135,12 +135,12 @@ export const albumUrls = [
     width: 4000,
   },
   {
-    src: 'https://i.imgur.com/Pv2lT9y.jpg', //20 - 0408
+    src: 'https://i.imgur.com/cRTJ9pH.jpg', //20 - 0422
     height: 3936,
     width: 2624,
   },
   {
-    src: 'https://i.imgur.com/cRTJ9pH.jpg', //21 - 0422
+    src: 'https://i.imgur.com/Pv2lT9y.jpg', //21 - 0408
     height: 3936,
     width: 2624,
   },
