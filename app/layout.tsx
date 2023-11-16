@@ -8,12 +8,11 @@ import Footer from '@/layout/footer';
 const inter = Dosis({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'Tuấn Bích | Our Wedding',
+  title: 'Tuấn ❤️ Bích | Our Wedding',
   description: 'Follow to know about Love journey of Tuan and Bich',
   authors: {
     name: 'tuannha & bichnobi',
   },
-  icons: [{ url: 'wedding-ring.png', sizes: '512x512', type: 'image/png' }],
 };
 
 export default function RootLayout({

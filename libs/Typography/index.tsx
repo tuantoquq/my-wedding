@@ -1,5 +1,4 @@
 import React from 'react';
-import Image from 'next/image';
 
 type Variant = 'h1' | 'h2' | 'h3' | 'desc' | string;
 

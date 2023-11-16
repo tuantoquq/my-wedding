@@ -17,7 +17,7 @@ export default function Congrats() {
         Tuấn và Bích xin gửi lời cảm ơn chân thành tới Bố Mẹ, Gia đình, các Anh
         Chị Em, Bạn bè hai bên đã luôn dõi theo, ủng hộ và chúc phúc cho hành
         trình yêu nhau và đến bến bờ hạnh phúc của chúng con/chúng mình. Tuấn và
-        Bích hy vọng tình yêu thương của tất cả mọi người sẽ luôn đong đầy,
+        Bích hy vọng tình yêu thương của tất cả mọi người sẽ luôn đong đầy để
         chúng con/chúng mình sẽ luôn vững vàng trên hành trình vun đắp hạnh phúc
         đến đầu bạc răng long… Chúc cho tất cả những người thân yêu xung quanh
         thật nhiều niềm vui và sức khoẻ. Hẹn gặp mọi người tại ngày cưới của

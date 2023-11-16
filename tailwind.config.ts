@@ -12,6 +12,7 @@ const config: Config = {
       sm: '600px',
       md: '900px',
       lg: '1200px',
+      lgm: '1400px',
       xl: '1536px',
       fhd: '1700px',
     },

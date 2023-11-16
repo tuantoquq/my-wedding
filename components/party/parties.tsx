@@ -144,14 +144,14 @@ export default function Parties() {
           <Typography variant="h3" className="text-black font-extrabold">
             Xác nhận tham dự
           </Typography>
-          <Typography variant="desc" className="text-black font-normal">
+          <Typography variant="desc" className="text-black !font-medium">
             Tiệc cưới của
           </Typography>
           <Typography
             variant="h2"
             className="xs:!text-2xl text-black font-bold"
           >
-            Nguyễn Tuấn & Trương Bích
+            Nguyễn Tuấn ❤️ Trương Bích
           </Typography>
           <input
             placeholder="Nhập tên của bạn"

@@ -15,11 +15,11 @@ export default function RadioButton({
     <label className="flex items-center cursor-pointer">
       <input
         type="radio"
-        className="form-radio text-indigo-600 h-5 w-5"
+        className="form-radio text-secondary-cl h-5 w-5"
         checked={checked}
         onChange={onChange}
       />
-      <span className="ml-2">{label}</span>
+      <span className="ml-2 font-medium">{label}</span>
     </label>
   );
 }
