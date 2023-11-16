@@ -78,7 +78,8 @@ export default function Header() {
       ) : (
         <>
           <motion.div
-            className="fixed top-0 left-1/2 -translate-x-1/2 h-12 xl:w-5/12 md:w-3/4 rounded-none border border-white border-opacity-30 bg-white bg-opacity-80 shadow-lg shadow-black/[0.03] backdrop-blur-[0.5rem] sm:top-6 sm:rounded-full"
+            className="fixed top-0 left-1/2 -translate-x-1/2 h-12 xl:w-5/12 md:w-3/4 lg:w-[66%] lgm:w-[60%] rounded-none 
+            border border-white border-opacity-30 bg-white bg-opacity-80 shadow-lg shadow-black/[0.03] backdrop-blur-[0.5rem] sm:top-6 sm:rounded-full"
             initial={{ y: -100, x: '-50%', opacity: 0 }}
             animate={{ y: 0, x: '-50%', opacity: 1 }}
           >

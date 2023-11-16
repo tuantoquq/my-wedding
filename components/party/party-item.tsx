@@ -48,7 +48,7 @@ export default function PartyItem({
           {"'"}
         </Typography>
         <div className="flex justify-center items-center flex-row gap-2 z-20">
-          <FaClock className="text-description" />
+          <FaClock className="text-secondary-cl" />
           <Typography
             variant="h3"
             className="!font-semibold !text-2xl xs:!text-xl"
@@ -56,19 +56,28 @@ export default function PartyItem({
             {date}
           </Typography>
         </div>
-        <Typography variant="desc" className="!italic z-20 !font-semibold">
+        <Typography
+          variant="desc"
+          className="!italic z-20 !font-semibold !text-gray-700"
+        >
           -- Tức Ngày 19 Tháng 10 Năm Quý Mão --
         </Typography>
         <div className="flex justify-center items-center flex-row gap-2 z-20">
-          <FaLocationDot className="text-description" />
-          <Typography variant="desc" className="!font-semibold">
+          <FaLocationDot className="text-secondary-cl" />
+          <Typography
+            variant="desc"
+            className="!font-semibold !text-secondary-cl"
+          >
             {address}
           </Typography>
         </div>
         <Button onClick={() => window.open(location)} className="mt-3 z-20">
           Xem bản đồ
         </Button>
-        <Typography variant="desc" className="!italic z-20 !font-semibold">
+        <Typography
+          variant="desc"
+          className="!italic z-20 !font-semibold !text-gray-600"
+        >
           Rất hân hạnh được đón tiếp!
         </Typography>
       </div>

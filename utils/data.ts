@@ -65,107 +65,107 @@ export const albumUrls = [
     width: 4000,
   },
   {
-    src: 'https://i.imgur.com/0FBnvPb.jpg', //6 - 0173
-    height: 6000,
-    width: 4000,
-  },
-  {
-    src: 'https://i.imgur.com/H02JaEa.jpg', //7 - 9387
-    height: 6000,
-    width: 4000,
-  },
-  {
-    src: 'https://i.imgur.com/xz8I5iB.jpg', //8 - 9589
+    src: 'https://i.imgur.com/sMdAW7B.jpg', //6 - 0411
     height: 3936,
     width: 2624,
   },
   {
-    src: 'https://i.imgur.com/0hS58Fg.jpg', //9 - 9590
+    src: 'https://i.imgur.com/0FBnvPb.jpg', //7 - 0173
+    height: 6000,
+    width: 4000,
+  },
+  {
+    src: 'https://i.imgur.com/H02JaEa.jpg', //8 - 9387
+    height: 6000,
+    width: 4000,
+  },
+  {
+    src: 'https://i.imgur.com/xz8I5iB.jpg', //9 - 9589
     height: 3936,
     width: 2624,
   },
   {
-    src: 'https://i.imgur.com/NknvcAF.jpg', //10 - 9818
+    src: 'https://i.imgur.com/0hS58Fg.jpg', //10 - 9590
+    height: 3936,
+    width: 2624,
+  },
+  {
+    src: 'https://i.imgur.com/NknvcAF.jpg', //11 - 9818
     height: 4000,
     width: 6000,
   },
   {
-    src: 'https://i.imgur.com/CCUT5fL.jpg', //11 - 9591
+    src: 'https://i.imgur.com/CCUT5fL.jpg', //12 - 9591
     height: 3936,
     width: 2624,
   },
   {
-    src: 'https://i.imgur.com/MzFKCFA.jpg', //12 - 9593
+    src: 'https://i.imgur.com/MzFKCFA.jpg', //13 - 9593
     height: 3451,
     width: 2384,
   },
   {
-    src: 'https://i.imgur.com/r8oTUg4.jpg', //13 - 0434
-    height: 3936,
-    width: 2624,
-  },
-  {
-    src: 'https://i.imgur.com/IpPkixq.jpg', //14 - 9570
-    height: 3640,
-    width: 2399,
-  },
-  {
-    src: 'https://i.imgur.com/bmHkqbh.jpg', //15 - 9779
+    src: 'https://i.imgur.com/bmHkqbh.jpg', //14 - 9779
     height: 4000,
     width: 6000,
   },
   {
-    src: 'https://i.imgur.com/8yoW1hd.jpg', //16 - 0659
+    src: 'https://i.imgur.com/H02JaEa.jpg', //15 - 9387
     height: 6000,
     width: 4000,
   },
   {
-    src: 'https://i.imgur.com/B1XdNP3.jpg', //17 - 0263
-    height: 6000,
-    width: 4000,
-  },
-  {
-    src: 'https://i.imgur.com/XkEJEKe.jpg', //18 - 0093
-    height: 6000,
-    width: 4000,
-  },
-  {
-    src: 'https://i.imgur.com/Pv2lT9y.jpg', //19 - 0408
+    src: 'https://i.imgur.com/i6IN3QH.jpg', //16 - 9584
     height: 3936,
     width: 2624,
   },
   {
-    src: 'https://i.imgur.com/AcUxm5n.jpg', //20 - 9260
+    src: 'https://i.imgur.com/8yoW1hd.jpg', //17 - 0659
     height: 6000,
     width: 4000,
   },
   {
-    src: 'https://i.imgur.com/5kXLhDB.jpg', //21 - 0423
+    src: 'https://i.imgur.com/B1XdNP3.jpg', //18 - 0263
+    height: 6000,
+    width: 4000,
+  },
+  {
+    src: 'https://i.imgur.com/XkEJEKe.jpg', //19 - 0093
+    height: 6000,
+    width: 4000,
+  },
+  {
+    src: 'https://i.imgur.com/Pv2lT9y.jpg', //20 - 0408
     height: 3936,
     width: 2624,
   },
   {
-    src: 'https://i.imgur.com/ImcADAN.jpg', //22 - 9592
+    src: 'https://i.imgur.com/cRTJ9pH.jpg', //21 - 0422
+    height: 3936,
+    width: 2624,
+  },
+  {
+    src: 'https://i.imgur.com/5kXLhDB.jpg', //22 - 0423
+    height: 3936,
+    width: 2624,
+  },
+  {
+    src: 'https://i.imgur.com/ImcADAN.jpg', //23 - 9592
     height: 4608,
     width: 3072,
   },
   {
-    src: 'https://i.imgur.com/KsPTFHy.jpg', //23 - 0433
+    src: 'https://i.imgur.com/KsPTFHy.jpg', //24 - 0433
     height: 3936,
     width: 2624,
   },
   {
-    src: 'https://i.imgur.com/cRTJ9pH.jpg', //24 - 0422
-    height: 3936,
-    width: 2624,
+    src: 'https://i.imgur.com/z6iIt2C.jpg', //25 - 0149
+    height: 4000,
+    width: 6000,
   },
   {
-    src: 'https://i.imgur.com/nuAixcA.jpg', //25 - 9584
-    height: 3936,
-    width: 2624,
-  },
-  {
-    src: 'https://i.imgur.com/hAVbYfh.jpg', //26 - 9665
+    src: 'https://i.imgur.com/nuAixcA.jpg', //26 - 9584
     height: 3936,
     width: 2624,
   },
@@ -180,12 +180,12 @@ export const albumUrls = [
     width: 2341,
   },
   {
-    src: 'https://i.imgur.com/z6iIt2C.jpg', //29 - 0149
-    height: 4000,
-    width: 6000,
+    src: 'https://i.imgur.com/AcUxm5n.jpg', //29 - 9260
+    height: 6000,
+    width: 4000,
   },
   {
-    src: 'https://i.imgur.com/i6IN3QH.jpg', //30 - 9584
+    src: 'https://i.imgur.com/r8oTUg4.jpg', //30 - 0434
     height: 3936,
     width: 2624,
   },
@@ -199,7 +199,7 @@ export const albumUrls = [
 export const storyLine = [
   {
     title: 'Từ bạn thân thành người yêu',
-    description: `3 năm cấp Ba, chúng cùng học, cùng làm cán bộ lớp, là bạn thân, luôn giúp đỡ nhau học tập với mục tiêu đỗ Đại học. \n
+    description: `3 năm cấp Ba, chúng mình cùng học, cùng làm cán bộ lớp, là bạn thân, luôn giúp đỡ nhau học tập với mục tiêu đỗ Đại học. \n
     Đạt được mục tiêu đó, chúng mình xuống Thủ đô theo đuổi ước mơ và vẫn là bạn tốt của nhau như vậy. Thời gian trôi vừa đúng lúc Em cảm nhận thấy tình cảm với Anh hơi khác thì Anh chợt tỏ tình “làm người yêu tao nhé!\n”
     Những năm tháng Đại học rực rỡ đó, Em và Anh lặng lẽ bình yên bên nhau, cùng nhau rong ruổi khắp phố phường Hà Nội, cùng trải qua bao thăng trầm, buồn vui`,
     year: '09 - 2018',
@@ -236,7 +236,7 @@ export const storyLine = [
   {
     title: 'Lời cầu hôn bất ngờ',
     description: `Ngày hôm đó, Em tin mình là cô gái hạnh phúc nhất thế giới. Dưới khung cảnh lãng mạn với biết bao 
-    lời chúc phúc của những người em thương và cả những người xa lạ, Anh bất ngờ cầu hôn em. 
+    lời chúc phúc của những người Em thương và cả những người xa lạ, Anh bất ngờ cầu hôn Em. 
     Nhiệm kỳ 5 năm làm người yêu, chúng mình đã hoàn thành rất xuất sắc. Từ đây, Em đồng ý "thăng chức" cho Anh thành bạn đời của Em…`,
     year: '10 - 2023',
     image: {
@@ -321,7 +321,7 @@ export const events = [
   },
 ] as const;
 
-export const slides = [albumUrls[29], albumUrls[15], albumUrls[0]];
+export const slides = [albumUrls[25], albumUrls[14], albumUrls[0]];
 
 export const banks = [
   {
