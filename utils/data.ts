@@ -312,7 +312,7 @@ export const events = [
     mapUrl: 'https://maps.app.goo.gl/q2KkyWbSNr9X4qCSA',
   },
   {
-    image: albumUrls[12],
+    image: albumUrls[13],
     title: 'LỄ THÀNH HÔN',
     date: '02/12/2023',
     time: '10:00 AM',
