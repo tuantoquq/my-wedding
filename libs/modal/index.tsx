@@ -35,7 +35,7 @@ export default function Modal({
         className="fixed inset-0 bg-black opacity-50"
         onClick={onClose}
       ></div>
-      <div className="bg-white rounded-lg z-10">
+      <div className="bg-white rounded-lg z-10 relative">
         <div className={`relative flex justify-center ${classNameHeader}`}>
           {title && (
             <Typography
