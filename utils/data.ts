@@ -100,7 +100,7 @@ export const albumUrls = [
     width: 2384,
   },
   {
-    src: 'https://i.imgur.com/fH2PdLk.jpg', //13 - 9969
+    src: 'https://i.imgur.com/r8oTUg4.jpg', //13 - 0434
     height: 3936,
     width: 2624,
   },
@@ -140,9 +140,9 @@ export const albumUrls = [
     width: 4000,
   },
   {
-    src: 'https://i.imgur.com/z6iIt2C.jpg', //21 - 0149
-    height: 4000,
-    width: 6000,
+    src: 'https://i.imgur.com/5kXLhDB.jpg', //21 - 0423
+    height: 3936,
+    width: 2624,
   },
   {
     src: 'https://i.imgur.com/iiN9oZB.jpg', //22 - 8379
@@ -154,26 +154,26 @@ export const albumUrls = [
     height: 4608,
     width: 3072,
   },
-  // {
-  //   src: 'https://i.imgur.com/ImcADAN.jpg', //24 - 9592
-  //   height: 4608,
-  //   width: 3072,
-  // },
-  // {
-  //   src: 'https://i.imgur.com/ImcADAN.jpg', //25 - 9592
-  //   height: 4608,
-  //   width: 3072,
-  // },
-  // {
-  //   src: 'https://i.imgur.com/ImcADAN.jpg', //26 - 9592
-  //   height: 4608,
-  //   width: 3072,
-  // },
-  // {
-  //   src: 'https://i.imgur.com/ImcADAN.jpg', //27 - 9592
-  //   height: 4608,
-  //   width: 3072,
-  // },
+  {
+    src: 'https://i.imgur.com/cRTJ9pH.jpg', //24 - 0422
+    height: 3936,
+    width: 2624,
+  },
+  {
+    src: 'https://i.imgur.com/z6iIt2C.jpg', //25 - 0149
+    height: 4000,
+    width: 6000,
+  },
+  {
+    src: 'https://i.imgur.com/KsPTFHy.jpg', //26 - 0433
+    height: 3936,
+    width: 2624,
+  },
+  {
+    src: 'https://i.imgur.com/vwAvHmn.jpg', //27 - 9584
+    height: 3509,
+    width: 2341,
+  },
 ] as Array<StaticImageData>;
 
 export const storyLine = [
@@ -231,7 +231,7 @@ export const couple = {
   groom: {
     name: 'Nguyễn Tuấn',
     image: {
-      src: 'https://i.imgur.com/oFH3oA9.jpg',
+      src: 'https://i.imgur.com/Z7eFICZ.jpg',
       width: 1264,
       height: 1896,
     } as StaticImageData,
