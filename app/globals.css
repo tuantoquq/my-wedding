@@ -24,28 +24,23 @@ html {
 
 @keyframes borderTransform {
   0% {
-    width: 58px;
-    height: 58px;
+    scale: 1.05;
   }
 
   25% {
-    width: 64px;
-    height: 64px;
+    scale: 1.15;
   }
 
   50% {
-    width: 68px;
-    height: 68px;
+    scale: 1.25;
   }
 
   75% {
-    width: 64px;
-    height: 64px;
+    scale: 1.15;
   }
 
   100% {
-    width: 58px;
-    height: 58px;
+    scale: 1.05;
   }
 }
 
@@ -55,5 +50,14 @@ html {
   }
   to {
     transform: translateX(0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
   }
 }

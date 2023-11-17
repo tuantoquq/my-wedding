@@ -19,6 +19,7 @@ const config: Config = {
     extend: {
       animation: {
         'slide-in-right': 'slideInRight 0.5s ease-in-out',
+        'slide-in-left': 'slideInLeft 1s ease-in-out',
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
