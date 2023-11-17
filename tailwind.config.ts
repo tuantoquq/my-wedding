@@ -17,6 +17,9 @@ const config: Config = {
       fhd: '1700px',
     },
     extend: {
+      animation: {
+        'slide-in-right': 'slideInRight 0.5s ease-in-out',
+      },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':
