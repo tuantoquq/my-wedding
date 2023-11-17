@@ -19,7 +19,8 @@ export function CountdownTimer() {
 
   function calculateTimeRemaining() {
     const targetDate = moment('2023-12-01T23:59:59'); // Replace with your target date
-    const now = moment().utcOffset('+07:00');
+    const now = moment().utc();
+    now.set({ hour: now.hour() + 7 });
     const duration = moment.duration(targetDate.diff(now));
 
     const totalSeconds = duration.asSeconds();
