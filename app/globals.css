@@ -22,29 +22,11 @@ html {
   background-color: #aaaaaa;
 }
 
-@keyframes borderTransform {
-  0% {
-    width: 58px;
-    height: 58px;
+@keyframes slideInRight {
+  from {
+    transform: translateX(-100%);
   }
-
-  25% {
-    width: 64px;
-    height: 64px;
-  }
-
-  50% {
-    width: 68px;
-    height: 68px;
-  }
-
-  75% {
-    width: 64px;
-    height: 64px;
-  }
-
-  100% {
-    width: 58px;
-    height: 58px;
+  to {
+    transform: translateX(0);
   }
 }

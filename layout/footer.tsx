@@ -1,12 +1,22 @@
 'use client';
 import React from 'react';
 import { BsVolumeMuteFill, BsVolumeUpFill } from 'react-icons/bs';
-import { motion } from 'framer-motion';
 import Typography from '@/libs/Typography';
 
 export default function Footer() {
   const audioRef = React.useRef<HTMLAudioElement>(null);
   const [isPause, setIsPause] = React.useState(true);
+  const [isVisible, setIsVisible] = React.useState(true);
+
+  React.useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsVisible(false);
+    }, 2000);
+
+    return () => {
+      clearTimeout(timer);
+    };
+  }, []);
 
   const handleMouseClick = (pause: boolean) => {
     setIsPause(pause);
@@ -38,6 +48,17 @@ export default function Footer() {
             isPause ? 'bg-red-300' : 'bg-green-300'
           } animate-[borderTransform_1.5s_linear_infinite] z-[80] opacity-40`}
         ></div>
+        {isVisible && (
+          <Typography
+            variant="desc"
+            className={`absolute w-[15rem] md:left-8 xs:left-5 top-0 bottom-0 !font-semibold
+          !text-black animate-slide-in-right
+          text-center justify-center items-center flex z-[10]
+           `}
+          >
+            Bấm vào đây để phát nhạc!
+          </Typography>
+        )}
         <audio
           controls
           src="https://res.cloudinary.com/devoro1vn/video/upload/v1698862626/wedding_music.mp3"
