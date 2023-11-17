@@ -27,7 +27,10 @@ export async function POST(req: Request) {
   try {
     const addCommentDto: WishData = await req.json();
     const comment = await prisma.comment.create({
-      data: addCommentDto,
+      data: {
+        content: addCommentDto.content.trim(),
+        guestName: addCommentDto.guestName.trim(),
+      },
     });
     return NextResponse.json({
       message: 'Add comment successfully',
