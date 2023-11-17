@@ -11,7 +11,7 @@ export default function Footer() {
   React.useEffect(() => {
     const timer = setTimeout(() => {
       setIsVisible(false);
-    }, 2000);
+    }, 3000);
 
     return () => {
       clearTimeout(timer);
@@ -51,7 +51,7 @@ export default function Footer() {
         {isVisible && (
           <Typography
             variant="desc"
-            className={`absolute w-[15rem] md:left-8 xs:left-5 top-0 bottom-0 !font-semibold
+            className={`absolute w-[15rem] md:left-10 xs:left-5 top-0 bottom-0 !font-semibold
           !text-black animate-slide-in-right
           text-center justify-center items-center flex z-[10]
            `}
