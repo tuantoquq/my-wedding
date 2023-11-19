@@ -5,7 +5,7 @@ export async function GET() {
   try {
     const comments = await prisma.comment.findMany({
       orderBy: {
-        createdAt: 'asc',
+        createdAt: 'desc',
       },
     });
     return NextResponse.json({
