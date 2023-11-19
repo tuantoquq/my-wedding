@@ -13,7 +13,8 @@ const config: Config = {
       md: '900px',
       lg: '1200px',
       lgm: '1400px',
-      xl: '1536px',
+      xl: '1500px',
+      xlm: '1600px',
       fhd: '1700px',
     },
     extend: {
