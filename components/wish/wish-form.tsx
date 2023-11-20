@@ -1,5 +1,6 @@
 import { Button } from '@/libs/Button';
 import Typography from '@/libs/Typography';
+import { useSocket } from '@/provider/socket-provider';
 import { WishData } from '@/services/types';
 import React, { FormEvent } from 'react';
 import { FaPaperPlane, FaSpinner } from 'react-icons/fa';
@@ -15,12 +16,10 @@ const loadingIcon = (
   <FaSpinner className="text-xs opacity-80 transition-all animate-spin" />
 );
 
-type WishFormProps = {
-  callDone: (isDone: boolean) => void;
-};
-export default function WishForm({ callDone }: WishFormProps) {
+export default function WishForm() {
   const [isLoading, setIsLoading] = React.useState(false);
   const [isSubmitted, setIsSubmitted] = React.useState(false);
+  const { socket } = useSocket();
   const submitForm = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     setIsLoading(true);
@@ -30,16 +29,12 @@ export default function WishForm({ callDone }: WishFormProps) {
       const dataSubmit = Object.fromEntries(
         formData.entries(),
       ) as unknown as WishData;
-      await fetch('/api/comments', {
-        method: 'POST',
-        body: JSON.stringify(dataSubmit),
-      });
+      socket.emit('addWish', dataSubmit);
     } catch (error) {
       console.log(error);
     } finally {
       setIsLoading(false);
       setIsSubmitted(!isSubmitted);
-      callDone(!isSubmitted);
       const guestNameEle = document.getElementById('name') as HTMLInputElement;
       const wishEle = document.getElementById('wish') as HTMLInputElement;
       guestNameEle.value = '';
