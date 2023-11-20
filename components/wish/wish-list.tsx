@@ -3,20 +3,25 @@ import React, { useState, useEffect } from 'react';
 import WishCard from './wish-card';
 import { WishData } from '@/services/types';
 import { FaSpinner } from 'react-icons/fa';
+import { useSocket } from '@/provider/socket-provider';
 
-type WishListProps = {
-  reload: boolean;
-};
-export default function WishList({ reload }: WishListProps) {
+export default function WishList() {
   const [listWishes, setListWishes] = useState<WishData[]>([]);
+  const { socket } = useSocket();
   useEffect(() => {
-    const fetchWishes = async () => {
-      const res = await fetch('/api/comments');
-      const data = await res.json();
-      setListWishes(data?.data);
-    };
-    fetchWishes();
-  }, [reload]);
+    if (socket) {
+      socket.on('newWish', (data: WishData) => {
+        setListWishes((prev) => [data, ...prev]);
+      });
+    } else {
+      const fetchWishes = async () => {
+        const res = await fetch('/api/comments');
+        const data = await res.json();
+        setListWishes(data?.data);
+      };
+      fetchWishes();
+    }
+  }, [socket]);
   return (
     <div
       className={`flex bg-white flex-col md:mt-10 xs:mt-1 border-[3px] w-full

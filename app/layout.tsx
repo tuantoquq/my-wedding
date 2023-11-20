@@ -4,6 +4,7 @@ import type { Metadata } from 'next';
 import { Dosis } from 'next/font/google';
 import ActiveSectionContextProvider from '@/context/active-section-context';
 import Footer from '@/layout/footer';
+import { SocketProvider } from '@/provider/socket-provider';
 
 const inter = Dosis({ subsets: ['latin'] });
 
@@ -24,9 +25,11 @@ export default function RootLayout({
     <html lang="en" className="!scroll-smooth overflow-x-hidden">
       <body className={`${inter.className} bg-white text-gray-950`}>
         <ActiveSectionContextProvider>
-          <Header />
-          {children}
-          <Footer />
+          <SocketProvider>
+            <Header />
+            {children}
+            <Footer />
+          </SocketProvider>
         </ActiveSectionContextProvider>
       </body>
     </html>

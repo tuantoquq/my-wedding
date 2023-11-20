@@ -8,7 +8,6 @@ import WishList from './wish-list';
 
 export default function Wishes() {
   const { ref } = useSectionInView({ sectionName: 'Lời chúc' });
-  const [isNeedReload, setIsNeedReload] = React.useState(false);
   return (
     <section ref={ref} className="max-w-[100rem] text-center mt-10" id="wishes">
       <SectionHeading className="mt-10 md:mt-20">
@@ -21,14 +20,10 @@ export default function Wishes() {
       md:items-stretch  md:flex-row"
       >
         <div className="xs:px-5 md:w-1/2">
-          <WishForm
-            callDone={(status: any) => {
-              setIsNeedReload(status);
-            }}
-          />
+          <WishForm />
         </div>
         <div className="xs:w-full xs:px-5 md:w-1/2">
-          <WishList reload={isNeedReload} />
+          <WishList />
         </div>
       </div>
     </section>
