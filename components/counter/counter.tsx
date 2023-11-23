@@ -4,6 +4,7 @@ import TimeBox from './time-box';
 import { SectionHeadingImage } from '@/layout/section-heading';
 import Typography from '@/libs/Typography';
 import Divider from '@/layout/divider';
+import moment from 'moment';
 
 export function CountdownTimer() {
   const [timeRemaining, setTimeRemaining] = useState(calculateTimeRemaining());
@@ -17,15 +18,11 @@ export function CountdownTimer() {
   }, []);
 
   function calculateTimeRemaining() {
-    const targetDate = new Date('2023-12-01T23:59:59');
-    const now = new Date(
-      new Date().toLocaleString('en-US', {
-        timeZone: 'Asia/Jakarta',
-      }),
-    );
-    const totalSeconds = Math.floor(
-      (targetDate.getTime() - now.getTime()) / 1000,
-    );
+    'use client';
+    const targetDate = moment('2023-12-01T23:59:59'); // Replace with your target date
+    const now = moment();
+    const duration = moment.duration(targetDate.diff(now));
+    const totalSeconds = duration.asSeconds();
 
     const days = Math.floor(totalSeconds / (60 * 60 * 24));
     const hours = Math.floor((totalSeconds % (60 * 60 * 24)) / 3600);
