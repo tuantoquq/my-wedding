@@ -18,11 +18,15 @@ export function CountdownTimer() {
   }, []);
 
   function calculateTimeRemaining() {
-    'use client';
-    const targetDate = moment('2023-12-01T23:59:59'); // Replace with your target date
-    const now = moment();
-    const duration = moment.duration(targetDate.diff(now));
-    const totalSeconds = duration.asSeconds();
+    const targetDate = new Date('2023-12-01T23:59:59');
+    const now = new Date(
+      new Date().toLocaleString('en-US', {
+        timeZone: 'Asia/Ho_Chi_Minh',
+      }),
+    );
+    const totalSeconds = Math.floor(
+      (targetDate.getTime() - now.getTime()) / 1000,
+    );
 
     const days = Math.floor(totalSeconds / (60 * 60 * 24));
     const hours = Math.floor((totalSeconds % (60 * 60 * 24)) / 3600);
