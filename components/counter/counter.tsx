@@ -24,8 +24,6 @@ export function CountdownTimer() {
         timeZone: 'Asia/Ho_Chi_Minh',
       }),
     );
-    console.log('Now: ', now);
-    console.log('targetDate: ', targetDate);
     const totalSeconds = Math.floor(
       (targetDate.getTime() - now.getTime()) / 1000,
     );
