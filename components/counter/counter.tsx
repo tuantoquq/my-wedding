@@ -4,42 +4,40 @@ import TimeBox from './time-box';
 import { SectionHeadingImage } from '@/layout/section-heading';
 import Typography from '@/libs/Typography';
 import Divider from '@/layout/divider';
-import moment from 'moment';
 
 export function CountdownTimer() {
-  const [timeRemaining, setTimeRemaining] = useState(calculateTimeRemaining());
+  const [days, setDays] = useState(0);
+  const [hours, setHours] = useState(0);
+  const [minutes, setMinutes] = useState(0);
+  const [seconds, setSeconds] = useState(0);
 
   useEffect(() => {
+    const targetDate = new Date('2023-12-01T23:59:59');
     const interval = setInterval(() => {
-      setTimeRemaining(calculateTimeRemaining());
+      const now = new Date();
+      let difference = targetDate.getTime() - now.getTime();
+      if (difference < 0) {
+        difference = -difference;
+      }
+
+      const d = Math.floor(difference / (1000 * 60 * 60 * 24));
+      setDays(d);
+
+      const h = Math.floor(
+        (difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60),
+      );
+      setHours(h);
+
+      const m = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+      setMinutes(m);
+
+      const s = Math.floor((difference % (1000 * 60)) / 1000);
+      setSeconds(s);
     }, 1000);
 
     return () => clearInterval(interval);
   }, []);
 
-  function calculateTimeRemaining() {
-    const targetDate = new Date('2023-12-01T23:59:59');
-    const now = new Date(
-      new Date().toLocaleString('en-US', {
-        timeZone: 'Asia/Ho_Chi_Minh',
-      }),
-    );
-    const totalSeconds = Math.floor(
-      (targetDate.getTime() - now.getTime()) / 1000,
-    );
-
-    const days = Math.floor(totalSeconds / (60 * 60 * 24));
-    const hours = Math.floor((totalSeconds % (60 * 60 * 24)) / 3600);
-    const minutes = Math.floor((totalSeconds % 3600) / 60);
-    const seconds = Math.floor(totalSeconds % 60);
-
-    return {
-      days,
-      hours,
-      minutes,
-      seconds,
-    };
-  }
   function getStringTime(time: number) {
     if (time < 10) {
       return `0${time}`;
@@ -66,10 +64,10 @@ export function CountdownTimer() {
         <Divider className="md:h-[3px] xs:h-[2px] md:w-15 xs:w-10 !bg-cs-green-900" />
       </div>
       <div className="grid md:grid-cols-4 sm:grid-cols-2 xs:grid-cols-2 gap-6 w-fit z-50">
-        <TimeBox time={getStringTime(timeRemaining.days)} title="Ngày" />
-        <TimeBox time={getStringTime(timeRemaining.hours)} title="Giờ" />
-        <TimeBox time={getStringTime(timeRemaining.minutes)} title="Phút" />
-        <TimeBox time={getStringTime(timeRemaining.seconds)} title="Giây" />
+        <TimeBox time={getStringTime(days)} title="Ngày" />
+        <TimeBox time={getStringTime(hours)} title="Giờ" />
+        <TimeBox time={getStringTime(minutes)} title="Phút" />
+        <TimeBox time={getStringTime(seconds)} title="Giây" />
       </div>
     </div>
   );
